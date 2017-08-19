@@ -1,0 +1,18 @@
+# Denote all files that are truly binary
+
+# Fonts
+*.eot binary
+*.svg binary
+*.ttf binary
+*.woff binary
+*.otf binary
+
+# Images
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+
+# Others
+*.jar binary
+*.swf binary

@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# dot
+#
+# `dot` handles installation, macOS defaults, Homebrew updates, etc.
+# Run it periodically to make sure you're on the latest and greatest.
+#
+
+export ZSH="$HOME/projects/dotfiles"
+
+export HOMEBREW_PREFIX=$(brew --prefix)
+
+# Install Homebrew.
+$ZSH/homebrew/install.sh 2>&1
+
+echo "› Upgrading Homebrew.\n"
+brew update > /dev/null
+
+# Install software.
+$ZSH/scripts/install
+
+# Set macOS defaults.
+$ZSH/macos/set-defaults.sh
+
+# Set macOS login items.
+$ZSH/macos/set-login-items.sh

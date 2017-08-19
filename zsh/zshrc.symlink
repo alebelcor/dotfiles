@@ -1,0 +1,42 @@
+#!/usr/bin/env zsh
+
+# Shortcut to Homebrew root directory.
+export HOMEBREW_PREFIX=$(brew --prefix)
+
+# Shortcut to this dotfiles path is $ZSH.
+export ZSH="$HOME/projects/dotfiles"
+
+# Load ~/.localrc if it exists.
+# A place to store private/custom shell information like environmental variables.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# All of our ZSH files.
+typeset -U config_files
+config_files=($ZSH/**/*.zsh)
+
+# Load the path files.
+for file in ${(M)config_files:#*/path.zsh}
+do
+  source $file
+done
+
+# Load everything except the path and completion files.
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+do
+  source $file
+done
+
+# Initialize autocomplete here, otherwise functions won't be loaded.
+autoload -Uz compinit
+compinit
+
+# Load every completion, after autocomplete loads.
+for file in ${(M)config_files:#*/completion.zsh}
+do
+  source $file
+done
+
+unset config_files

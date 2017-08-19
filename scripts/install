@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Run all dotfiles installers.
+#
+
+# Exit if any subcommand or pipeline returns a non-zero status.
+set -e
+
+cd "$(dirname $0)"/..
+
+printf "\r› Installing packages and applications.\n\n"
+brew bundle > /dev/null
+
+# Find the installers and run them iteratively
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

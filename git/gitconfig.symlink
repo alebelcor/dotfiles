@@ -1,0 +1,110 @@
+[alias]
+
+	ada = add -A
+	br = branch
+	cp = cherry-pick
+	co = checkout
+	com = checkout master
+	st = status
+
+	# Verify objects in database and optimize
+	cleanup = !git fsck && git gc --aggressive --prune=now
+
+	# Stash current changes, pull and re-apply stashed changes
+	sth = !git stash && git pull && git stash pop
+
+	# Undo the last commit and keep the changes locally
+	undo = reset HEAD~1 --soft
+
+[apply]
+
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+
+[core]
+
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+
+	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
+	# [default] trailing-space: looks for spaces at the end of a line
+	# [default] space-before-tab: looks for spaces before tabs at the beginning of
+	# a line
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+	# Make `git rebase` safer on OS X
+	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+	trustctime = false
+
+	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
+	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+	precomposeunicode = false
+
+[color]
+
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
+
+[color "branch"]
+
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[diff]
+
+	# Detect copies as well as renames
+	renames = copies
+
+	# Enable an experimental heuristic that shifts the hunk boundary in an
+	# attempt to make the resulting patch easier to read.
+	indentHeuristic = true
+
+[diff "bin"]
+
+	# Use `hexdump` to diff binary files
+	textconv = hexdump -v -C
+
+[help]
+
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+
+[include]
+
+	# Include additional config directive
+	path = ~/.gitconfig.local
+
+[push]
+
+	# Use the Git 1.x.x default to avoid errors on machines with old Git
+	# installations. To use `simple` instead, add this to your `~/.localrc` file:
+	# `git config --global push.default simple`. See http://git.io/mMah-w.
+	default = matching
+
+# URL shorthands
+
+[url "git@github.com:"]
+
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+	insteadOf = "github:"
