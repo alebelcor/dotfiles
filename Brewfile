@@ -17,6 +17,7 @@ brew 'gnu-sed', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
 brew 'mas'
 brew 'nodenv'
+brew 'wifi-password'
 brew 'zsh'
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
