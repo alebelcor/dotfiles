@@ -1,12 +1,5 @@
 #!/usr/bin/env zsh
 
-# Set the history file.
-export HISTFILE=~/.zsh_history
-
-# Increase history size.
-export HISTSIZE=32768;
-export SAVEHIST=$HISTSIZE
-
 # ==========================================================================
 # ZSH options
 # ==========================================================================

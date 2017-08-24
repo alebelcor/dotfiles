@@ -6,6 +6,10 @@ export EDITOR='vim';
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
 
+# Increase history size.
+export HISTSIZE=32768;
+export SAVEHIST=$HISTSIZE
+
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
