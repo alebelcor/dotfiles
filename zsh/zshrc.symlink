@@ -1,10 +1,7 @@
 #!/usr/bin/env zsh
 
-# Shortcut to Homebrew root directory.
-export HOMEBREW_PREFIX=$(brew --prefix)
-
 # Shortcut to this dotfiles path is $ZSH.
-export ZSH="$HOME/projects/dotfiles"
+ZSH="$HOME/projects/dotfiles"
 
 # Load ~/.localrc if it exists.
 # A place to store private/custom shell information like environmental variables.

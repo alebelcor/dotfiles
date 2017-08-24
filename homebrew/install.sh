@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Check for Homebrew
+# Check for Homebrew.
 if test ! $(which brew)
 then
   echo "› Installing Homebrew.\n"

@@ -15,7 +15,7 @@ cp -r Markdown.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Pa
 # Package Control will automatically install the packages listed in this file.
 cp -r Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Package\ Control.sublime-settings 2> /dev/null
 
-# Install Package Control
+# Install Package Control.
 # Sublime Text will automatically install the package on the next run.
 cd ~/Library/Application\ Support/Sublime\ Text*/Installed\ Packages/
 wget --quiet https://packagecontrol.io/Package%20Control.sublime-package

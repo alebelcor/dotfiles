@@ -3,40 +3,41 @@ module.exports = {
   // https://hyper.is/#cfg
   config: {
 
-    // The default size in pixels for the terminal
+    // The default size in pixels for the terminal.
     fontSize: 16,
 
-    // The font family to use with optional fallbacks
+    // The font family to use with optional fallbacks.
     fontFamily: '"Fira Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
-    // The shape of the caret in the terminal. Available options are: 'BEAM', 'UNDERLINE', 'BLOCK'
+    // The shape of the caret in the terminal.
+    // Available options are: 'BEAM', 'UNDERLINE', 'BLOCK'.
     cursorShape: 'BLOCK',
 
-    // If true, cursor will blink
+    // If true, cursor will blink.
     cursorBlink: false,
 
-    // Custom CSS to include in the main window
+    // Custom CSS to include in the main window.
     css: '',
 
-    // Custom CSS to include in the terminal window
+    // Custom CSS to include in the terminal window.
     termCSS: '',
 
-    // CSS padding values for the space around each term
+    // CSS padding values for the space around each term.
     padding: '14px',
 
-    // A path to a custom shell to run when Hyper starts a new session
+    // A path to a custom shell to run when Hyper starts a new session.
     shell: '/usr/local/bin/zsh',
 
-    // The default width/height in pixels of a new window e.g. [540, 380]
+    // The default width/height in pixels of a new window e.g. [540, 380].
     windowSize: [740, 580],
 
-    // If true, selected text will automatically be copied to the clipboard
+    // If true, selected text will automatically be copied to the clipboard.
     copyOnSelect: true,
 
-    // System bell configuration. Available options are: "SOUND", false
+    // System bell configuration. Available options are: "SOUND", false.
     bell: "SOUND",
 
-    // for environment variables
+    // For environment variables.
     env: {},
 
     // --- PLUGINS

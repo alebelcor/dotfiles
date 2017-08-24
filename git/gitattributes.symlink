@@ -1,4 +1,4 @@
-# Denote all files that are truly binary
+# Denote all files that are truly binary.
 
 # Fonts
 *.eot binary

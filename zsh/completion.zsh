@@ -10,7 +10,7 @@ else
   printf "\r  [ \u001b[33mWARN\u001b[39m ] zsh-autosuggestions is not installed.\n";
 fi
 
-# Syntax highlighting for ZSH
+# Syntax highlighting for ZSH.
 syntax_highlighting="$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 if test -f $syntax_highlighting

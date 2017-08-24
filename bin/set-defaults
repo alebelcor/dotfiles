@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "› Setting macOS defaults.\n"
-exec $ZSH/macos/set-defaults.sh

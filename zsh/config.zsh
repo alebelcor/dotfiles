@@ -71,7 +71,7 @@ setopt LOCAL_TRAPS
 # Suggest commands when they don't exist.
 setopt CORRECT
 
-# Spelling correction for arguments
+# Spelling correction for arguments.
 unsetopt CORRECT_ALL
 
 # Enable parameter expansion, command substitution, and arithmetic expansion
