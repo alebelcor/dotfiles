@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# Get domain name of an app.
+# Useful when getting/setting user defaults with the `defaults` command.
+#
+# Usage: domain <app name>
+# Example: `domain Xcode` returns `com.apple.dt.Xcode`
+#
+
+domain() {
+	local app="/Applications/$1.app"
+
+	if ! test -d "${app}"
+	then
+		echo "$app doesn't exist"
+		return 1
+	fi
+
+	mdls -name kMDItemCFBundleIdentifier -r "/Applications/$1.app"
+}
