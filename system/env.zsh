@@ -3,6 +3,9 @@
 # Make vim the default editor.
 export EDITOR='vim';
 
+# Always enable colored `grep` output.
+export GREP_OPTIONS='--color=auto';
+
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
@@ -15,6 +18,3 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 
 # Don't clear the screen after quitting a manual page.
 export MANPAGER='less -X';
-
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto';
