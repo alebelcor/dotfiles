@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-# Shortcut to this dotfiles path is $ZSH.
 ZSH="$HOME/projects/dotfiles"
 
 # Load ~/.localrc if it exists.
