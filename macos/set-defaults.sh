@@ -471,6 +471,9 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # 1Password
 # ==========================================================================
 
+# Start 1Password at login.
+defaults write com.agilebits.onepassword4 StartAtLogin -bool true
+
 # Always keep 1Password mini running.
 defaults write com.agilebits.onepassword4 KeepHelperRunning -bool true
 
