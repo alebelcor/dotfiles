@@ -528,8 +528,15 @@ defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 # Flux
 # ==========================================================================
 
+# Start Flux at login.
+defaults write org.herf.Flux startAtLogin -bool true
+
 # Set recommended colors.
 defaults write org.herf.Flux lateColorTemp -int 1900
+
+# Set location
+defaults write org.herf.Flux location -string "29.0975,-111.022"
+defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 
 # ==========================================================================
 # Lightshot Screenshot
