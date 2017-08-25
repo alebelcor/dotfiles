@@ -11,7 +11,6 @@ tap 'caskroom/fonts'
 
 brew 'coreutils'
 brew 'findutils'
-brew 'fontconfig'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
