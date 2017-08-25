@@ -5,8 +5,8 @@ printf "› Adding login items.\n"
 for app in "BitBar" \
 	"Caffeine" \
 	"Flux" \
-	"Lightshot Screenshot" \
 	"Google Chrome" \
+	"Lightshot Screenshot" \
 	"Spectacle";
 do
 	# Check if app is installed.
