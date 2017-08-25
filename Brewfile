@@ -23,7 +23,6 @@ brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
-#cask '1password'
 cask 'android-file-transfer'
 cask 'bitbar'
 cask 'caffeine'
@@ -54,7 +53,7 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 
-#mas '1Password - Password Manager and Secure Wallet', id: 443987910
-#mas 'Joystick Mapper', id: 528183797
-#mas 'Lightshot Screenshot', id: 526298438
-#mas 'TweetDeck', id: 485812721
+mas '1Password - Password Manager and Secure Wallet', id: 443987910
+mas 'Joystick Mapper', id: 528183797
+mas 'Lightshot Screenshot', id: 526298438
+mas 'TweetDeck', id: 485812721
