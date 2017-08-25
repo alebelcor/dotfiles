@@ -472,25 +472,25 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # ==========================================================================
 
 # Start 1Password at login.
-defaults write com.agilebits.onepassword4 StartAtLogin -bool true
+# defaults write com.agilebits.onepassword-osx StartAtLogin -bool true
 
 # Always keep 1Password mini running.
-defaults write com.agilebits.onepassword4 KeepHelperRunning -bool true
+defaults write com.agilebits.onepassword-osx KeepHelperRunning -bool true
 
 # Show mini app icon in the menu bar.
-defaults write com.agilebits.onepassword4 ShowStatusItem -bool true
+defaults write com.agilebits.onepassword-osx ShowStatusItem -bool true
 
 # Use rich icons.
-defaults write com.agilebits.onepassword4 ShowRichIcons -bool true
+defaults write com.agilebits.onepassword-osx ShowRichIcons -bool true
 
 # Don't show item count in sidebar.
-defaults write com.agilebits.onepassword4 ShowItemCounts -bool false
+defaults write com.agilebits.onepassword-osx ShowItemCounts -bool false
 
 # Conceal passwords.
-defaults write com.agilebits.onepassword4 ConcealPasswords -bool true
+defaults write com.agilebits.onepassword-osx ConcealPasswords -bool true
 
 # Automatically check for updates.
-defaults write com.agilebits.onepassword4 CheckForSoftwareUpdatesEnabled -bool true
+defaults write com.agilebits.onepassword-osx CheckForSoftwareUpdatesEnabled -bool true
 
 # ==========================================================================
 # BitBar
