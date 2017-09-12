@@ -97,6 +97,11 @@
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
 	default = matching
 
+[receive]
+
+	# Refuse force-pushes
+	denyNonFastForwards = true
+
 # URL shorthands.
 
 [url "git@github.com:"]
