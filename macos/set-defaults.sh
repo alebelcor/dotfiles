@@ -69,6 +69,9 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable auto-correct.
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Hide battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+
 # ==========================================================================
 # SSD-specific tweaks
 # ==========================================================================
