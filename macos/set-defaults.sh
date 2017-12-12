@@ -528,6 +528,34 @@ defaults write com.lightheadsw.Caffeine DefaultDuration -int 0
 defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 
 # ==========================================================================
+# Coin Tick
+# ==========================================================================
+
+# Set base currency to USD
+defaults write com.yonilevy.cryptoticker BASE_CURRENCY_NAME -string "USD"
+
+# Set favorite currencies to none (empty array)
+#defaults write com.yonilevy.cryptoticker FAVORITE_CURRENCIES -array
+
+# Set number of currencies to display to the top 30
+defaults write com.yonilevy.cryptoticker NUM_CURRENCIES_TO_DISPLAY -int 30
+
+# Set the color price changes to only show in the list
+defaults write com.yonilevy.cryptoticker PRICE_CHANGES_COLOR_CONFIG -int 1
+
+# Set precision to 4 digits
+defaults write com.yonilevy.cryptoticker PRICE_PRECISION -int 4
+
+# Hide the base currency symbol
+defaults write com.yonilevy.cryptoticker SHOW_BASE_CURRENCY_SYMBOL -int 0
+
+# Don't use coin symbols
+defaults write com.yonilevy.cryptoticker USE_SHORT_SYMBOLS -int 0
+
+# Don't use small font size on the menu item
+defaults write com.yonilevy.cryptoticker USE_SMALL_FONT_SIZE -int 0
+
+# ==========================================================================
 # Flux
 # ==========================================================================
 
@@ -611,6 +639,7 @@ defaults write org.m0k.transmission QueueDownloadNumber -int 1
 for app in "Activity Monitor" \
 	"BitBar" \
 	"Caffeine" \
+	"Coin Tick" \
 	"cfprefsd" \
 	"Dock" \
 	"Finder" \
