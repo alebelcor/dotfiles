@@ -580,6 +580,19 @@ defaults write com.skillbrains.lightshot GlobalShortcut -data 62706c6973743030d4
 defaults write com.skillbrains.lightshot downscaleRetinaScreens -bool false
 
 # ==========================================================================
+# Noisy
+# ==========================================================================
+
+# Set initial noise type to "Off"
+defaults write com.rathertremendous.noisy NoiseType -int 0
+
+# Set previous noisy type to "Brown"
+defaults write com.rathertremendous.noisy PreviousNoiseType -int 3
+
+# Set volume to 100%
+defaults write com.rathertremendous.noisy NoiseVolume -int 1
+
+# ==========================================================================
 # Spectacle
 # ==========================================================================
 
