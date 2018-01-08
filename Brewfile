@@ -53,7 +53,6 @@ cask 'sublime-text2'
 cask 'telegram'
 cask 'the-unarchiver'
 cask 'transmission'
-cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 
