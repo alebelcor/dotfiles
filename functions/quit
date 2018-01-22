@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Quit (soft kill) a running process.
+#
+# Usage: quit <executable>
+#
+
+quit() {
+	pkill -HUP "$1"
+}
