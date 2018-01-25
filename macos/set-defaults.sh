@@ -474,6 +474,19 @@ defaults write com.apple.commerce AutoUpdate -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # ==========================================================================
+# Calculator
+# ==========================================================================
+
+# Enable scientific calculator
+defaults write com.apple.calculator ViewDefaultsKey -string "Scientific"
+
+# Show thousands separator
+defaults write com.apple.calculator SeparatorsDefaultsKey -int 1
+
+# Set decimal places
+defaults write com.apple.calculator PrecisionDefaultsKey_2 -int 8
+
+# ==========================================================================
 # 1Password
 # ==========================================================================
 
@@ -652,6 +665,7 @@ defaults write org.m0k.transmission QueueDownloadNumber -int 1
 for app in "Activity Monitor" \
 	"BitBar" \
 	"Caffeine" \
+	"Calculator" \
 	"Coin Tick" \
 	"cfprefsd" \
 	"Dock" \
@@ -659,6 +673,7 @@ for app in "Activity Monitor" \
 	"Flux" \
 	"Google Chrome" \
 	"Lightshot Screenshot" \
+	"Noisy" \
 	"Photos" \
 	"Safari" \
 	"Spectacle" \
