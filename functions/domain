@@ -4,7 +4,7 @@
 # Useful when getting/setting user defaults with the `defaults` command.
 #
 # Usage: domain <app name>
-# Example: `domain Xcode` returns `com.apple.dt.Xcode`
+# Example: `domain "Xcode"` returns `com.apple.dt.Xcode`
 #
 
 domain() {
