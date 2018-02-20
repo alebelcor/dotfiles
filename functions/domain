@@ -16,5 +16,5 @@ domain() {
 		return 1
 	fi
 
-	mdls -name kMDItemCFBundleIdentifier -r "/Applications/$1.app"
+	mdls -name kMDItemCFBundleIdentifier -r "$app"
 }
