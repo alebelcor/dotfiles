@@ -138,6 +138,9 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 # Enable HiDPI display modes (requires restart).
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
+# Show mirroring options in the menu bar when available.
+defaults write com.apple.airplay showInMenuBarIfPresent -bool true
+
 # ==========================================================================
 # Finder
 # ==========================================================================
@@ -183,8 +186,8 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Keep folders on top when sorting by name.
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# When performing a search, search the current folder by default.
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# When performing a search, "Search This Mac" by default.
+defaults write com.apple.finder FXDefaultSearchScope -string "SCev"
 
 # Disable the warning when changing a file extension.
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
