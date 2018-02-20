@@ -6,8 +6,13 @@ tap 'homebrew/bundle'
 # Install Homebrew Cask
 tap 'caskroom/cask'
 
+# Tap for drivers as Casks
+tap 'caskroom/drivers'
+
 # Tap for fonts as Casks
 tap 'caskroom/fonts'
+
+# Command-line
 
 brew 'coreutils'
 brew 'findutils'
@@ -24,6 +29,8 @@ brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
+# Apps
+
 cask 'android-file-transfer'
 cask 'bitbar'
 cask 'caffeine'
@@ -34,7 +41,6 @@ cask 'disk-inventory-x'
 cask 'exodus'
 cask 'firefox'
 cask 'flux'
-cask 'font-fira-mono'
 cask 'google-chrome'
 cask 'google-hangouts'
 cask 'hyper'
@@ -55,6 +61,17 @@ cask 'the-unarchiver'
 cask 'transmission'
 cask 'vlc'
 cask 'whatsapp'
+
+# Drivers
+
+cask 'fitbit-connect'
+cask 'xbox360-controller-driver-unofficial'
+
+# Fonts
+
+cask 'font-fira-mono'
+
+# App Store
 
 mas '1Password - Password Manager and Secure Wallet', id: 443987910
 mas 'Coin Tick - Menu Bar Crypto', id: 1141688067
