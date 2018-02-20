@@ -547,29 +547,36 @@ defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 # Coin Tick
 # ==========================================================================
 
-# Set base currency to USD
+# Set base currency to USD.
 defaults write com.yonilevy.cryptoticker BASE_CURRENCY_NAME -string "USD"
 
-# Set favorite currencies to none (empty array)
+# Set favorite currencies to none (empty array).
 #defaults write com.yonilevy.cryptoticker FAVORITE_CURRENCIES -array
 
-# Set number of currencies to display to the top 30
+# Set number of currencies to display to the top 30.
 defaults write com.yonilevy.cryptoticker NUM_CURRENCIES_TO_DISPLAY -int 30
 
-# Set the color price changes to only show in the list
+# Set the color price changes to only show in the list.
 defaults write com.yonilevy.cryptoticker PRICE_CHANGES_COLOR_CONFIG -int 1
 
-# Set precision to 4 digits
+# Set precision to 4 digits.
 defaults write com.yonilevy.cryptoticker PRICE_PRECISION -int 4
 
-# Hide the base currency symbol
+# Hide the base currency symbol.
 defaults write com.yonilevy.cryptoticker SHOW_BASE_CURRENCY_SYMBOL -int 0
 
-# Don't use coin symbols
+# Don't use coin symbols.
 defaults write com.yonilevy.cryptoticker USE_SHORT_SYMBOLS -int 0
 
-# Don't use small font size on the menu item
+# Don't use small font size on the menu item.
 defaults write com.yonilevy.cryptoticker USE_SMALL_FONT_SIZE -int 0
+
+# ==========================================================================
+# Fitbit Connect
+# ==========================================================================
+
+# Don't show menu bar icon.
+defaults write com.fitbit.GalileoClient menubarHelperNotKeepRunning -int 0
 
 # ==========================================================================
 # Flux
@@ -599,13 +606,13 @@ defaults write com.skillbrains.lightshot downscaleRetinaScreens -bool false
 # Noisy
 # ==========================================================================
 
-# Set initial noise type to "Off"
+# Set initial noise type to "Off".
 defaults write com.rathertremendous.noisy NoiseType -int 0
 
-# Set previous noisy type to "Brown"
+# Set previous noisy type to "Brown".
 defaults write com.rathertremendous.noisy PreviousNoiseType -int 3
 
-# Set volume to 100%
+# Set volume to 100%.
 defaults write com.rathertremendous.noisy NoiseVolume -int 1
 
 # ==========================================================================
@@ -673,6 +680,7 @@ for app in "Activity Monitor" \
 	"cfprefsd" \
 	"Dock" \
 	"Finder" \
+	"Fitbit Connect" \
 	"Flux" \
 	"Google Chrome" \
 	"Lightshot Screenshot" \
