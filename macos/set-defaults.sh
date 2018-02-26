@@ -593,6 +593,67 @@ defaults write org.herf.Flux location -string "29.0975,-111.022"
 defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 
 # ==========================================================================
+# Google Chrome
+# ==========================================================================
+
+# -- Default search provider
+
+# Enable the use of a default search provider.
+defaults write com.google.Chrome DefaultSearchProviderEnabled -bool true
+
+# Set the name of the default search provider.
+defaults write com.google.Chrome DefaultSearchProviderName -string "Encrypted Google"
+
+# Set the keyword of the default search provider provider, as trigger, for the omnibox.
+defaults write com.google.Chrome DefaultSearchProviderKeyword -string "google.com"
+
+# Set the search URL of the default search provider.
+defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://encrypted.google.com/search?hl=en&q=%s"
+
+# -- Password manager
+
+# Disable saving passwords to the password manager.
+defaults write com.google.Chrome PasswordManagerEnabled -bool false
+
+# -- Startup pages
+
+# Continue where you left off on startup.
+defaults write com.google.Chrome RestoreOnStartup -int 1
+
+# --
+
+# Disable autofill.
+defaults write com.google.Chrome AutoFillEnabled -bool false
+
+# Disable autofill for credit cards.
+defaults write com.google.Chrome AutofillCreditCardEnabled -bool false
+
+# Enable bookmark bar.
+defaults write com.google.Chrome BookmarkBarEnabled -bool true
+
+# Set download directory.
+defaults write com.google.Chrome DefaultDownloadDirectory -string "$HOME/Downloads"
+defaults write com.google.Chrome DownloadDirectory -string "$HOME/Downloads"
+
+# Use the system-native print preview dialog instead of the print preview.
+defaults write com.google.Chrome DisablePrintPreview -bool true
+
+# Use hardware acceleration when available.
+defaults write com.google.Chrome HardwareAccelerationModeEnabled -bool true
+
+# Disable reporting of usage and crash-related data.
+defaults write com.google.Chrome MetricsReportingEnabled -bool false
+
+# Don't ask where to save each file before downloading.
+defaults write com.google.Chrome PromptForDownloadLocation -bool false
+
+# Hide the Home button on the toolbar.
+defaults write com.google.Chrome ShowHomeButton -bool false
+
+# Disable spell checking web service.
+defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
+
+# ==========================================================================
 # Lightshot Screenshot
 # ==========================================================================
 
