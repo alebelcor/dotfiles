@@ -354,6 +354,7 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 # Don't send search queries to Apple.
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
 
 # Show the full URL in the address bar (note: this still hides the scheme).
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
