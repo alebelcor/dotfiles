@@ -359,6 +359,11 @@ defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
 # Show the full URL in the address bar (note: this still hides the scheme).
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
 # Add a context menu item for showing the Web Inspector in web views.
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
@@ -367,6 +372,12 @@ defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
 
 # Disable auto-correct.
 defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable AutoFill.
+defaults write com.apple.Safari AutoFillFromAddressBook -bool false
+defaults write com.apple.Safari AutoFillPasswords -bool false
+defaults write com.apple.Safari AutoFillCreditCardData -bool false
+defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
 # Warn about fraudulent websites.
 defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
@@ -383,8 +394,11 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
 
-# Enable “Do Not Track”.
+# Enable "Do Not Track".
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+# Update extensions automatically.
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 # ==========================================================================
 # Spotlight
