@@ -1,28 +1,30 @@
 #!/usr/bin/env zsh
 
+# Set shortcut to dotfiles path
 ZSH="$HOME/projects/dotfiles"
+export ZSH
 
 # Load ~/.localrc if it exists.
 # A place to store private/custom shell information like environmental variables.
-if [[ -a ~/.localrc ]]
+if test -f ~/.localrc
 then
-  source ~/.localrc
+  source "$HOME/.localrc"
 fi
 
 # All of our ZSH files.
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=("$ZSH"/**/*.zsh)
 
 # Load the path files.
 for file in ${(M)config_files:#*/path.zsh}
 do
-  source $file
+  source "$file"
 done
 
 # Load everything except the path and completion files.
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
-  source $file
+  source "$file"
 done
 
 # Initialize autocomplete here, otherwise functions won't be loaded.
@@ -32,7 +34,7 @@ compinit
 # Load every completion, after autocomplete loads.
 for file in ${(M)config_files:#*/completion.zsh}
 do
-  source $file
+  source "$file"
 done
 
 unset config_files

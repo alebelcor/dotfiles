@@ -1,9 +1,7 @@
 #!/usr/bin/env zsh
 
-ZSH="$HOME/projects/dotfiles"
-
 # Automatically load functions in `functions` folder.
-autoload -U $ZSH/functions/*(:t)
+autoload -U "$ZSH"/functions/*(:t)
 
 # ==========================================================================
 # ZSH options

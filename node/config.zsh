@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Initialize `nodenv`.
-if test $(which nodenv)
+if test "$(command -v nodenv)"
 then
   eval "$(nodenv init -)"
 fi

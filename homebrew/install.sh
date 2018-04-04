@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Check for Homebrew.
-if test ! $(which brew)
+if test ! "$(command -v brew)"
 then
-  echo "› Installing Homebrew.\n"
+  printf "› Installing Homebrew.\\n"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > /dev/null
 fi

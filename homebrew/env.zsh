@@ -7,4 +7,4 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
 # Abort installation of cask if not checksum is defined.
-export HOMEBREW_CASK_OPTS="--require-sha"
+export HOMEBREW_CASK_OPTS='--require-sha'

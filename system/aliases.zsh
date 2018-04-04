@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-alias e="exit"
+alias e='exit'
 
 # Enable aliases to be sudo'd.
 alias sudo='sudo '
@@ -9,30 +9,30 @@ alias sudo='sudo '
 alias grep='grep --color'
 
 # Easier navigation.
-alias cd..="cd .."
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~"
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ~='cd ~'
 
 # Shortcuts.
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias dl='cd ~/Downloads'
+alias dt='cd ~/Desktop'
+alias p='cd ~/projects'
 
 # Add this to long-running commands to know when they're done.
 alias end="say 'Done'"
 
 # Flush the DNS cache (for El Capitan). Use it after modifying the hosts file.
-alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;"
+alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;'
 
 # Detect which `ls` flavor is in use.
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+	colorflag='--color'
 else # OS X `ls`
-	colorflag="-G"
+	colorflag='-G'
 fi
 
 # Always use color output for `ls`.
-alias ls="command ls ${colorflag}"
+alias ls='command ls ${colorflag}'
