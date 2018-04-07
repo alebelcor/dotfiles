@@ -4,9 +4,9 @@
 ZSH="$HOME/projects/dotfiles"
 export ZSH
 
-# Load ~/.localrc if it exists.
+# Load .localrc if it exists.
 # A place to store private/custom shell information like environmental variables.
-if test -f ~/.localrc
+if test -f "$HOME/.localrc"
 then
   source "$HOME/.localrc"
 fi
