@@ -20,6 +20,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX
 # ==========================================================================
 
+# Disable the sound effects on boot.
+sudo nvram SystemAudioVolume=" "
+
 # Disable transparency in the menu bar and elsewhere on Yosemite.
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
@@ -79,7 +82,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 # Disable hibernation (speeds up entering sleep mode).
 sudo pmset -a hibernatemode 0
 
-# ==========================================================================
+# ===============================================f===========================
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
 # ==========================================================================
 
