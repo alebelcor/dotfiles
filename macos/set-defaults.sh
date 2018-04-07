@@ -16,9 +16,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# ==========================================================================
-# General UI/UX
-# ==========================================================================
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
 
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
@@ -33,8 +33,28 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.5
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Always show scrollbars.
-# Possible values: `WhenScrolling`, `Automatic` and `Always`
+# Possible values:
+#   WhenScrolling
+#   Automatic
+#   Always
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+# Disable the over-the-top focus ring animation.
+defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
+
+# Increase window resize speed for Cocoa applications.
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Expand save panel by default.
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default.
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Save to disk (not to iCloud) by default.
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete.
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
@@ -45,11 +65,18 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Remove duplicates in the "Open With" menu.
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
+# Display ASCII control characters using caret notation in standard text views.
+# Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
+defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+
 # Disable "Resume" system-wide.
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps.
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+# Set Help Viewer windows to non-floating mode.
+defaults write com.apple.helpviewer DevMode -bool true
 
 # Restart automatically if the computer freezes.
 sudo systemsetup -setrestartfreeze on
@@ -57,16 +84,16 @@ sudo systemsetup -setrestartfreeze on
 # Disable "Notification Center" and remove the menu bar icon.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
-# Disable automatic capitalization.
+# Disable automatic capitalization as it's annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
-# Disable smart dashes.
+# Disable smart dashes as they're annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# Disable automatic period substitution.
+# Disable automatic period substitution as it's annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
-# Disable smart quotes.
+# Disable smart quotes as they're annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable auto-correct.
@@ -75,22 +102,32 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Hide battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 
-# ==========================================================================
-# SSD-specific tweaks
-# ==========================================================================
+###############################################################################
+# SSD-specific tweaks                                                         #
+###############################################################################
 
 # Disable hibernation (speeds up entering sleep mode).
 sudo pmset -a hibernatemode 0
 
-# ===============================================f===========================
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input
-# ==========================================================================
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
 
 # Disable "natural" (Lion-style) scrolling.
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets.
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# Enable full keyboard access for all controls.
+# (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Use scroll gesture with the Ctrl (^) modifier key to zoom.
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# Follow the keyboard focus while zoomed in.
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -108,7 +145,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # Use all F1, F2, etc. keys as standard function keys.
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
-# Set tracking speed
+# Set tracking speed.
 defaults write NSGlobalDomain com.apple.mouse.scaling -float 0.875
 
 # Show language menu in the top right corner of the boot screen.
@@ -117,9 +154,12 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values.
 sudo systemsetup -settimezone "America/Hermosillo" > /dev/null
 
-# ==========================================================================
-# Screen
-# ==========================================================================
+# Stop iTunes from responding to the keyboard media keys.
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+###############################################################################
+# Screen                                                                      #
+###############################################################################
 
 # Require password immediately after sleep or screen saver begins.
 defaults write com.apple.screensaver askForPassword -int 1
@@ -144,9 +184,9 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Show mirroring options in the menu bar when available.
 defaults write com.apple.airplay showInMenuBarIfPresent -bool true
 
-# ==========================================================================
-# Finder
-# ==========================================================================
+###############################################################################
+# Finder                                                                      #
+###############################################################################
 
 # Open folders in tabs instead of new windows.
 defaults write com.apple.finder FinderSpawnTab -bool true
@@ -196,8 +236,12 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Keep folders on top when sorting by name.
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# When performing a search, "Search This Mac" by default.
-defaults write com.apple.finder FXDefaultSearchScope -string "SCev"
+# When performing a search, search the current folder by default.
+# Possible values:
+#   SCev: This Mac
+#   SCcf: Current Folder
+#   SCsp: Previous Scope
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Disable the warning when changing a file extension.
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -268,9 +312,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true
 
-# ==========================================================================
-# Dock, Dashboard, and hot corners
-# ==========================================================================
+###############################################################################
+# Dock, Dashboard, and hot corners                                            #
+###############################################################################
 
 # Enable highlight hover effect for the grid view of a stack (Dock).
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
@@ -357,9 +401,9 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock wvous-br-modifier -int 0
 
-# ==========================================================================
-# Safari & WebKit
-# ==========================================================================
+###############################################################################
+# Safari & WebKit                                                             #
+###############################################################################
 
 # Don't send search queries to Apple.
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -369,7 +413,34 @@ defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
 # Show the full URL in the address bar (note: this still hides the scheme).
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
-# Enable the Develop menu and the Web Inspector in Safari
+# Set Safari's home page to `about:blank` for faster loading.
+defaults write com.apple.Safari HomePage -string "about:blank"
+
+# Prevent Safari from opening 'safe' files automatically after downloading.
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# Allow hitting the Backspace key to go to the previous page in history.
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+
+# Hide Safari's bookmarks bar by default.
+defaults write com.apple.Safari ShowFavoritesBar -bool false
+
+# Hide Safari's sidebar in Top Sites.
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+
+# Disable Safari's thumbnail cache for History and Top Sites.
+defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+
+# Enable Safari's debug menu.
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+# Make Safari's search banners default to Contains instead of Starts With.
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+
+# Remove useless icons from Safari's bookmarks bar.
+defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+
+# Enable the Develop menu and the Web Inspector in Safari.
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
@@ -410,9 +481,9 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 # Update extensions automatically.
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
-# ==========================================================================
-# Spotlight
-# ==========================================================================
+###############################################################################
+# Spotlight                                                                   #
+###############################################################################
 
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
@@ -453,9 +524,9 @@ sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch.
 sudo mdutil -E / > /dev/null
 
-# ==========================================================================
-# Terminal
-# ==========================================================================
+###############################################################################
+# Terminal                                                                    #
+###############################################################################
 
 # Only use UTF-8 in Terminal.app.
 defaults write com.apple.terminal StringEncodings -array 4
@@ -467,9 +538,9 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 # Disable the annoying line marks.
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
-# ==========================================================================
-# Time Machine
-# ==========================================================================
+###############################################################################
+# Time Machine                                                                #
+###############################################################################
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume.
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
@@ -477,9 +548,9 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Disable local Time Machine backups.
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
-# ==========================================================================
-# Activity Monitor
-# ==========================================================================
+###############################################################################
+# Activity Monitor                                                            #
+###############################################################################
 
 # Show the main window when launching Activity Monitor.
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -494,9 +565,9 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-# ==========================================================================
-# TextEdit and Disk Utility
-# ==========================================================================
+###############################################################################
+# TextEdit, QuickTime and Disk Utility                                        #
+###############################################################################
 
 # Use plain text mode for new TextEdit documents.
 defaults write com.apple.TextEdit RichText -int 0
@@ -512,9 +583,9 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 # Auto-play videos when opened with QuickTime Player.
 defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
-# ==========================================================================
-# Mac App Store
-# ==========================================================================
+###############################################################################
+# Mac App Store                                                               #
+###############################################################################
 
 # Enable Debug Menu in the Mac App Store.
 defaults write com.apple.appstore ShowDebugMenu -bool true
@@ -537,16 +608,16 @@ defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
 # Turn on app auto-update.
 defaults write com.apple.commerce AutoUpdate -bool true
 
-# ==========================================================================
-# Photos
-# ==========================================================================
+###############################################################################
+# Photos                                                                      #
+###############################################################################
 
 # Prevent Photos from opening automatically when devices are plugged in.
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-# ==========================================================================
-# Calculator
-# ==========================================================================
+###############################################################################
+# Calculator                                                                  #
+###############################################################################
 
 # Enable scientific calculator
 defaults write com.apple.calculator ViewDefaultsKey -string "Scientific"
@@ -557,9 +628,9 @@ defaults write com.apple.calculator SeparatorsDefaultsKey -int 1
 # Set decimal places
 defaults write com.apple.calculator PrecisionDefaultsKey_2 -int 8
 
-# ==========================================================================
-# 1Password
-# ==========================================================================
+###############################################################################
+# 1Password                                                                   #
+###############################################################################
 
 # Always keep 1Password mini running.
 defaults write com.agilebits.onepassword-osx KeepHelperRunning -bool true
@@ -579,9 +650,9 @@ defaults write com.agilebits.onepassword-osx ConcealPasswords -bool true
 # Automatically check for updates.
 defaults write com.agilebits.onepassword-osx CheckForSoftwareUpdatesEnabled -bool true
 
-# ==========================================================================
-# BitBar
-# ==========================================================================
+###############################################################################
+# BitBar                                                                      #
+###############################################################################
 
 # Create plugin folder if it doesn't exist.
 mkdir -p "${HOME}/bitbar-plugins"
@@ -589,9 +660,9 @@ mkdir -p "${HOME}/bitbar-plugins"
 # Set plugin folder.
 defaults write com.matryer.BitBar pluginsDirectory -string "${HOME}/bitbar-plugins"
 
-# ==========================================================================
-# Caffeine
-# ==========================================================================
+###############################################################################
+# Caffeine                                                                    #
+###############################################################################
 
 # Activate at launch.
 defaults write com.lightheadsw.Caffeine ActivateOnLaunch -bool true
@@ -611,16 +682,16 @@ defaults write com.lightheadsw.Caffeine DefaultDuration -int 0
 # Suppress welcome message when starting.
 defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 
-# ==========================================================================
-# Fitbit Connect
-# ==========================================================================
+###############################################################################
+# Fitbit Connect                                                              #
+###############################################################################
 
 # Don't show menu bar icon.
 defaults write com.fitbit.GalileoClient menubarHelperNotKeepRunning -int 0
 
-# ==========================================================================
-# Flux
-# ==========================================================================
+###############################################################################
+# Flux                                                                        #
+###############################################################################
 
 # Start Flux at login.
 defaults write org.herf.Flux startAtLogin -bool true
@@ -632,9 +703,9 @@ defaults write org.herf.Flux lateColorTemp -int 1900
 defaults write org.herf.Flux location -string "29.0975,-111.022"
 defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 
-# ==========================================================================
-# Google Chrome
-# ==========================================================================
+###############################################################################
+# Google Chrome                                                               #
+###############################################################################
 
 # -- Default search provider
 
@@ -693,9 +764,9 @@ defaults write com.google.Chrome ShowHomeButton -bool false
 # Disable spell checking web service.
 defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
 
-# ==========================================================================
-# Lightshot Screenshot
-# ==========================================================================
+###############################################################################
+# Lightshot Screenshot                                                        #
+###############################################################################
 
 # Capture screenshot via ⌘ + ⇧ + 1.
 defaults write com.skillbrains.lightshot GlobalShortcut -data 62706c6973743030d40102030405061617582476657273696f6e58246f626a65637473592461726368697665725424746f7012000186a0a307080f55246e756c6cd3090a0b0c0d0e574b6579436f64655624636c6173735d4d6f646966696572466c616773101280021200120000d2101112135a24636c6173736e616d655824636c61737365735b4d415353686f7274637574a214155b4d415353686f7274637574584e534f626a6563745f100f4e534b657965644172636869766572d1181954726f6f74800108111a232d32373b414850576567696e737e879396a2abbdc0c50000000000000101000000000000001a000000000000000000000000000000c7
@@ -703,9 +774,9 @@ defaults write com.skillbrains.lightshot GlobalShortcut -data 62706c6973743030d4
 # Don't downscale retina screens.
 defaults write com.skillbrains.lightshot downscaleRetinaScreens -bool false
 
-# ==========================================================================
-# Noisy
-# ==========================================================================
+###############################################################################
+# Noisy                                                                       #
+###############################################################################
 
 # Set initial noise type to "Off".
 defaults write com.rathertremendous.noisy NoiseType -int 0
@@ -716,9 +787,9 @@ defaults write com.rathertremendous.noisy PreviousNoiseType -int 3
 # Set volume to 100%.
 defaults write com.rathertremendous.noisy NoiseVolume -int 1
 
-# ==========================================================================
-# Spectacle
-# ==========================================================================
+###############################################################################
+# Spectacle                                                                   #
+###############################################################################
 
 # Turn on automatic updates.
 defaults write com.divisiblebyzero.Spectacle SUEnableAutomaticChecks -bool true
@@ -726,9 +797,9 @@ defaults write com.divisiblebyzero.Spectacle SUEnableAutomaticChecks -bool true
 # Run as a background application (false). Run in the status menu (true).
 defaults write com.divisiblebyzero.Spectacle StatusItemEnabled -bool false
 
-# ==========================================================================
-# Transmission
-# ==========================================================================
+###############################################################################
+# Transmission                                                                #
+###############################################################################
 
 # Use `~/Documents/Torrents` to store incomplete downloads.
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
@@ -770,14 +841,13 @@ defaults write org.m0k.transmission RatioLimit -string "2.00"
 defaults write org.m0k.transmission Queue -bool true
 defaults write org.m0k.transmission QueueDownloadNumber -int 1
 
-# ==========================================================================
-# Kill affected applications
-# ==========================================================================
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
 for app in "Activity Monitor" \
 	"BitBar" \
 	"Caffeine" \
 	"Calculator" \
-	"Coin Tick" \
 	"cfprefsd" \
 	"Dock" \
 	"Finder" \
