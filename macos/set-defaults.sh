@@ -158,8 +158,15 @@ defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Set Downloads folder as the default location for new Finder windows.
-# For other paths, use `PfLo` and `file:///full/path/here/`
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
+# Possible values
+#   PfCm: Computer
+#   PfVo: Volume
+#   PfHm: $HOME
+#   PfDe: Desktop
+#   PfDo: Documents
+#   PfAF: All My Files
+#   PfLo: Other
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
 
 # Show icons for hard drives, servers, and removable media on the desktop.
