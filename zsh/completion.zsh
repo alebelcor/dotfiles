@@ -7,7 +7,7 @@ if test -f "$autosuggestions"
 then
   source "$autosuggestions"
 else
-  printf "\\r  [ \\u001b[33mWARN\\u001b[39m ] zsh-autosuggestions is not installed.\\n";
+  printf "\\r  [ \\033[0;33mWARN\\033[0m ] zsh-autosuggestions is not installed.\\n"
 fi
 
 # Syntax highlighting for ZSH.
@@ -17,7 +17,7 @@ if test -f "$syntax_highlighting"
 then
   source "$syntax_highlighting"
 else
-  printf "\\r  [ \\u001b[33mWARN\\u001b[39m ] zsh-syntax-highlighting is not installed.\\n";
+  printf "\\r  [ \\033[0;33mWARN\\033[0m ] zsh-syntax-highlighting is not installed.\\n"
 fi
 
 # Matches case insensitive for lowercase.

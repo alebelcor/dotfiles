@@ -5,14 +5,14 @@ DOTFILES_NODE="$(pwd -P)"
 # Check for `nodenv`.
 if test ! "$(command -v nodenv)"
 then
-	printf "\\r  [ \\u001b[33mWARN\\u001b[39m ] nodenv is not installed.\\n"
+	printf "\\r  [ \\033[0;33mWARN\\033[0m ] nodenv is not installed.\\n"
 	exit 1
 fi
 
 # Check for `git`
 if test ! "$(command -v git)"
 then
-	printf "\\r  [ \\u001b[33mWARN\\u001b[39m ] git is not installed.\\n"
+	printf "\\r  [ \\033[0;33mWARN\\033[0m ] git is not installed.\\n"
 	exit 1
 fi
 

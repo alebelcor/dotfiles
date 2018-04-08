@@ -5,8 +5,8 @@ printf "› Installing ZSH.\\n"
 # Check if ZSH is installed.
 if test ! "$(command -v zsh)"
 then
-	printf "\\r  [ \\u001b[33mWARN\\u001b[39m ] ZSH is not installed.\\n";
-	exit 1;
+	printf "\\r  [ \\033[0;33mWARN\\033[0m ] ZSH is not installed.\\n"
+	exit 1
 fi
 
 # Check if ZSH is in `/etc/shells`.
