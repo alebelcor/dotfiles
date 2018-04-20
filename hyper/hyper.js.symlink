@@ -9,19 +9,6 @@ module.exports = {
     // The font family to use with optional fallbacks.
     fontFamily: '"Fira Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
-    // The shape of the caret in the terminal.
-    // Available options are: 'BEAM', 'UNDERLINE', 'BLOCK'.
-    cursorShape: 'BLOCK',
-
-    // If true, cursor will blink.
-    cursorBlink: false,
-
-    // Custom CSS to include in the main window.
-    css: '',
-
-    // Custom CSS to include in the terminal window.
-    termCSS: '',
-
     // CSS padding values for the space around each term.
     padding: '14px',
 
@@ -29,23 +16,20 @@ module.exports = {
     shell: '/usr/local/bin/zsh',
 
     // The default width/height in pixels of a new window e.g. [540, 380].
-    windowSize: [740, 580],
+    windowSize: [820, 640],
 
     // If true, selected text will automatically be copied to the clipboard.
     copyOnSelect: true,
 
-    // System bell configuration. Available options are: "SOUND", false.
-    bell: "SOUND",
-
-    // For environment variables.
-    env: {},
-
     // --- PLUGINS
 
-    // https://github.com/zeit/hyperlinks
-    hyperlinks: {
-      defaultBrowser: true,
-      clickAction: 'open',
+    // https://github.com/henrikdahl/hyper-tabs-enhanced
+    hyperTabs: {
+      border: false,
+      closeAlign: 'right',
+      trafficButtons: true,
+      tabIcons: true,
+      tabIconsColored: true
     }
   },
 
@@ -56,8 +40,15 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
+
+    // https://github.com/jaanauati/hyper-search
+    'hyper-search',
+
+    // https://github.com/sindresorhus/hyper-snazzy
     'hyper-snazzy',
-    'hyperlinks'
+
+    // https://github.com/henrikdahl/hyper-tabs-enhanced
+    'hyper-tabs-enhanced'
   ],
 
   // in development, you can create a directory under
