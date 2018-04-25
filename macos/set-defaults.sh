@@ -20,6 +20,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+# Privacy: Disable storing information about downloaded files by Quarantine.
+# Clear the file.
+:> ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
+# Make the file immutable.
+sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
+
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
 
