@@ -26,6 +26,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Make the file immutable.
 sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
 
+# Allow apps downloaded from "Anywhere".
+sudo spctl --master-disable
+
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
 
@@ -108,7 +111,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Hide battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 
-# Show certain preferences in menu bar
+# Show certain preferences in menu bar.
 #   1. Wi-Fi
 #   2. Volume
 #   3. Displays
