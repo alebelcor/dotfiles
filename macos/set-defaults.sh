@@ -108,6 +108,21 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Hide battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 
+# Show certain preferences in menu bar
+#   1. Wi-Fi
+#   2. Volume
+#   3. Displays
+#   4. Battery
+#   5. Date & Time
+#   6. Keyboard
+defaults write com.apple.systemuiserver menuExtras -array \
+	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+	"/System/Library/CoreServices/Menu Extras/Volume.menu" \
+	"/System/Library/CoreServices/Menu Extras/Displays.menu" \
+	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
+	"/System/Library/CoreServices/Menu Extras/Clock.menu" \
+	"/System/Library/CoreServices/Menu Extras/TextInput.menu"
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
