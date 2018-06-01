@@ -6,6 +6,7 @@
 # Exit if any subcommand or pipeline returns a non-zero status.
 set -e
 
+# Go up one level.
 cd "$(dirname "$0")/.."
 
 printf "\\r› Installing packages and applications.\\n\\n"
