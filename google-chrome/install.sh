@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#
+# Install Google Chrome extensions.
+#
 
 # Ensure destination folder exists.
 DESTINATION="$HOME/Library/Application Support/Google/Chrome/External Extensions"
