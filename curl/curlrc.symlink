@@ -4,11 +4,11 @@ connect-timeout = 30
 # Show progress using a progress meter.
 progress-bar
 
-# When following a redirect, automatically set the previous URL as referer.
+# When following a redirect, automatically set the previous URL as referrer.
 referer = ";auto"
 
 # Show error messages.
 show-error
 
 # Disguise as Google Chrome.
-user-agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36"
+user-agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36"
