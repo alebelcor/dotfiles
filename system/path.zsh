@@ -7,7 +7,7 @@ path=("$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin" $path)
 path=("$HOMEBREW_PREFIX/bin" $path)
 path=("$HOMEBREW_PREFIX/sbin" $path)
 
-# Adding local /bin folder.
+# Adding local `/bin` folder.
 path=("$ZSH/bin" $path)
 
 # Adding coreutils' man pages.
