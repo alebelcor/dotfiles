@@ -9,6 +9,13 @@
 # Bundle ID             UTI/ext/MIME Type              Role
 #
 
+# Protection against Sparklegate
+# https://www.taoeffect.com/blog/2016/02/apologies-sky-kinda-falling-protecting-yourself-from-sparklegate/
+com.apple.Safari        afp
+com.apple.Safari        ftp
+com.apple.Safari        nfs
+com.apple.Safari        smb
+
 # Set "Sublime Text" as the default app for:
 #   * .md, .markdown
 #   * .txt, text/plain
