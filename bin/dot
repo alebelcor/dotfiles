@@ -23,3 +23,6 @@ brew update > /dev/null
 
 # Set macOS login items.
 "$ZSH"/macos/set-login-items.sh
+
+# Set user agents.
+"$ZSH"/macos/set-user-agents.sh
