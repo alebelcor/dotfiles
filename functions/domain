@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Get domain name of an app.
+# Get the domain name of an app.
 # Useful when getting/setting user defaults with the `defaults` command.
 #
 # Usage: domain <app name>
@@ -12,9 +12,9 @@ domain() {
 
 	if ! test -d "${app}"
 	then
-		echo "$app doesn't exist"
+		echo "App not found: $app"
 		return 1
 	fi
 
-	mdls -name kMDItemCFBundleIdentifier -r "$app"
+	mdls -name kMDItemCFBundleIdentifier -raw "$app"
 }
