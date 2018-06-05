@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# Get the Uniform Type Identifiers of a file.
+# Useful when getting/setting default applications for various document types.
+#
+# Usage: uti <file path>
+# Example: `uti "readme.md"` returns `net.daringfireball.markdown`
+#
+
+uti() {
+	if ! test -f "$1"
+	then
+		echo "File not found: $1"
+		return 1
+	fi
+
+	mdls -name kMDItemContentType -raw "$1"
+}
