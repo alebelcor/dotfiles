@@ -15,6 +15,7 @@ tap 'caskroom/fonts'
 # Command-line
 
 brew 'coreutils'
+brew 'duti'
 brew 'findutils'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']

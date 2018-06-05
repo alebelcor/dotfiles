@@ -1,0 +1,47 @@
+# `duti` is a command-line utility capable of setting default applications for
+# various document types on macOS, using Apple's Uniform Type Identifiers (UTI).
+#
+# Documentation at `man duti` or http://duti.org/documentation.html
+#
+# List of Uniform Type Identifiers in OS X:
+# https://developer.apple.com/library/mac/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html
+#
+# Bundle ID             UTI/ext/MIME Type              Role
+#
+
+# Set "Transmission" as the default app for:
+#   * "magnet" URI scheme
+#   * .torrent
+org.m0k.transmission    magnet
+org.m0k.transmission    org.bittorrent.torrent         all
+
+# Set "VLC" as the default app for "movie" files
+org.videolan.vlc        public.movie                   viewer
+
+# Set "The Unarchiver" as the default app for:
+#   * .gtar, application/x-gtar
+#   * .tar, application/x-tar, application/tar
+#   * .gz, .gzip, application/x-gzip, application/gzip
+#   * .tgz
+#   * .zip, application/zip
+cx.c3.theunarchiver     org.gnu.gnu-tar-archive        all
+cx.c3.theunarchiver     public.tar-archive             all
+cx.c3.theunarchiver     org.gnu.gnu-zip-archive        all
+cx.c3.theunarchiver     org.gnu.gnu-zip-tar-archive    all
+cx.c3.theunarchiver     com.pkware.zip-archive         all
+
+# Set "Sublime Text" as the default app for:
+#   * .md, .markdown
+#   * .txt, text/plain
+#   * .xml, text/xml
+#   * .sh, .command
+#   * .json
+#   * .log
+#   * .zsh
+com.sublimetext.2       net.daringfireball.markdown    editor
+com.sublimetext.2       public.plain-text              editor
+com.sublimetext.2       public.xml                     editor
+com.sublimetext.2       public.shell-script            editor
+com.sublimetext.2       public.json                    editor
+com.sublimetext.2       com.apple.log                  editor
+com.sublimetext.2       public.zsh-script              editor
