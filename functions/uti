@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Get the Uniform Type Identifiers of a file.
+# Get the Uniform Type Identifier of a file.
 # Useful when getting/setting default applications for various document types.
 #
 # Usage: uti <file path>
