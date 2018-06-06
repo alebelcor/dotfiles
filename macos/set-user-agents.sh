@@ -21,5 +21,4 @@ setup_agent() {
 
 printf "› Setting user agents.\\n"
 
-# Set up "Launch Fitbit Connect" agent.
-setup_agent "launch-fitbit-connect.plist"
+setup_agent "fitbit-connect-launcher.plist"
