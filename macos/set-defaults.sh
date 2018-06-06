@@ -26,6 +26,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Make the file immutable.
 sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
 
+# Disable crash reporter.
+defaults write com.apple.CrashReporter DialogType none
+
+# Disable Bonjour multicast advertisements.
+sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool true
+
 # Allow apps downloaded from "Anywhere".
 sudo spctl --master-disable
 
@@ -241,6 +247,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Show hidden files by default.
 defaults write com.apple.finder AppleShowAllFiles -bool true
+chflags nohidden ~/Library
 
 # Show all filename extensions.
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
