@@ -22,3 +22,5 @@ setup_agent() {
 printf "› Setting user agents.\\n"
 
 setup_agent "fitbit-connect-launcher.plist"
+
+setup_agent "duti-watcher.plist"

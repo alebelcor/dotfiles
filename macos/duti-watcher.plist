@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<!-- Key to uniquely identify the job to `launchd` -->
+		<key>Label</key>
+		<string>duti-watcher</string>
+
+		<!-- Absolute path to the executable -->
+		<key>ProgramArguments</key>
+		<array>
+			<string>/usr/local/bin/duti</string>
+			<string>/Users/abeltran/.duti</string>
+		</array>
+
+		<!-- Absolute path to the file being watched -->
+		<key>WatchPaths</key>
+		<array>
+			<string>/Users/abeltran/.duti</string>
+		</array>
+	</dict>
+</plist>
