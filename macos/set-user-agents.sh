@@ -4,6 +4,8 @@
 #
 # More information here: http://www.launchd.info/
 #
+# Note: Set proper permissions for new `.plist`: `chmod 644 new.plist`
+#
 
 setup_agent() {
 	local destination="$HOME/Library/LaunchAgents/"
