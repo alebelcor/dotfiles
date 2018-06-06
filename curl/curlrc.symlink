@@ -1,5 +1,11 @@
-# Wait 30 seconds before timing out.
+# Wait 30 seconds before timing out connection.
 connect-timeout = 30
+
+# Resolve names to IPv4 addresses only
+ipv4
+
+# Wait 30 seconds before timing out operation.
+max-time = 90
 
 # Show progress using a progress meter.
 progress-bar
@@ -10,5 +16,5 @@ referer = ";auto"
 # Show error messages.
 show-error
 
-# Disguise as Google Chrome.
+# Set user-agent string.
 user-agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36"
