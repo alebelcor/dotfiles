@@ -132,6 +132,18 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu" \
 	"/System/Library/CoreServices/Menu Extras/TextInput.menu"
 
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values.
+sudo systemsetup -settimezone "America/Hermosillo" > /dev/null
+
+# Set the clock to show the date and use a 12-hour clock with AM/PM.
+defaults write com.apple.menuextra.clock DateFormat -string "MMM d  h:mm a"
+
+# Disable the flashing time separators.
+defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
+
+# Set the clock to be digital.
+defaults write com.apple.menuextra.clock IsAnalog -bool true
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
@@ -180,9 +192,6 @@ defaults write NSGlobalDomain com.apple.mouse.scaling -float 0.875
 
 # Show language menu in the top right corner of the boot screen.
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
-
-# Set the timezone; see `sudo systemsetup -listtimezones` for other values.
-sudo systemsetup -settimezone "America/Hermosillo" > /dev/null
 
 # Stop iTunes from responding to the keyboard media keys.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
