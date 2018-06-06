@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 	<dict>
-		<!-- Key to uniquely identify the job to launchd -->
+		<!-- Key to uniquely identify the job to `launchd` -->
 		<key>Label</key>
-		<string>launch-fitbit-connect</string>
+		<string>fitbit-connect-launcher</string>
 
 		<!-- Absolute path to the executable -->
 		<key>Program</key>
