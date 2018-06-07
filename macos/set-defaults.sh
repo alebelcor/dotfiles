@@ -968,24 +968,29 @@ defaults write org.m0k.transmission QueueDownloadNumber -int 1
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
-for app in "Activity Monitor" \
-	"BitBar" \
-	"Caffeine" \
-	"Calculator" \
-	"cfprefsd" \
-	"Dock" \
-	"Finder" \
-	"Fitbit Connect" \
-	"Flux" \
-	"Google Chrome" \
-	"Lightshot Screenshot" \
-	"Noisy" \
-	"Photos" \
-	"Safari" \
-	"Spectacle" \
-	"SystemUIServer" \
-	"Terminal" \
-	"Transmission";
+
+AFFECTED_APPS=(
+	"Activity Monitor"
+	"BitBar"
+	"Caffeine"
+	"Calculator"
+	"cfprefsd"
+	"Dock"
+	"Finder"
+	"Fitbit Connect"
+	"Flux"
+	"Google Chrome"
+	"Lightshot Screenshot"
+	"Noisy"
+	"Photos"
+	"Safari"
+	"Spectacle"
+	"SystemUIServer"
+	"Terminal"
+	"Transmission"
+)
+
+for app in "${AFFECTED_APPS[@]}"
 do
 	killall "${app}" &> /dev/null
 done
