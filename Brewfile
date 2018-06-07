@@ -34,6 +34,7 @@ brew 'zsh-syntax-highlighting'
 
 cask 'android-file-transfer'
 cask 'bitbar'
+cask 'brave'
 cask 'caffeine'
 cask 'calibre'
 cask 'colorpicker'
