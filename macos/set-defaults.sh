@@ -17,23 +17,47 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
-# General UI/UX                                                               #
+# General security & privacy                                                  #
 ###############################################################################
 
-# Privacy: Disable storing information about downloaded files by Quarantine.
+# Disable storing information about downloaded files by Quarantine.
 # Clear the file.
 :> ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
 # Make the file immutable.
 sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
 
-# Disable crash reporter.
-defaults write com.apple.CrashReporter DialogType none
-
 # Disable Bonjour multicast advertisements.
 sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool true
 
+# Disable automatic login.
+sudo defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser &> /dev/null
+sudo rm /etc/kcpassword &> /dev/null
+
+# Disable remote control infrared receiver.
+sudo defaults write /Library/Preferences/com.apple.driver.AppleIRController DeviceEnabled -bool false
+
 # Allow apps downloaded from "Anywhere".
 sudo spctl --master-disable
+
+# Do not send diagnostic & usage data to Apple.
+defaults -currentHost write com.apple.SubmitDiagInfo AutoSubmit -bool false
+
+# Save to disk (not to iCloud) by default.
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Disable crash reporter.
+defaults write com.apple.CrashReporter DialogType none
+
+# Disable location services.
+defaults write com.apple.MCX DisableLocationServices -bool true
+
+# Require password immediately after sleep or screen saver begins.
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
 
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
@@ -67,9 +91,6 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 # Expand print panel by default.
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-
-# Save to disk (not to iCloud) by default.
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete.
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
@@ -132,8 +153,72 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu" \
 	"/System/Library/CoreServices/Menu Extras/TextInput.menu"
 
+# Set local reference to the `airport` command-line utility for later use.
+AIRPORT="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+
+# Join Preferred Wi-Fi networks.
+# Possible values:
+#   * Automatic
+#   * Preferred
+#   * Ranked
+#   * Recent
+#   * Strongest
+sudo "$AIRPORT" prefs JoinMode=Preferred
+
+# Do not ask to join new networks.
+# Possible values:
+#   * Prompt
+#   * JoinOpen
+#   * KeepLooking
+#   * DoNothing
+sudo "$AIRPORT" prefs JoinModeFallback=DoNothing
+
+# Remember networks this computer has joined.
+sudo "$AIRPORT" prefs RememberRecentNetworks=YES
+
+# Require administrator authorization to create computer-to-computer networks.
+sudo "$AIRPORT" prefs RequireAdminIBSS=YES
+
+# Require administrator authorization to change networks.
+sudo "$AIRPORT" prefs RequireAdminNetworkChange=YES
+
+# Require administrator authorization to turn Wi-Fi on or off.
+sudo "$AIRPORT" prefs RequireAdminPowerToggle=NO
+
+# Define list of DNS servers to set up.
+#   1. CloudFlare
+#   2. Quad9
+#   3. Google
+#   4. OpenDNS
+DNS_SERVERS=(
+	"1.1.1.1"
+
+	"9.9.9.9"
+
+	"8.8.8.8"
+	"8.8.4.4"
+
+	"208.67.222.222"
+	"208.67.220.220"
+)
+
+# Clear all DNS entries.
+sudo networksetup -setdnsservers "Wi-Fi" "Empty"
+sudo networksetup -setdnsservers "Thunderbolt Ethernet" "Empty"
+
+# Set DNS entries.
+sudo networksetup -setdnsservers "Wi-Fi" ${DNS_SERVERS[*]}
+sudo networksetup -setdnsservers "Thunderbolt Ethernet" ${DNS_SERVERS[*]}
+
+# Flush DNS cache.
+sudo dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
+
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values.
 sudo systemsetup -settimezone "America/Hermosillo" > /dev/null
+
+# Set date and time automatically.
+sudo systemsetup -setusingnetworktime on > /dev/null
 
 # Set the clock to show the date and use a 12-hour clock with AM/PM.
 defaults write com.apple.menuextra.clock DateFormat -string "MMM d  h:mm a"
@@ -196,13 +281,13 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 # Stop iTunes from responding to the keyboard media keys.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
+# Turn off keyboard brightness.
+sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Manual Brightness" -int 0
+sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Muted" -bool true
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
-
-# Require password immediately after sleep or screen saver begins.
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to ~/Pictures.
 defaults write com.apple.screencapture location -string "${HOME}/Pictures"
@@ -237,7 +322,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Set Downloads folder as the default location for new Finder windows.
-# Possible values
+# Possible values:
 #   PfCm: Computer
 #   PfVo: Volume
 #   PfHm: $HOME
@@ -256,7 +341,6 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Show hidden files by default.
 defaults write com.apple.finder AppleShowAllFiles -bool true
-chflags nohidden ~/Library
 
 # Show all filename extensions.
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -339,10 +423,10 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-# Show the ~/Library folder.
+# Show the `~/Library` folder.
 chflags nohidden ~/Library
 
-# Show the /Volumes folder.
+# Show the `/Volumes` folder.
 sudo chflags nohidden /Volumes
 
 # Expand the following File Info panes:
@@ -399,7 +483,7 @@ defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock.
 defaults write com.apple.dock autohide-time-modifier -float 0
 
-# Automatically hide and show the Dock.
+# Disable automatically hiding and showing the Dock.
 defaults write com.apple.dock autohide -bool false
 
 # Make Dock icons of hidden applications translucent.
