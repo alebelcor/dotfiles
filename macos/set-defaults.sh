@@ -21,8 +21,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Disable storing information about downloaded files by Quarantine.
-# Clear the file.
-:> ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 &> /dev/null
+# Clear the file: `:> file` is equivalent to `true > file`
+(:> ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2) &> /dev/null
 # Make the file immutable.
 sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 &> /dev/null
 
