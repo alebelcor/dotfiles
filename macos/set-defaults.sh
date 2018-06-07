@@ -22,9 +22,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Disable storing information about downloaded files by Quarantine.
 # Clear the file.
-:> ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
+:> ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 &> /dev/null
 # Make the file immutable.
-sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
+sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 &> /dev/null
 
 # Disable Bonjour multicast advertisements.
 sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool true
@@ -227,7 +227,7 @@ defaults write com.apple.menuextra.clock DateFormat -string "MMM d  h:mm a"
 defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
 
 # Set the clock to be digital.
-defaults write com.apple.menuextra.clock IsAnalog -bool true
+defaults write com.apple.menuextra.clock IsAnalog -bool false
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
