@@ -889,6 +889,19 @@ defaults write com.google.Chrome ShowHomeButton -bool false
 defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
 
 ###############################################################################
+# ImageOptim                                                                  #
+###############################################################################
+
+# Strip PNG metadata.
+defaults write net.pornel.ImageOptim PngOutRemoveChunks -bool true
+
+# Strip JPEG metadata.
+defaults write net.pornel.ImageOptim JpegTranStripAll -bool true
+
+# Preserve file permissions, attributes and hardlinks
+defaults write net.pornel.ImageOptim PreservePermissions -bool true
+
+###############################################################################
 # Lightshot Screenshot                                                        #
 ###############################################################################
 
