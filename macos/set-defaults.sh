@@ -831,6 +831,11 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 # Google Chrome                                                               #
 ###############################################################################
 
+# -- Content settings
+
+# Ask before accessing physical location.
+defaults write com.google.Chrome DefaultGeolocationSetting -int 3
+
 # -- Default search provider
 
 # Enable the use of a default search provider.
@@ -845,10 +850,23 @@ defaults write com.google.Chrome DefaultSearchProviderKeyword -string "google.co
 # Set the search URL of the default search provider.
 defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://encrypted.google.com/search?hl=en&q=%s"
 
+# -- Home page
+
+# Use New Tab Page as homepage.
+defaults write com.google.Chrome HomepageIsNewTabPage -bool true
+
 # -- Password manager
 
 # Disable saving passwords to the password manager.
 defaults write com.google.Chrome PasswordManagerEnabled -bool false
+
+# -- Safe Browsing settings
+
+# Protect you and your device from dangerous sites.
+defaults write com.google.Chrome SafeBrowsingEnabled -bool true
+
+# Disable sending system information and page content to Google servers to help detect dangerous apps and sites.
+defaults write com.google.Chrome SafeBrowsingExtendedReportingEnabled -bool false
 
 # -- Startup pages
 
@@ -857,18 +875,48 @@ defaults write com.google.Chrome RestoreOnStartup -int 1
 
 # --
 
+# Prevent sites with abusive experiences from opening new windows or tabs.
+defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
+
+# Disallow ads on sites with intrusive ads.
+defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -bool true
+
+# Always open PDF files in Google Chrome instead of downloading them.
+defaults write com.google.Chrome AlwaysOpenPdfExternally -bool false
+
+# Set the application locale.
+defaults write com.google.Chrome ApplicationLocaleValue -string "en-US"
+
 # Disable autofill.
 defaults write com.google.Chrome AutoFillEnabled -bool false
 
 # Disable autofill for credit cards.
 defaults write com.google.Chrome AutofillCreditCardEnabled -bool false
 
+# Disable playing videos automatically (without user consent) with audio content.
+defaults write com.google.Chrome AutoplayAllowed -bool false
+
 # Enable bookmark bar.
 defaults write com.google.Chrome BookmarkBarEnabled -bool true
+
+# Disallow Add Person from the user manager.
+defaults write com.google.Chrome BrowserAddPersonEnabled -bool false
+
+# Disable guest logins.
+defaults write com.google.Chrome BrowserGuestModeEnabled -bool false
+
+# Don't use built-in DNS client.
+defaults write com.google.Chrome BuiltInDnsClientEnabled -bool false
+
+# Set as default browser.
+defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
 
 # Set download directory.
 defaults write com.google.Chrome DefaultDownloadDirectory -string "$HOME/Downloads"
 defaults write com.google.Chrome DownloadDirectory -string "$HOME/Downloads"
+
+# Disable usage metrics and diagnostic data, including crash reports, being reported back to Google.
+defaults write com.google.Chrome DeviceMetricsReportingEnabled -bool false
 
 # Use the system-native print preview dialog instead of the print preview.
 defaults write com.google.Chrome DisablePrintPreview -bool true
@@ -879,14 +927,26 @@ defaults write com.google.Chrome HardwareAccelerationModeEnabled -bool true
 # Disable reporting of usage and crash-related data.
 defaults write com.google.Chrome MetricsReportingEnabled -bool false
 
+# Disable prediction service to load pages more quickly (on any network connection).
+defaults write com.google.Chrome NetworkPredictionOptions -int 2
+
 # Don't ask where to save each file before downloading.
 defaults write com.google.Chrome PromptForDownloadLocation -bool false
+
+# Disable prediction service to help complete searches and URLs typed in the address bar.
+defaults write com.google.Chrome SearchSuggestEnabled -bool false
+
+# Hide the apps shortcut in the bookmark bar.
+defaults write com.google.Chrome ShowAppsShortcutInBookmarkBar -bool false
 
 # Hide the Home button on the toolbar.
 defaults write com.google.Chrome ShowHomeButton -bool false
 
 # Disable spell checking web service.
 defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
+
+# Disable synchronization of data with Google.
+defaults write com.google.Chrome SyncDisabled -bool true
 
 ###############################################################################
 # ImageOptim                                                                  #
