@@ -831,6 +831,8 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 # Google Chrome                                                               #
 ###############################################################################
 
+# Full list of supported Policies: https://www.chromium.org/administrators/policy-list-3
+
 # -- Content settings
 
 # Ask before accessing physical location.
@@ -848,7 +850,7 @@ defaults write com.google.Chrome DefaultSearchProviderName -string "Encrypted Go
 defaults write com.google.Chrome DefaultSearchProviderKeyword -string "google.com"
 
 # Set the search URL of the default search provider.
-defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://encrypted.google.com/search?hl=en&q=%s"
+defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://encrypted.google.com/search?hl=en&q={searchTerms}"
 
 # -- Home page
 
@@ -879,7 +881,7 @@ defaults write com.google.Chrome RestoreOnStartup -int 1
 defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
 
 # Disallow ads on sites with intrusive ads.
-defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -bool true
+defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -int 2
 
 # Always open PDF files in Google Chrome instead of downloading them.
 defaults write com.google.Chrome AlwaysOpenPdfExternally -bool false
