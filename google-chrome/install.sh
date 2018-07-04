@@ -13,9 +13,6 @@ EXTENSIONS=(
 	# 1Password: Password Manager and Secure Wallet
 	"aomjjhallfgjeglblehebfpbcfeobpgk"
 
-	# aXe
-	"lhdoppojpmngadmnindnejefpokejbdd"
-
 	# Clear Downloads
 	"bknoejjhcfmakcibhifepfkegpjdnadk"
 
@@ -68,7 +65,7 @@ EXTENSIONS=(
 # Define content for JSON files.
 JSON_CONTENT='{"external_update_url": "https:\/\/clients2.google.com\/service\/update2\/crx"}'
 
-# Create .json files, one for each extension to be installed.
+# Create `.json` files, one for each extension to be installed.
 for extension_id in "${EXTENSIONS[@]}"
 do
 	echo "$JSON_CONTENT" > "$DESTINATION/$extension_id.json"
