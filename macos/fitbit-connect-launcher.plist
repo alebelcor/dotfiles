@@ -14,16 +14,16 @@
 		<key>StartCalendarInterval</key>
 		<array>
 			<dict>
-				<key>Hour</key>
-				<integer>10</integer>
 				<key>Weekday</key>
 				<integer>1</integer>
-			</dict>
-			<dict>
 				<key>Hour</key>
 				<integer>10</integer>
+			</dict>
+			<dict>
 				<key>Weekday</key>
 				<integer>5</integer>
+				<key>Hour</key>
+				<integer>10</integer>
 			</dict>
 		</array>
 	</dict>
