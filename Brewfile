@@ -20,6 +20,7 @@ brew 'findutils', args: ['with-default-names']
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
+brew 'hostess'
 brew 'mas'
 brew 'nodenv'
 brew 'wget'
