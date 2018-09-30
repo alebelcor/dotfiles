@@ -489,6 +489,9 @@ defaults write com.apple.dock autohide -bool false
 # Make Dock icons of hidden applications translucent.
 defaults write com.apple.dock showhidden -bool true
 
+# Don't show recent applications in Dock.
+defaults write com.apple.dock show-recents -bool false
+
 # Reset Launchpad, but keep the desktop wallpaper intact.
 find "${HOME}/Library/Application Support/Dock" -maxdepth 1 -name "*-*.db" -delete
 
