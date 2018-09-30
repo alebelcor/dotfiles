@@ -15,7 +15,7 @@ setup_agent() {
 	launchctl unload "$configuration_file" > /dev/null 2>&1
 
 	# Copy the configuration file.
-	cp "$1" "$destination"
+	cp --force "$1" "$destination"
 
 	# Load the configuration file.
 	launchctl load "$configuration_file" > /dev/null
