@@ -12,3 +12,7 @@ sudo hostess -s apply domains.json
 
 # Clean up.
 sudo hostess -s fix
+
+# Flush the DNS cache (for El Capitan). Use it after modifying the hosts file.
+sudo dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
