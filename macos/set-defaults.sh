@@ -1032,7 +1032,7 @@ defaults write com.google.Chrome SyncDisabled -bool true
 # Disable the integrated Google Translate service.
 defaults write com.google.Chrome TranslateEnabled -bool false
 
-# Disable URL-keyed anonymized data collection
+# Disable URL-keyed anonymized data collection.
 defaults write com.google.Chrome UrlKeyedAnonymizedDataCollectionEnabled -bool false
 
 ###############################################################################
