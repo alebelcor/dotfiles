@@ -461,6 +461,9 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Don't animate opening applications from the Dock.
 defaults write com.apple.dock launchanim -bool false
 
+# Disable bounce animation on notification.
+defaults write com.apple.dock no-bouncing -bool true
+
 # Speed up "Mission Control" animations.
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
