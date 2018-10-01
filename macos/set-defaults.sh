@@ -836,6 +836,20 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 
 # Full list of supported Policies: https://www.chromium.org/administrators/policy-list-3
 
+# -- Chrome Reporting Extension
+
+# Don't report OS and browser version information.
+defaults write com.google.Chrome ReportVersionData -bool false
+
+# Don't report browser policy information.
+defaults write com.google.Chrome ReportPolicyData -bool false
+
+# Don't report machine identification information.
+defaults write com.google.Chrome ReportMachineIDData -bool false
+
+# Don't report user identification information.
+defaults write com.google.Chrome ReportUserIDData -bool false
+
 # -- Content settings
 
 # Ask before accessing physical location.
@@ -854,6 +868,14 @@ defaults write com.google.Chrome DefaultSearchProviderKeyword -string "google.co
 
 # Set the search URL of the default search provider.
 defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://encrypted.google.com/search?hl=en&q={searchTerms}"
+
+# -- Google Cast
+
+# Enable Google Cast.
+defaults write com.google.Chrome EnableMediaRouter -bool true
+
+# Hide the Google Cast toolbar icon.
+defaults write com.google.Chrome ShowCastIconInToolbar -bool false
 
 # -- Home page
 
@@ -886,20 +908,23 @@ defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
 # Disallow ads on sites with intrusive ads.
 defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -int 2
 
-# Always open PDF files in Google Chrome instead of downloading them.
+# Always open PDF files in browser instead of downloading them.
 defaults write com.google.Chrome AlwaysOpenPdfExternally -bool false
 
 # Set the application locale.
 defaults write com.google.Chrome ApplicationLocaleValue -string "en-US"
 
-# Disable autofill.
-defaults write com.google.Chrome AutoFillEnabled -bool false
+# Disable autoFill for addresses.
+defaults write com.google.Chrome AutofillAddressEnabled -bool false
 
 # Disable autofill for credit cards.
 defaults write com.google.Chrome AutofillCreditCardEnabled -bool false
 
 # Disable playing videos automatically (without user consent) with audio content.
 defaults write com.google.Chrome AutoplayAllowed -bool false
+
+# Stop running background apps when browser is closed.
+defaults write com.google.Chrome BackgroundModeEnabled -bool true
 
 # Enable bookmark bar.
 defaults write com.google.Chrome BookmarkBarEnabled -bool true
@@ -909,6 +934,9 @@ defaults write com.google.Chrome BrowserAddPersonEnabled -bool false
 
 # Disable guest logins.
 defaults write com.google.Chrome BrowserGuestModeEnabled -bool false
+
+# Disallow queries to a Google time service.
+defaults write com.google.Chrome BrowserNetworkTimeQueriesEnabled -bool false
 
 # Don't use built-in DNS client.
 defaults write com.google.Chrome BuiltInDnsClientEnabled -bool false
@@ -923,11 +951,50 @@ defaults write com.google.Chrome DownloadDirectory -string "$HOME/Downloads"
 # Disable usage metrics and diagnostic data, including crash reports, being reported back to Google.
 defaults write com.google.Chrome DeviceMetricsReportingEnabled -bool false
 
+# Allow usage of the developer tools.
+defaults write com.google.Chrome DeveloperToolsAvailability -int 1
+
+# Disable support for 3D graphics APIs.
+defaults write com.google.Chrome Disable3DAPIs -bool true
+
 # Use the system-native print preview dialog instead of the print preview.
 defaults write com.google.Chrome DisablePrintPreview -bool true
 
+# Disable taking screenshots.
+defaults write com.google.Chrome DisableScreenshots -bool true
+
+# Disable force sign in.
+defaults write com.google.Chrome ForceBrowserSignin -bool false
+
+# Don't enforce Google SafeSearch.
+defaults write com.google.Chrome ForceGoogleSafeSearch -bool false
+
+# Don't enforce restricted mode on YouTube.
+defaults write com.google.Chrome ForceYouTubeRestrict -int 0
+
 # Use hardware acceleration when available.
 defaults write com.google.Chrome HardwareAccelerationModeEnabled -bool true
+
+# Don't import autofill form data from default browser on first run.
+defaults write com.google.Chrome ImportAutofillFormData -bool false
+
+# Don't import bookmarks from default browser on first run.
+defaults write com.google.Chrome ImportBookmarks -bool false
+
+# Don't import browsing history from default browser on first run.
+defaults write com.google.Chrome ImportHistory -bool false
+
+# Don't import homepage from default browser on first run.
+defaults write com.google.Chrome ImportHomepage -bool false
+
+# Don't import saved passwords from default browser on first run.
+defaults write com.google.Chrome ImportSavedPasswords -bool false
+
+# Don't import search engines from default browser on first run.
+defaults write com.google.Chrome ImportSearchEngine -bool false
+
+# Allow Google Cast to connect to Cast devices on private IP addresses only.
+defaults write com.google.Chrome MediaRouterCastAllowAllIPs -bool false
 
 # Disable reporting of usage and crash-related data.
 defaults write com.google.Chrome MetricsReportingEnabled -bool false
@@ -935,8 +1002,14 @@ defaults write com.google.Chrome MetricsReportingEnabled -bool false
 # Disable prediction service to load pages more quickly (on any network connection).
 defaults write com.google.Chrome NetworkPredictionOptions -int 2
 
+# Disable showing full-tab promotional content.
+defaults write com.google.Chrome PromotionalTabsEnabled -bool false
+
 # Don't ask where to save each file before downloading.
 defaults write com.google.Chrome PromptForDownloadLocation -bool false
+
+# Don't automatically reboot after update.
+defaults write com.google.Chrome RebootAfterUpdate -bool false
 
 # Disable prediction service to help complete searches and URLs typed in the address bar.
 defaults write com.google.Chrome SearchSuggestEnabled -bool false
@@ -947,11 +1020,20 @@ defaults write com.google.Chrome ShowAppsShortcutInBookmarkBar -bool false
 # Hide the Home button on the toolbar.
 defaults write com.google.Chrome ShowHomeButton -bool false
 
+# Enable site isolation for every site.
+defaults write com.google.Chrome SitePerProcess -bool true
+
 # Disable spell checking web service.
 defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
 
 # Disable synchronization of data with Google.
 defaults write com.google.Chrome SyncDisabled -bool true
+
+# Disable the integrated Google Translate service.
+defaults write com.google.Chrome TranslateEnabled -bool false
+
+# Disable URL-keyed anonymized data collection
+defaults write com.google.Chrome UrlKeyedAnonymizedDataCollectionEnabled -bool false
 
 ###############################################################################
 # ImageOptim                                                                  #
