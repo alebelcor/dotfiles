@@ -853,20 +853,6 @@ defaults write com.google.Chrome ReportMachineIDData -bool false
 # Don't report user identification information.
 defaults write com.google.Chrome ReportUserIDData -bool false
 
-# -- Content settings
-
-# Ask before playing Flash content.
-defaults write com.google.Chrome DefaultPluginsSetting -int 3
-
-# Do not allow any site to show popups.
-defaults write com.google.Chrome DefaultPopupsSetting -int 2
-
-# Ask before accessing physical location.
-defaults write com.google.Chrome DefaultGeolocationSetting -int 3
-
-# Ask before showing desktop notifications.
-defaults write com.google.Chrome DefaultNotificationsSetting -int 3
-
 # -- Default search provider
 
 # Enable the use of a default search provider.
