@@ -41,6 +41,9 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 
+	# Set `diff-so-fancy` as the preferred pager when outputting logs and diffs.
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
 [color]
 
 	# Use colors in Git commands that are capable of colored output when

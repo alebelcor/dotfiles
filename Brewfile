@@ -15,6 +15,7 @@ tap 'caskroom/fonts'
 # Command-line
 
 brew 'coreutils'
+brew 'diff-so-fancy'
 brew 'duti'
 brew 'findutils', args: ['with-default-names']
 brew 'git'
