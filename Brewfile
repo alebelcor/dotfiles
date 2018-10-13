@@ -75,7 +75,7 @@ cask 'font-fira-mono'
 
 # App Store
 
-mas '1Password - Password Manager and Secure Wallet', id: 443987910
+mas '1Password', id: 443987910
 mas 'Joystick Mapper', id: 528183797
 mas 'Lightshot Screenshot', id: 526298438
 mas 'TweetDeck', id: 485812721
