@@ -183,7 +183,7 @@ sudo "$AIRPORT" prefs RequireAdminIBSS=YES
 sudo "$AIRPORT" prefs RequireAdminNetworkChange=YES
 
 # Require administrator authorization to turn Wi-Fi on or off.
-sudo "$AIRPORT" prefs RequireAdminPowerToggle=NO
+sudo "$AIRPORT" prefs RequireAdminPowerToggle=YES
 
 # Define list of DNS servers to set up.
 #   1. CloudFlare
