@@ -54,3 +54,4 @@ org.m0k.transmission    org.bittorrent.torrent         all
 
 # Set "VLC" as the default app for "movie" files
 org.videolan.vlc        public.movie                   viewer
+org.videolan.vlc        public.avi                     viewer
