@@ -39,12 +39,14 @@ com.sublimetext.2       public.zsh-script              editor
 #   * .tgz
 #   * .zip, application/zip
 #   * .zip, application/zip
+#   * .rar
 cx.c3.theunarchiver     org.gnu.gnu-tar-archive        all
 cx.c3.theunarchiver     public.tar-archive             all
 cx.c3.theunarchiver     org.gnu.gnu-zip-archive        all
 cx.c3.theunarchiver     org.gnu.gnu-zip-tar-archive    all
 cx.c3.theunarchiver     com.pkware.zip-archive         all
 cx.c3.theunarchiver     public.zip-archive             all
+cx.c3.theunarchiver     com.rarlab.rar-archive         all
 
 # Set "Transmission" as the default app for:
 #   * "magnet" URI scheme
