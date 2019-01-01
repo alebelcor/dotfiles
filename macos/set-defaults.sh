@@ -958,15 +958,20 @@ defaults write com.google.Chrome BrowserGuestModeEnabled -bool false
 # Disallow queries to a Google time service.
 defaults write com.google.Chrome BrowserNetworkTimeQueriesEnabled -bool false
 
+# Disable browser sign-in.
+defaults write com.google.Chrome BrowserSignin -int 0
+
 # Don't use built-in DNS client.
 defaults write com.google.Chrome BuiltInDnsClientEnabled -bool false
+
+# Disable Chrome Cleanup reporting metadata to Google when scanning for unwanted software.
+defaults write com.google.Chrome ChromeCleanupReportingEnabled -bool false
 
 # Set as default browser.
 defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
 
-# Set download directory.
+# Set default download directory.
 defaults write com.google.Chrome DefaultDownloadDirectory -string "$HOME/Downloads"
-defaults write com.google.Chrome DownloadDirectory -string "$HOME/Downloads"
 
 # Disable usage metrics and diagnostic data, including crash reports, being reported back to Google.
 defaults write com.google.Chrome DeviceMetricsReportingEnabled -bool false
@@ -974,14 +979,14 @@ defaults write com.google.Chrome DeviceMetricsReportingEnabled -bool false
 # Allow usage of the developer tools.
 defaults write com.google.Chrome DeveloperToolsAvailability -int 1
 
-# Disable support for 3D graphics APIs.
-defaults write com.google.Chrome Disable3DAPIs -bool true
-
 # Use the system-native print preview dialog instead of the print preview.
 defaults write com.google.Chrome DisablePrintPreview -bool true
 
 # Disable taking screenshots.
 defaults write com.google.Chrome DisableScreenshots -bool true
+
+# Set download directory.
+defaults write com.google.Chrome DownloadDirectory -string "$HOME/Downloads"
 
 # Disable force sign in.
 defaults write com.google.Chrome ForceBrowserSignin -bool false
@@ -1049,11 +1054,17 @@ defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
 # Disable synchronization of data with Google.
 defaults write com.google.Chrome SyncDisabled -bool true
 
+# Disable tab lifecycles.
+defaults write com.google.Chrome TabLifecyclesEnabled -bool false
+
 # Disable the integrated Google Translate service.
 defaults write com.google.Chrome TranslateEnabled -bool false
 
 # Disable URL-keyed anonymized data collection.
 defaults write com.google.Chrome UrlKeyedAnonymizedDataCollectionEnabled -bool false
+
+# Disable collection of WebRTC event logs from Google services.
+defaults write com.google.Chrome WebRtcEventLogCollectionAllowed -bool false
 
 ###############################################################################
 # ImageOptim                                                                  #
