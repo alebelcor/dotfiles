@@ -835,6 +835,13 @@ defaults write com.lightheadsw.Caffeine DefaultDuration -int 0
 defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 
 ###############################################################################
+# Calibre                                                                     #
+###############################################################################
+
+# Add E-book Viewer to Launchpad.
+sudo ln -sf "/Applications/calibre.app/Contents/ebook-viewer.app" "/Applications/E-book Viewer.app"
+
+###############################################################################
 # Fitbit Connect                                                              #
 ###############################################################################
 
