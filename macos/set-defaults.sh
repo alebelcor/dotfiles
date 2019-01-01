@@ -988,9 +988,6 @@ defaults write com.google.Chrome DisableScreenshots -bool true
 # Set download directory.
 defaults write com.google.Chrome DownloadDirectory -string "$HOME/Downloads"
 
-# Disable force sign in.
-defaults write com.google.Chrome ForceBrowserSignin -bool false
-
 # Don't enforce Google SafeSearch.
 defaults write com.google.Chrome ForceGoogleSafeSearch -bool false
 
