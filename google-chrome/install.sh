@@ -28,8 +28,8 @@ EXTENSIONS=(
 	# IBA Opt-out (by Google)
 	"gbiekjoijknlhijdjbaadobpkdhmoebb"
 
-	# JSONView
-	"chklaanhfefbnpoihckbnefhakgolnmc"
+	# JSON Formatter
+	"bcjindcccaagfpapjjmafapmmgkkhgoa"
 
 	# minerBlock
 	"emikbbbebcdfohonlaifafnoanocnebl"
