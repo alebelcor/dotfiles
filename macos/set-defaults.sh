@@ -935,6 +935,9 @@ defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
 # Disallow ads on sites with intrusive ads.
 defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -int 2
 
+# Disable web service to help resolve navigation errors.
+defaults write com.google.Chrome AlternateErrorPagesEnabled -bool false
+
 # Always open PDF files in browser instead of downloading them.
 defaults write com.google.Chrome AlwaysOpenPdfExternally -bool false
 
@@ -979,9 +982,6 @@ defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
 
 # Set default download directory.
 defaults write com.google.Chrome DefaultDownloadDirectory -string "$HOME/Downloads"
-
-# Disable usage metrics and diagnostic data, including crash reports, being reported back to Google.
-defaults write com.google.Chrome DeviceMetricsReportingEnabled -bool false
 
 # Allow usage of the developer tools.
 defaults write com.google.Chrome DeveloperToolsAvailability -int 1
