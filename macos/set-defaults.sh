@@ -1167,6 +1167,7 @@ AFFECTED_APPS=(
 	"Fitbit Connect"
 	"Flux"
 	"Google Chrome"
+	"ImageOptim"
 	"Lightshot Screenshot"
 	"Noisy"
 	"Photos"
