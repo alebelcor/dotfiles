@@ -866,21 +866,7 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 # Google Chrome                                                               #
 ###############################################################################
 
-# Full list of supported Policies: https://www.chromium.org/administrators/policy-list-3
-
-# -- Chrome Reporting Extension
-
-# Don't report OS and browser version information.
-defaults write com.google.Chrome ReportVersionData -bool false
-
-# Don't report browser policy information.
-defaults write com.google.Chrome ReportPolicyData -bool false
-
-# Don't report machine identification information.
-defaults write com.google.Chrome ReportMachineIDData -bool false
-
-# Don't report user identification information.
-defaults write com.google.Chrome ReportUserIDData -bool false
+# Full list of supported policies: https://www.chromium.org/administrators/policy-list-3
 
 # -- Default search provider
 
@@ -974,8 +960,8 @@ defaults write com.google.Chrome BrowserSignin -int 0
 # Don't use built-in DNS client.
 defaults write com.google.Chrome BuiltInDnsClientEnabled -bool false
 
-# Disable Chrome Cleanup reporting metadata to Google when scanning for unwanted software.
-defaults write com.google.Chrome ChromeCleanupReportingEnabled -bool false
+# Disable mandatory cloud management enrollment.
+defaults write com.google.Chrome CloudManagementEnrollmentMandatory -bool false
 
 # Set as default browser.
 defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
@@ -1037,8 +1023,11 @@ defaults write com.google.Chrome PromotionalTabsEnabled -bool false
 # Don't ask where to save each file before downloading.
 defaults write com.google.Chrome PromptForDownloadLocation -bool false
 
-# Don't automatically reboot after update.
-defaults write com.google.Chrome RebootAfterUpdate -bool false
+# Allow proceeding from the SSL warning page.
+defaults write com.google.Chrome SSLErrorOverrideAllowed -bool true
+
+# Disable SafeSites adult content filtering.
+defaults write com.google.Chrome SafeSitesFilterBehavior -int 0
 
 # Disable prediction service to help complete searches and URLs typed in the address bar.
 defaults write com.google.Chrome SearchSuggestEnabled -bool false
@@ -1066,6 +1055,9 @@ defaults write com.google.Chrome TranslateEnabled -bool false
 
 # Disable URL-keyed anonymized data collection.
 defaults write com.google.Chrome UrlKeyedAnonymizedDataCollectionEnabled -bool false
+
+# Disable Web Proxy Auto-Discovery optimization.
+defaults write com.google.Chrome WPADQuickCheckEnabled -bool false
 
 # Disable collection of WebRTC event logs from Google services.
 defaults write com.google.Chrome WebRtcEventLogCollectionAllowed -bool false
