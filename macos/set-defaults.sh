@@ -1204,6 +1204,19 @@ defaults write org.m0k.transmission Queue -bool true
 defaults write org.m0k.transmission QueueDownloadNumber -int 1
 
 ###############################################################################
+# VLC media player                                                            #
+###############################################################################
+
+# Enable checking for updates automatically.
+defaults write org.videolan.vlc SUEnableAutomaticChecks -bool true
+
+# Disable checking online for album art and metadata.
+defaults write org.videolan.vlc SUSendProfileInfo -bool true
+
+# Set language to "American English".
+defaults write org.videolan.vlc language -string "en"
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -1228,6 +1241,7 @@ AFFECTED_APPS=(
 	"SystemUIServer"
 	"Terminal"
 	"Transmission"
+	"VLC"
 )
 
 for app in "${AFFECTED_APPS[@]}"
