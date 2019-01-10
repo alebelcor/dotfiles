@@ -1137,6 +1137,19 @@ defaults write com.rathertremendous.noisy PreviousNoiseType -int 3
 defaults write com.rathertremendous.noisy NoiseVolume -int 1
 
 ###############################################################################
+# QuickTime Player                                                            #
+###############################################################################
+
+# Don't show mouse clicks in recording.
+defaults write com.apple.QuickTimePlayerX MGScreenRecordingDocumentShowMouseClicksUserDefaultsKey -int 0
+
+# Set Microphone input to "None" for recording.
+defaults delete com.apple.QuickTimePlayerX "MGCaptureDeviceSelection MGScreenRecordingDocument"
+
+# Clear recent items.
+defaults delete com.apple.QuickTimePlayerX MGRecentURLPropertyLists
+
+###############################################################################
 # Spectacle                                                                   #
 ###############################################################################
 
