@@ -1086,6 +1086,44 @@ defaults write com.skillbrains.lightshot GlobalShortcut -data 62706c6973743030d4
 defaults write com.skillbrains.lightshot downscaleRetinaScreens -bool false
 
 ###############################################################################
+# LimeChat                                                                    #
+###############################################################################
+
+# Highlight your nickname.
+defaults write net.limechat.LimeChat-AppStore Preferences.Keyword.current_nick -int 1
+
+# Confirm to quit the application.
+defaults write net.limechat.LimeChat-AppStore Preferences.General.confirm_quit -int 1
+
+# Connect to server on double click.
+defaults write net.limechat.LimeChat-AppStore Preferences.General.connect_on_doubleclick -int 1
+
+# Disconnect from server on double click.
+defaults write net.limechat.LimeChat-AppStore Preferences.General.disconnect_on_doubleclick -int 1
+
+# Join channel on double click.
+defaults write net.limechat.LimeChat-AppStore Preferences.General.join_on_doubleclick -int 1
+
+# Leave channel on double click.
+defaults write net.limechat.LimeChat-AppStore Preferences.General.leave_on_doubleclick -int 1
+
+# Hide join/leave events.
+defaults write net.limechat.LimeChat-AppStore Preferences.General.show_join_leave -int 0
+
+# Override log font.
+defaults write net.limechat.LimeChat-AppStore Preferences.Theme.override_log_font -int 1
+defaults write net.limechat.LimeChat-AppStore Preferences.Theme.log_font_name -string "FiraMono-Regular"
+defaults write net.limechat.LimeChat-AppStore Preferences.Theme.log_font_size -int 13
+
+# Override input font.
+defaults write net.limechat.LimeChat-AppStore Preferences.Theme.override_input_font -int 1
+defaults write net.limechat.LimeChat-AppStore Preferences.Theme.input_font_name -string "FiraMono-Regular"
+defaults write net.limechat.LimeChat-AppStore Preferences.Theme.input_font_size -int 13
+
+# Show dialog when received a file transfer.
+defaults write net.limechat.LimeChat-AppStore Preferences.Dcc.action -int 1
+
+###############################################################################
 # Noisy                                                                       #
 ###############################################################################
 
@@ -1169,6 +1207,7 @@ AFFECTED_APPS=(
 	"Google Chrome"
 	"ImageOptim"
 	"Lightshot Screenshot"
+	"LimeChat"
 	"Noisy"
 	"Photos"
 	"Safari"
