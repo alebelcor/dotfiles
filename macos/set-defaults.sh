@@ -55,6 +55,34 @@ defaults write com.apple.MCX DisableLocationServices -bool true
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+# Disable service daemons related to "Feedback Assistant".
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.appleseed.fbahelperd.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.appleseed.seedusaged.plist 2> /dev/null
+
+# Disable "Apple Wide Area Connectivity" service daemon.
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.awacsd.plist 2> /dev/null
+
+# Disable service daemon related to "Wireless Diagnostics".
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.awdd.plist 2> /dev/null
+
+# Disable service daemon related to "Crash Reporter".
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.CrashReporterSupportHelper.plist 2> /dev/null
+
+# Disable service daemon that collects and sends to Apple any recent diagnostic information.
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.plist 2> /dev/null
+
+# Disable service daemon related to "Siri".
+launchctl unload -w /System/Library/LaunchAgents/com.apple.assistant_service.plist 2> /dev/null
+
+# Disable service daemon related to photos and iCloud.
+launchctl unload -w /System/Library/LaunchAgents/com.apple.cloudphotosd.plist 2> /dev/null
+
+# Disable service daemon related to Safari history syncing.
+launchctl unload -w /System/Library/LaunchAgents/com.apple.SafariCloudHistoryPushAgent.plist 2> /dev/null
+
+# Disable service daemon related to Safari bookmark syncing.
+launchctl unload -w /System/Library/LaunchAgents/com.apple.safaridavclient.plist 2> /dev/null
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
