@@ -60,4 +60,5 @@ org.videolan.vlc        public.avi                     viewer
 
 # Set "VLC" as the default app for "audio" files
 org.videolan.vlc        public.audio                   viewer
+org.videolan.vlc        public.mp3                     viewer
 org.videolan.vlc        com.apple.m4a-audio            viewer
