@@ -16,6 +16,9 @@ EXTENSIONS=(
 	# Clear Downloads
 	"bknoejjhcfmakcibhifepfkegpjdnadk"
 
+	# Decentraleyes
+	"ldpochfccmkkmhdbclfhpagapcfdljkj"
+
 	# Google Analytics Opt-out Add-on (by Google)
 	"fllaojicojecljbmefodhfapmkghcbnh"
 
