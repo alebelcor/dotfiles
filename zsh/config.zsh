@@ -85,6 +85,12 @@ setopt PROMPT_SUBST
 #   like: git comm-[tab]
 setopt COMPLETE_ALIASES
 
+# Query the user before executing `rm` with a star, e.g. `rm *` or `rm path/*`.
+unsetopt RM_STAR_SILENT
+
+# Wait 10 seconds until executing `rm` with a star, e.g. `rm path/*`.
+setopt RM_STAR_WAIT
+
 # ==========================================================================
 # Key bindings
 # ==========================================================================
