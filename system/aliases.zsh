@@ -36,3 +36,6 @@ fi
 
 # Always use color output for `ls`.
 alias ls='command ls ${colorflag}'
+
+# Replace `rm` with `safe-rm` to prevent accidental deletion of important files.
+alias rm='safe-rm'

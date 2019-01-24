@@ -1,0 +1,6 @@
+# User-specific blacklist
+#
+# Documentation at https://launchpad.net/safe-rm
+
+~/Downloads
+~/projects
