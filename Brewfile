@@ -25,6 +25,7 @@ brew 'grep', args: ['with-default-names']
 brew 'hostess'
 brew 'mas'
 brew 'nodenv'
+brew 'p7zip'
 brew 'safe-rm'
 brew 'wget'
 brew 'wifi-password'
