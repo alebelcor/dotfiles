@@ -1,0 +1,109 @@
+{
+  // Editor
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.dragAndDrop": false,
+  "editor.emptySelectionClipboard": false,
+  "editor.fontSize": 15,
+  "editor.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderControlCharacters": true,
+  "editor.renderIndentGuides": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80,
+    100,
+    120,
+  ],
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  // Workbench
+  "workbench.colorTheme": "One Monokai",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.editor": "json",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.feedback.visible": false,
+  // Window
+  "window.closeWhenEmpty": true,
+  "window.restoreWindows": "all",
+  // Files
+  "files.autoSave": "onWindowChange",
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.vscode": true,
+    "**/.sass-cache": true,
+    "**/node_modules": true,
+    "**/._*": true,
+    "**/.DS_Store": true,
+    "**/.Spotlight-V100": true,
+    "**/.Trashes": true,
+    "**/Desktop.ini": true,
+    "**/Thumbs.db": true,
+  },
+  "files.hotExit": "onExitAndWindowClose",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  // File Explorer
+  "explorer.openEditors.visible": 0,
+  // Search
+  "search.exclude": {
+    "**/package-lock.json": true,
+  },
+  // Update
+  "update.enableWindowsBackgroundUpdates": false,
+  // HTML
+  "html.format.endWithNewline": true,
+  "html.format.wrapLineLength": 0,
+  // Markdown
+  "markdown.preview.fontSize": 16,
+  "[markdown]": {
+    "editor.tabSize": 4,
+  },
+  // CSS
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.idSelector": "warning",
+  "css.lint.ieHack": "warning",
+  "css.lint.important": "warning",
+  "css.lint.importStatement": "warning",
+  "css.lint.universalSelector": "warning",
+  "css.lint.zeroUnits": "warning",
+  // Sass
+  "scss.lint.duplicateProperties": "warning",
+  "scss.lint.idSelector": "warning",
+  "scss.lint.ieHack": "warning",
+  "scss.lint.important": "warning",
+  "scss.lint.importStatement": "warning",
+  "scss.lint.universalSelector": "warning",
+  "scss.lint.zeroUnits": "warning",
+  // Telemetry
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  // Git
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.path": "/usr/local/bin/git",
+  // Material Icons
+  "material-icon-theme.showWelcomeMessage": false,
+  // Code Spell Checker Configuration
+  "cSpell.userWords": [
+    "autofill",
+    "Brewfile",
+    "editorconfig",
+    "gitignore",
+    "monokai",
+    "polyfill",
+    "symlink",
+    "todos",
+  ],
+  // Npm
+  "npm.enableScriptExplorer": true,
+}

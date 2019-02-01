@@ -64,6 +64,7 @@ cask 'steam'
 cask 'sublime-text2'
 cask 'the-unarchiver'
 cask 'transmission'
+cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 
