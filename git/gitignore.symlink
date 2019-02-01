@@ -52,6 +52,7 @@ sys$command
 .svn
 .CVS
 .idea
+.vscode
 
 # ==========================================================================
 # Numerous always-ignore extensions
