@@ -1,6 +1,10 @@
-# User-specific blacklist
+# `safe-rm` is a safety tool intended to prevent the accidental deletion of
+# important files by replacing `/bin/rm` with a wrapper, which checks the given
+# arguments against a configurable blacklist of files and directories that
+# should never be removed.
 #
 # Documentation at https://launchpad.net/safe-rm
+#
 
 ~/Downloads
 ~/projects
