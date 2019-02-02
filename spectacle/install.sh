@@ -10,7 +10,7 @@ fi
 printf "› Installing Spectacle keyboard shortcuts.\\n"
 
 # Get path to `spectacle` folder.
-DOTFILES_SPECTACLE="$(dirname $(realpath $0))"
+DOTFILES_SPECTACLE="$(dirname $(realpath "$0"))"
 
 # Install Spectacle keyboard shortcuts.
 cp "$DOTFILES_SPECTACLE/Shortcuts.json" "$HOME/Library/Application Support/Spectacle/Shortcuts.json"
