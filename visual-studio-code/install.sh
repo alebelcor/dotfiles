@@ -26,12 +26,14 @@ code --install-extension "editorconfig.editorconfig" > /dev/null 2>&1
 code --install-extension "davidanson.vscode-markdownlint" > /dev/null 2>&1
 # Material Icon Theme
 code --install-extension "PKief.material-icon-theme" > /dev/null 2>&1
-# One Monokai Theme
-code --install-extension "azemoh.one-monokai" > /dev/null 2>&1
 # npm
 code --install-extension "eg2.vscode-npm-script" > /dev/null 2>&1
 # npm Intellisense
 code --install-extension "christian-kohler.npm-intellisense" > /dev/null 2>&1
+# One Monokai Theme
+code --install-extension "azemoh.one-monokai" > /dev/null 2>&1
+# shellcheck
+code --install-extension "timonwong.shellcheck" > /dev/null 2>&1
 
 # Set path to current folder.
 DOTFILES_VSCODE="${ZSH}/visual-studio-code"
