@@ -34,7 +34,7 @@ else
 fi
 
 # Get path to `node` folder.
-DOTFILES_NODE="$(dirname $(realpath "$0"))"
+DOTFILES_NODE="$(dirname "$(realpath "$0")")"
 
 # Install the `nodenv-default-packages` plugin.
 cp "$DOTFILES_NODE/default-packages" "$(nodenv root)/"

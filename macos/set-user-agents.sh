@@ -8,7 +8,7 @@
 #
 
 # Get path to `macos` folder.
-DOTFILES_MACOS="$(dirname $(realpath "$0"))"
+DOTFILES_MACOS="$(dirname "$(realpath "$0")")"
 
 setup_agent() {
 	local destination="${HOME}/Library/LaunchAgents/"

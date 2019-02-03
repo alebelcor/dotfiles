@@ -8,7 +8,7 @@ then
 fi
 
 # Get path to `safe-rm` folder.
-DOTFILES_SAFE_RM="$(dirname $(realpath "$0"))"
+DOTFILES_SAFE_RM="$(dirname "$(realpath "$0")")"
 
 # Create `.config` folder if it doesn't exist.
 mkdir -p "${HOME}/.config"
