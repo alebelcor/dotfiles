@@ -7,8 +7,10 @@ then
 	exit 1
 fi
 
-# Get path to `safe-rm` folder.
-DOTFILES_SAFE_RM="$(dirname "$(realpath "$0")")"
+printf "› Installing safe-rm settings.\\n"
+
+# Set path to current folder.
+DOTFILES_SAFE_RM="${ZSH}/safe-rm"
 
 # Create `.config` folder if it doesn't exist.
 mkdir -p "${HOME}/.config"

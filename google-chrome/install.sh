@@ -4,8 +4,8 @@
 #
 
 # Ensure destination folder exists.
-DESTINATION="$HOME/Library/Application Support/Google/Chrome/External Extensions"
-mkdir -p "$DESTINATION"
+DESTINATION="${HOME}/Library/Application Support/Google/Chrome/External Extensions"
+mkdir -p "${DESTINATION}"
 
 # Define list of Google Chrome extensions to install.
 EXTENSIONS=(
@@ -71,5 +71,5 @@ JSON_CONTENT='{"external_update_url": "https:\/\/clients2.google.com\/service\/u
 # Create `.json` files, one for each extension to be installed.
 for extension_id in "${EXTENSIONS[@]}"
 do
-	echo "$JSON_CONTENT" > "$DESTINATION/$extension_id.json"
+	echo "${JSON_CONTENT}" > "${DESTINATION}/${extension_id}.json"
 done

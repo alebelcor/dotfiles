@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Automatically load functions in `functions` folder.
-autoload -U "$ZSH"/functions/*(:t)
+autoload -U "${ZSH}"/functions/*(:t)
 
 # ==========================================================================
 # ZSH options

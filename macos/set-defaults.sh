@@ -191,7 +191,7 @@ AIRPORT="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current
 #   * Ranked
 #   * Recent
 #   * Strongest
-sudo "$AIRPORT" prefs JoinMode=Preferred
+sudo "${AIRPORT}" prefs JoinMode=Preferred
 
 # Do not ask to join new networks.
 # Possible values:
@@ -199,19 +199,19 @@ sudo "$AIRPORT" prefs JoinMode=Preferred
 #   * JoinOpen
 #   * KeepLooking
 #   * DoNothing
-sudo "$AIRPORT" prefs JoinModeFallback=DoNothing
+sudo "${AIRPORT}" prefs JoinModeFallback=DoNothing
 
 # Remember networks this computer has joined.
-sudo "$AIRPORT" prefs RememberRecentNetworks=YES
+sudo "${AIRPORT}" prefs RememberRecentNetworks=YES
 
 # Require administrator authorization to create computer-to-computer networks.
-sudo "$AIRPORT" prefs RequireAdminIBSS=YES
+sudo "${AIRPORT}" prefs RequireAdminIBSS=YES
 
 # Require administrator authorization to change networks.
-sudo "$AIRPORT" prefs RequireAdminNetworkChange=YES
+sudo "${AIRPORT}" prefs RequireAdminNetworkChange=YES
 
 # Require administrator authorization to turn Wi-Fi on or off.
-sudo "$AIRPORT" prefs RequireAdminPowerToggle=YES
+sudo "${AIRPORT}" prefs RequireAdminPowerToggle=YES
 
 # Define list of DNS servers to set up.
 #   1. Google
@@ -764,6 +764,15 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 # Auto-play videos when opened with QuickTime Player.
 defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
+# Don't show mouse clicks in recording.
+defaults write com.apple.QuickTimePlayerX MGScreenRecordingDocumentShowMouseClicksUserDefaultsKey -int 0
+
+# Set Microphone input to "None" for recording.
+defaults delete com.apple.QuickTimePlayerX "MGCaptureDeviceSelection MGScreenRecordingDocument" &> /dev/null
+
+# Clear recent items.
+defaults delete com.apple.QuickTimePlayerX MGRecentURLPropertyLists &> /dev/null
+
 ###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
@@ -996,7 +1005,7 @@ defaults write com.google.Chrome CloudManagementEnrollmentMandatory -bool false
 defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
 
 # Set default download directory.
-defaults write com.google.Chrome DefaultDownloadDirectory -string "$HOME/Downloads"
+defaults write com.google.Chrome DefaultDownloadDirectory -string "${HOME}/Downloads"
 
 # Allow usage of the developer tools.
 defaults write com.google.Chrome DeveloperToolsAvailability -int 1
@@ -1008,7 +1017,7 @@ defaults write com.google.Chrome DisablePrintPreview -bool true
 defaults write com.google.Chrome DisableScreenshots -bool true
 
 # Set download directory.
-defaults write com.google.Chrome DownloadDirectory -string "$HOME/Downloads"
+defaults write com.google.Chrome DownloadDirectory -string "${HOME}/Downloads"
 
 # Don't enforce Google SafeSearch.
 defaults write com.google.Chrome ForceGoogleSafeSearch -bool false
@@ -1164,19 +1173,6 @@ defaults write com.rathertremendous.noisy PreviousNoiseType -int 3
 
 # Set volume to 100%.
 defaults write com.rathertremendous.noisy NoiseVolume -int 1
-
-###############################################################################
-# QuickTime Player                                                            #
-###############################################################################
-
-# Don't show mouse clicks in recording.
-defaults write com.apple.QuickTimePlayerX MGScreenRecordingDocumentShowMouseClicksUserDefaultsKey -int 0
-
-# Set Microphone input to "None" for recording.
-defaults delete com.apple.QuickTimePlayerX "MGCaptureDeviceSelection MGScreenRecordingDocument"
-
-# Clear recent items.
-defaults delete com.apple.QuickTimePlayerX MGRecentURLPropertyLists
 
 ###############################################################################
 # Spectacle                                                                   #

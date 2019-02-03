@@ -10,7 +10,7 @@ then
 fi
 
 # Check if ZSH is in `/etc/shells`.
-if test ! "$(grep --quiet "$HOMEBREW_PREFIX/bin/zsh" "/etc/shells")"
+if test ! "$(grep --quiet "${HOMEBREW_PREFIX}/bin/zsh" "/etc/shells")"
 then
 	# Ask for the administrator password upfront.
 	sudo -v
@@ -19,16 +19,16 @@ then
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 	printf "› Adding ZSH to the list of shells.\\n"
-	echo "$HOMEBREW_PREFIX/bin/zsh" | sudo tee -a /etc/shells > /dev/null
+	echo "${HOMEBREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells > /dev/null
 else
 	printf "\\r  [ \\033[00;34mINFO\\033[0m ] ZSH is already in \"/etc/shells\".\\n"
 fi
 
 # Check if current shell is ZSH.
-if test ! "$ZSH_NAME" = "zsh"
+if test ! "${ZSH_NAME}" = "zsh"
 then
 	printf "› Changing shell to ZSH.\\n"
-	chsh -s "$HOMEBREW_PREFIX/bin/zsh"
+	chsh -s "${HOMEBREW_PREFIX}/bin/zsh"
 else
 	printf "\\r  [ \\033[00;34mINFO\\033[0m ] ZSH is already the default shell.\\n"
 fi
@@ -43,4 +43,4 @@ else
 fi
 
 # Create "projects" folder in case it doesn't exist.
-mkdir -p "$HOME/projects"
+mkdir -p "${HOME}/projects"

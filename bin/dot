@@ -6,23 +6,23 @@
 # Run it periodically to make sure you're on the latest and greatest.
 #
 
-ZSH="$HOME/projects/dotfiles"
+ZSH="${HOME}/projects/dotfiles"
 export ZSH
 
 # Install Homebrew.
-"$ZSH"/homebrew/install.sh 2>&1
+"${ZSH}"/homebrew/install.sh 2>&1
 
 printf "› Upgrading Homebrew.\\n"
 brew update > /dev/null
 
 # Install software.
-"$ZSH"/scripts/install
+"${ZSH}"/scripts/install
 
 # Set macOS defaults.
-"$ZSH"/macos/set-defaults.sh
+"${ZSH}"/macos/set-defaults.sh
 
 # Set macOS login items.
-"$ZSH"/macos/set-login-items.sh
+"${ZSH}"/macos/set-login-items.sh
 
 # Set user agents.
-"$ZSH"/macos/set-user-agents.sh
+"${ZSH}"/macos/set-user-agents.sh

@@ -8,7 +8,7 @@ export GREP_OPTIONS='--color=auto'
 
 # Increase history size.
 export HISTSIZE=32768
-export SAVEHIST="$HISTSIZE"
+export SAVEHIST="${HISTSIZE}"
 
 # Shortcut to Homebrew's root directory.
 HOMEBREW_PREFIX="$(brew --prefix)"

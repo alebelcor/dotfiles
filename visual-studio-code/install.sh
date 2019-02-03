@@ -33,8 +33,8 @@ code --install-extension "eg2.vscode-npm-script" > /dev/null 2>&1
 # npm Intellisense
 code --install-extension "christian-kohler.npm-intellisense" > /dev/null 2>&1
 
-# Get path to `visual-studio-code` folder.
-DOTFILES_VSCODE="$(dirname "$(realpath "$0")")"
+# Set path to current folder.
+DOTFILES_VSCODE="${ZSH}/visual-studio-code"
 
 # Set up Visual Studio Code settings.
-cp "$DOTFILES_VSCODE/settings.json" "$HOME/Library/Application Support/Code/User/"
+cp "${DOTFILES_VSCODE}/settings.json" "${HOME}/Library/Application Support/Code/User/"

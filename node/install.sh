@@ -33,11 +33,11 @@ else
 	printf "\\r  [ \\033[00;34mINFO\\033[0m ] nodenv-package-rehash is already installed.\\n"
 fi
 
-# Get path to `node` folder.
-DOTFILES_NODE="$(dirname "$(realpath "$0")")"
+# Set path to current folder.
+DOTFILES_NODE="${ZSH}/node"
 
 # Install the `nodenv-default-packages` plugin.
-cp "$DOTFILES_NODE/default-packages" "$(nodenv root)/"
+cp "${DOTFILES_NODE}/default-packages" "$(nodenv root)/"
 
 if test ! -d "nodenv-default-packages"
 then
@@ -58,7 +58,7 @@ else
 fi
 
 # Get the latest Node.js LTS version number.
-latest_lts_version=$(curl -s https://nodejs.org/dist/index.json 2>/dev/null | \
+LATEST_LTS_VERSION=$(curl -s https://nodejs.org/dist/index.json 2>/dev/null | \
 	grep -e '"lts":"[A-Z][a-z]\+"' | \
 	grep -oe '"version":"\(v[.0-9]\+\)"' | \
 	grep -oe '[.0-9]\+' | \
@@ -66,13 +66,13 @@ latest_lts_version=$(curl -s https://nodejs.org/dist/index.json 2>/dev/null | \
 )
 
 # Check if that version is installed, otherwise install it.
-if test ! "$(nodenv versions | grep -qe "$latest_lts_version")"
+if ! (nodenv versions | grep -qe "$LATEST_LTS_VERSION")
 then
-	printf "› Installing Node.js v%s.\\n" "$latest_lts_version"
-	nodenv install "$latest_lts_version" > /dev/null 2>&1
+	printf "› Installing Node.js v%s.\\n" "${LATEST_LTS_VERSION}"
+	nodenv install "${LATEST_LTS_VERSION}" > /dev/null 2>&1
 
-	printf "› Setting global version of Node for all shells to v%s.\\n" "$latest_lts_version"
-	nodenv global "$latest_lts_version" > /dev/null 2>&1
+	printf "› Setting global version of Node for all shells to v%s.\\n" "${LATEST_LTS_VERSION}"
+	nodenv global "${LATEST_LTS_VERSION}" > /dev/null 2>&1
 else
-	printf "\\r  [ \\033[00;34mINFO\\033[0m ] Node.js v%s is already installed.\\n" "$latest_lts_version"
+	printf "\\r  [ \\033[00;34mINFO\\033[0m ] Node.js v%s is already installed.\\n" "${LATEST_LTS_VERSION}"
 fi

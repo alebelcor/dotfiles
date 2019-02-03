@@ -7,6 +7,8 @@ then
 	exit 1
 fi
 
+printf "› Setting domain settings.\\n"
+
 # Set domains from file.
 sudo hostess -s apply domains.json
 

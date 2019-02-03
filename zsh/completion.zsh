@@ -1,21 +1,21 @@
 #!/usr/bin/env zsh
 
 # Fish-like fast/unobtrusive autosuggestions for ZSH.
-autosuggestions="$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+AUTOSUGGESTIONS="${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-if test -f "$autosuggestions"
+if test -f "${AUTOSUGGESTIONS}"
 then
-	source "$autosuggestions"
+	source "${AUTOSUGGESTIONS}"
 else
 	printf "\\r  [ \\033[0;33mWARN\\033[0m ] zsh-autosuggestions is not installed.\\n"
 fi
 
 # Syntax highlighting for ZSH.
-syntax_highlighting="$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+SYNTAX_HIGHLIGHTING="${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-if test -f "$syntax_highlighting"
+if test -f "${SYNTAX_HIGHLIGHTING}"
 then
-	source "$syntax_highlighting"
+	source "${SYNTAX_HIGHLIGHTING}"
 else
 	printf "\\r  [ \\033[0;33mWARN\\033[0m ] zsh-syntax-highlighting is not installed.\\n"
 fi

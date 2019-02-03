@@ -7,8 +7,8 @@
 # Note: Set proper permissions for new `.plist`: `chmod 644 new.plist`
 #
 
-# Get path to `macos` folder.
-DOTFILES_MACOS="$(dirname "$(realpath "$0")")"
+# Set path to current folder.
+DOTFILES_MACOS="${ZSH}/macos"
 
 setup_agent() {
 	local destination="${HOME}/Library/LaunchAgents/"

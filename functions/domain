@@ -12,9 +12,9 @@ domain() {
 
 	if ! test -d "${app}"
 	then
-		echo "App not found: $app"
+		echo "App not found: ${app}"
 		return 1
 	fi
 
-	mdls -name kMDItemCFBundleIdentifier -raw "$app"
+	mdls -name kMDItemCFBundleIdentifier -raw "${app}"
 }

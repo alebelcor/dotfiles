@@ -7,5 +7,7 @@ then
 	exit 1
 fi
 
+printf "› Settings default applications for various file types.\\n"
+
 # Set default applications for various document types.
-duti "$HOME/.duti" > /dev/null
+duti "${HOME}/.duti" > /dev/null
