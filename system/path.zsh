@@ -8,7 +8,7 @@ path=("${HOMEBREW_PREFIX}/bin" $path)
 path=("${HOMEBREW_PREFIX}/sbin" $path)
 
 # Adding local `/bin` folder.
-path=("${ZSH}/bin" $path)
+path=("${DOTFILES}/bin" $path)
 
 # Adding coreutils' man pages.
 export MANPATH="${HOMEBREW_PREFIX}/man:${HOMEBREW_PREFIX}/git/man:${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnuman:${MANPATH}"

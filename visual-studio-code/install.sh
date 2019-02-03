@@ -36,7 +36,7 @@ code --install-extension "azemoh.one-monokai" > /dev/null 2>&1
 code --install-extension "timonwong.shellcheck" > /dev/null 2>&1
 
 # Set path to current folder.
-DOTFILES_VSCODE="${ZSH}/visual-studio-code"
+DOTFILES_VSCODE="${DOTFILES}/visual-studio-code"
 
 # Set up Visual Studio Code settings.
 ln -sf "${DOTFILES_VSCODE}/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"

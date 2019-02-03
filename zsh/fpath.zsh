@@ -2,7 +2,7 @@
 
 # Add each topic folder to fpath so that they can add functions and
 # completion scripts.
-for topic_folder in "${ZSH}"/*
+for topic_folder in "${DOTFILES}"/*
 do
 	if test -d "${topic_folder}"
 	then

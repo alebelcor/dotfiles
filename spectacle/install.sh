@@ -10,7 +10,7 @@ fi
 printf "› Installing Spectacle keyboard shortcuts.\\n"
 
 # Set path to current folder.
-DOTFILES_SPECTACLE="${ZSH}/spectacle"
+DOTFILES_SPECTACLE="${DOTFILES}/spectacle"
 
 # Install Spectacle keyboard shortcuts.
 ln -sf "${DOTFILES_SPECTACLE}/Shortcuts.json" "${HOME}/Library/Application Support/Spectacle/Shortcuts.json"

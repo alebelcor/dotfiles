@@ -8,7 +8,7 @@
 #
 
 # Set path to current folder.
-DOTFILES_MACOS="${ZSH}/macos"
+DOTFILES_MACOS="${DOTFILES}/macos"
 
 setup_agent() {
 	local destination="${HOME}/Library/LaunchAgents/"

@@ -34,7 +34,7 @@ else
 fi
 
 # Set path to current folder.
-DOTFILES_NODE="${ZSH}/node"
+DOTFILES_NODE="${DOTFILES}/node"
 
 # Install the `nodenv-default-packages` plugin.
 cp "${DOTFILES_NODE}/default-packages" "$(nodenv root)/"
