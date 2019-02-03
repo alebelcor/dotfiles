@@ -12,7 +12,7 @@ printf "› Installing safe-rm settings.\\n"
 # Set path to current folder.
 DOTFILES_SAFE_RM="${ZSH}/safe-rm"
 
-# Create `.config` folder if it doesn't exist.
+# Ensure destination folder exists.
 mkdir -p "${HOME}/.config"
 
 # Create a symbolic link for the configuration file.

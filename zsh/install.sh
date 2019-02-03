@@ -42,5 +42,5 @@ else
 	printf "\\r  [ \\033[00;34mINFO\\033[0m ] ZSH prompt is already installed.\\n";
 fi
 
-# Create "projects" folder in case it doesn't exist.
+# Ensure "projects" folder exists.
 mkdir -p "${HOME}/projects"
