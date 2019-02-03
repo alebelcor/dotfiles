@@ -846,10 +846,10 @@ defaults write com.agilebits.onepassword-osx CheckForSoftwareUpdatesEnabled -boo
 ###############################################################################
 
 # Create plugin folder if it doesn't exist.
-mkdir -p "${HOME}/bitbar-plugins"
+mkdir -p "${HOME}/.config/bitbar"
 
 # Set plugin folder.
-defaults write com.matryer.BitBar pluginsDirectory -string "${HOME}/bitbar-plugins"
+defaults write com.matryer.BitBar pluginsDirectory -string "${HOME}/.config/bitbar"
 
 ###############################################################################
 # Caffeine                                                                    #
