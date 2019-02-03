@@ -7,7 +7,7 @@ export EDITOR='vim'
 export GREP_OPTIONS='--color=auto'
 
 # Increase history size.
-export HISTSIZE=32768
+export HISTSIZE=1500
 export SAVEHIST="${HISTSIZE}"
 
 # Shortcut to Homebrew's root directory.
