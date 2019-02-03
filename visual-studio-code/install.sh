@@ -37,4 +37,4 @@ code --install-extension "christian-kohler.npm-intellisense" > /dev/null 2>&1
 DOTFILES_VSCODE="${ZSH}/visual-studio-code"
 
 # Set up Visual Studio Code settings.
-cp "${DOTFILES_VSCODE}/settings.json" "${HOME}/Library/Application Support/Code/User/"
+ln -sf "${DOTFILES_VSCODE}/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"

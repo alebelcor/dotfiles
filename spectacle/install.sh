@@ -13,4 +13,4 @@ printf "› Installing Spectacle keyboard shortcuts.\\n"
 DOTFILES_SPECTACLE="${ZSH}/spectacle"
 
 # Install Spectacle keyboard shortcuts.
-cp "${DOTFILES_SPECTACLE}/Shortcuts.json" "${HOME}/Library/Application Support/Spectacle/Shortcuts.json"
+ln -sf "${DOTFILES_SPECTACLE}/Shortcuts.json" "${HOME}/Library/Application Support/Spectacle/Shortcuts.json"
