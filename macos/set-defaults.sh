@@ -3,6 +3,7 @@
 # Sets reasonable macOS defaults.
 #
 # Original from https://mths.be/macos
+#
 
 printf "› Setting macOS defaults.\\n"
 
@@ -1247,6 +1248,7 @@ defaults write org.videolan.vlc language -string "en"
 
 AFFECTED_APPS=(
 	"Activity Monitor"
+	"App Store"
 	"BitBar"
 	"Caffeine"
 	"Calculator"
@@ -1261,6 +1263,7 @@ AFFECTED_APPS=(
 	"LimeChat"
 	"Noisy"
 	"Photos"
+	"QuickTime Player"
 	"Safari"
 	"Spectacle"
 	"SystemUIServer"
