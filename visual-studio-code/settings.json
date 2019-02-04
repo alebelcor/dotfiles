@@ -34,6 +34,10 @@
   "window.closeWhenEmpty": true,
   "window.restoreWindows": "all",
   // Files
+  "files.associations": {
+    "*.js.symlink": "javascript",
+    "*.plist": "xml",
+  },
   "files.autoSave": "onWindowChange",
   "files.eol": "\n",
   "files.exclude": {
@@ -66,9 +70,6 @@
   "html.format.wrapLineLength": 0,
   // Markdown
   "markdown.preview.fontSize": 16,
-  "[markdown]": {
-    "editor.tabSize": 4,
-  },
   // CSS
   "css.lint.duplicateProperties": "warning",
   "css.lint.idSelector": "warning",
