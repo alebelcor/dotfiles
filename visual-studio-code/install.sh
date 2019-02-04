@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Check for Visual Studio Code.
 if test ! "$(command -v code)"
@@ -7,33 +7,66 @@ then
 	exit 1
 fi
 
-printf "› Installing Visual Studio Code settings.\\n"
+printf "› Installing Visual Studio Code extensions and settings.\\n"
 
-# Uninstall extensions
+# Get list of installed extensions.
+INSTALLED_EXTENSIONS=$(code --list-extensions)
 
-# vscode-icons
-code --uninstall-extension "robertohuertasm.vscode-icons" > /dev/null 2>&1
+# Define list of extensions to uninstall.
+EXTENSIONS_TO_UNINSTALL=(
 
-# Install extensions
+	# vscode-icons
+	"robertohuertasm.vscode-icons"
 
-# Brewfile
-code --install-extension "sharat.vscode-brewfile" > /dev/null 2>&1
-# Code Spell Checker
-code --install-extension "streetsidesoftware.code-spell-checker" > /dev/null 2>&1
-# EditorConfig for VS Code
-code --install-extension "editorconfig.editorconfig" > /dev/null 2>&1
-# markdownlint
-code --install-extension "davidanson.vscode-markdownlint" > /dev/null 2>&1
-# Material Icon Theme
-code --install-extension "PKief.material-icon-theme" > /dev/null 2>&1
-# npm
-code --install-extension "eg2.vscode-npm-script" > /dev/null 2>&1
-# npm Intellisense
-code --install-extension "christian-kohler.npm-intellisense" > /dev/null 2>&1
-# One Monokai Theme
-code --install-extension "azemoh.one-monokai" > /dev/null 2>&1
-# shellcheck
-code --install-extension "timonwong.shellcheck" > /dev/null 2>&1
+)
+
+for installed_extension in "${INSTALLED_EXTENSIONS[@]}"
+do
+	if (printf '%s\n' "${EXTENSIONS_TO_UNINSTALL[@]}" | grep -q "${installed_extension}")
+	then
+		code --uninstall-extension "${installed_extension}" > /dev/null 2>&1
+	fi
+done
+
+# Define list of extensions to install.
+EXTENSIONS_TO_INSTALL=(
+
+	# Brewfile
+	"sharat.vscode-brewfile"
+
+	# Code Spell Checker
+	"streetsidesoftware.code-spell-checker"
+
+	# EditorConfig for VS Code
+	"EditorConfig.EditorConfig"
+
+	# markdownlint
+	"DavidAnson.vscode-markdownlint"
+
+	# Material Icon Theme
+	"PKief.material-icon-theme"
+
+	# npm
+	"eg2.vscode-npm-script"
+
+	# npm Intellisense
+	"christian-kohler.npm-intellisense"
+
+	# One Monokai Theme
+	"azemoh.one-monokai"
+
+	# shellcheck
+	"timonwong.shellcheck"
+
+)
+
+for extension_to_install in "${EXTENSIONS_TO_INSTALL[@]}"
+do
+	if ! (printf '%s\n' "${INSTALLED_EXTENSIONS[@]}" | grep -q "${extension_to_install}")
+	then
+		code --install-extension "${extension_to_install}" > /dev/null 2>&1
+	fi
+done
 
 # Set path to current folder.
 DOTFILES_VSCODE="${DOTFILES}/visual-studio-code"
