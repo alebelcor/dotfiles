@@ -7,7 +7,7 @@
 DESTINATION="${HOME}/Library/Application Support/Google/Chrome/External Extensions"
 mkdir -p "${DESTINATION}"
 
-# Define list of Google Chrome extensions to install.
+# List of Google Chrome extensions to install.
 EXTENSIONS=(
 
 	# 1Password: Password Manager and Secure Wallet
