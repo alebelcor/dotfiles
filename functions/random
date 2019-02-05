@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Get a random (MD5 hash-like) sequence of characters.
+# Useful when creating unique names.
+#
+# Usage: random [number of characters]
+# Example: `random` may return something like `7fe623`
+#
+
+random() {
+	local number_of_characters=${1:-6}
+
+	< /dev/urandom tr -dc 'abcdef0-9' | fold -w "${number_of_characters}" | head -n 1
+}
