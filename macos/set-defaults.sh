@@ -314,6 +314,9 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Manual Brightness" -int 0
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Muted" -bool true
 
+# Add "Spanish" keyboard input source.
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
