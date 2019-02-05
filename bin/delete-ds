@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# delete-ds
+#
+# Remove `.DS_Store` files from the current and descendant folders.
+#
+
+find . -name '.DS_Store' -type f -delete
