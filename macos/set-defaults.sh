@@ -316,6 +316,8 @@ sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Key
 
 # Add "Spanish" keyboard input source.
 defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
+defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
+defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
 
 ###############################################################################
 # Screen                                                                      #
