@@ -905,6 +905,7 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 ###############################################################################
 
 # Full list of supported policies: https://www.chromium.org/administrators/policy-list-3
+# Last updated for version 74.0.3690.
 
 # -- Default search provider
 
@@ -937,6 +938,11 @@ defaults write com.google.Chrome HomepageIsNewTabPage -bool true
 
 # Disable saving passwords to the password manager.
 defaults write com.google.Chrome PasswordManagerEnabled -bool false
+
+# -- Printing
+
+# Use the system-native print preview dialog instead of the print preview.
+defaults write com.google.Chrome DisablePrintPreview -bool true
 
 # -- Safe Browsing settings
 
@@ -1009,9 +1015,6 @@ defaults write com.google.Chrome DefaultDownloadDirectory -string "${HOME}/Downl
 
 # Allow usage of the developer tools.
 defaults write com.google.Chrome DeveloperToolsAvailability -int 1
-
-# Use the system-native print preview dialog instead of the print preview.
-defaults write com.google.Chrome DisablePrintPreview -bool true
 
 # Disable taking screenshots.
 defaults write com.google.Chrome DisableScreenshots -bool true
