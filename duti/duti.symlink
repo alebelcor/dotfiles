@@ -33,16 +33,18 @@ com.microsoft.VSCode      com.apple.log                    editor
 com.microsoft.VSCode      public.zsh-script                editor
 
 # Set "The Unarchiver" as the default app for:
+#   * .7z, application/x-7z-compressed
 #   * .gtar, application/x-gtar
-#   * .tar, application/x-tar, application/tar
 #   * .gz, .gzip, application/x-gzip, application/gzip
+#   * .tar, application/x-tar, application/tar
 #   * .tgz
-#   * .zip, application/zip
-#   * .zip, application/zip
-#   * .rar
+#   * .zip, application/zip, application/x-zip-compressed
+#   * .zip, application/zip, application/x-zip-compressed
+#   * .rar, application/x-rar, application/x-rar-compressed
+cx.c3.theunarchiver      org.7-zip.7-zip-archive          all
 cx.c3.theunarchiver      org.gnu.gnu-tar-archive          all
-cx.c3.theunarchiver      public.tar-archive               all
 cx.c3.theunarchiver      org.gnu.gnu-zip-archive          all
+cx.c3.theunarchiver      public.tar-archive               all
 cx.c3.theunarchiver      org.gnu.gnu-zip-tar-archive      all
 cx.c3.theunarchiver      com.pkware.zip-archive           all
 cx.c3.theunarchiver      public.zip-archive               all
