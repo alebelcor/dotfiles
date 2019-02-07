@@ -95,6 +95,13 @@
   // Material Icons
   "material-icon-theme.showWelcomeMessage": false,
   // Code Spell Checker Configuration
+  "cSpell.dictionaries": [
+    "css",
+    "html",
+    "node",
+    "npm",
+    "typescript",
+  ],
   "cSpell.userWords": [
     "autofill",
     "Brewfile",
