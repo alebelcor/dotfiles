@@ -6,15 +6,15 @@
 # List of Uniform Type Identifiers in OS X:
 # https://developer.apple.com/library/mac/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html
 #
-# Bundle ID             UTI/ext/MIME Type              Role
+# Bundle ID      UTI/ext/MIME Type      Role
 #
 
 # Protection against Sparklegate
 # https://www.taoeffect.com/blog/2016/02/apologies-sky-kinda-falling-protecting-yourself-from-sparklegate/
-com.apple.Safari        afp
-com.apple.Safari        ftp
-com.apple.Safari        nfs
-com.apple.Safari        smb
+com.apple.Safari      afp
+com.apple.Safari      ftp
+com.apple.Safari      nfs
+com.apple.Safari      smb
 
 # Set "Sublime Text" as the default app for:
 #   * .md, .markdown
@@ -24,13 +24,13 @@ com.apple.Safari        smb
 #   * .json
 #   * .log
 #   * .zsh
-com.sublimetext.2       net.daringfireball.markdown    editor
-com.sublimetext.2       public.plain-text              editor
-com.sublimetext.2       public.xml                     editor
-com.sublimetext.2       public.shell-script            editor
-com.sublimetext.2       public.json                    editor
-com.sublimetext.2       com.apple.log                  editor
-com.sublimetext.2       public.zsh-script              editor
+com.sublimetext.2      net.daringfireball.markdown      editor
+com.sublimetext.2      public.plain-text                editor
+com.sublimetext.2      public.xml                       editor
+com.sublimetext.2      public.shell-script              editor
+com.sublimetext.2      public.json                      editor
+com.sublimetext.2      com.apple.log                    editor
+com.sublimetext.2      public.zsh-script                editor
 
 # Set "The Unarchiver" as the default app for:
 #   * .gtar, application/x-gtar
@@ -40,25 +40,28 @@ com.sublimetext.2       public.zsh-script              editor
 #   * .zip, application/zip
 #   * .zip, application/zip
 #   * .rar
-cx.c3.theunarchiver     org.gnu.gnu-tar-archive        all
-cx.c3.theunarchiver     public.tar-archive             all
-cx.c3.theunarchiver     org.gnu.gnu-zip-archive        all
-cx.c3.theunarchiver     org.gnu.gnu-zip-tar-archive    all
-cx.c3.theunarchiver     com.pkware.zip-archive         all
-cx.c3.theunarchiver     public.zip-archive             all
-cx.c3.theunarchiver     com.rarlab.rar-archive         all
+cx.c3.theunarchiver      org.gnu.gnu-tar-archive          all
+cx.c3.theunarchiver      public.tar-archive               all
+cx.c3.theunarchiver      org.gnu.gnu-zip-archive          all
+cx.c3.theunarchiver      org.gnu.gnu-zip-tar-archive      all
+cx.c3.theunarchiver      com.pkware.zip-archive           all
+cx.c3.theunarchiver      public.zip-archive               all
+cx.c3.theunarchiver      com.rarlab.rar-archive           all
 
 # Set "Transmission" as the default app for:
 #   * "magnet" URI scheme
 #   * .torrent
-org.m0k.transmission    magnet
-org.m0k.transmission    org.bittorrent.torrent         all
+org.m0k.transmission      magnet
+org.m0k.transmission      org.bittorrent.torrent      all
 
 # Set "VLC" as the default app for "movie" files
-org.videolan.vlc        public.movie                   viewer
-org.videolan.vlc        public.avi                     viewer
+org.videolan.vlc      public.movie      viewer
+org.videolan.vlc      public.avi        viewer
 
 # Set "VLC" as the default app for "audio" files
-org.videolan.vlc        public.audio                   viewer
-org.videolan.vlc        public.mp3                     viewer
-org.videolan.vlc        com.apple.m4a-audio            viewer
+org.videolan.vlc      public.audio             viewer
+org.videolan.vlc      public.mp3               viewer
+org.videolan.vlc      com.apple.m4a-audio      viewer
+
+# Set "ebook-viewer" as the default app for "epub" files
+com.calibre-ebook.ebook-viewer      org.idpf.epub-container      viewer
