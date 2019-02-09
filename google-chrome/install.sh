@@ -3,6 +3,13 @@
 # Install Google Chrome extensions.
 #
 
+# Check for Google Chrome.
+if ! test -d "/Applications/Google Chrome.app"
+then
+	printf "\\r  [ \\033[0;33mWARN\\033[0m ] Google Chrome.app is not installed.\\n"
+	exit 1
+fi
+
 # Ensure destination folder exists.
 DESTINATION="${HOME}/Library/Application Support/Google/Chrome/External Extensions"
 mkdir -p "${DESTINATION}"
