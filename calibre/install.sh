@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# Check for Calibre.
+if ! test -d "/Applications/calibre.app"
+then
+	printf "\\r  [ \\033[0;33mWARN\\033[0m ] calibre.app is not installed.\\n"
+	exit 1
+fi
+
 # Ask for the administrator password upfront.
 sudo -v
 
