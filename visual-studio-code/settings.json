@@ -91,6 +91,23 @@
   // Git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.path": "/usr/local/bin/git",
+  // GitLens
+  "gitlens.advanced.telemetry.enabled": false,
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.liveshare.allowGuestAccess": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.views.compare.avatars": false,
+  "gitlens.views.fileHistory.avatars": false,
+  "gitlens.views.lineHistory.avatars": false,
+  "gitlens.views.repositories.avatars": false,
+  "gitlens.views.search.avatars": false,
   // Material Icons
   "material-icon-theme.showWelcomeMessage": false,
   // Auto Rename Tag

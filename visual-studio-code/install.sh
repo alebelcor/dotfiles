@@ -46,6 +46,9 @@ EXTENSIONS_TO_INSTALL=(
 	# EditorConfig for VS Code
 	"EditorConfig.EditorConfig"
 
+	# GitLens
+	"eamodio.gitlens"
+
 	# markdownlint
 	"DavidAnson.vscode-markdownlint"
 
