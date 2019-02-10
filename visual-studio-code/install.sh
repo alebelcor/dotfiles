@@ -31,6 +31,9 @@ done
 # Define list of extensions to install.
 EXTENSIONS_TO_INSTALL=(
 
+	# Auto Rename Tag
+	"formulahendry.auto-rename-tag"
+
 	# Brewfile
 	"sharat.vscode-brewfile"
 

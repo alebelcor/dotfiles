@@ -93,6 +93,11 @@
   "git.path": "/usr/local/bin/git",
   // Material Icons
   "material-icon-theme.showWelcomeMessage": false,
+  // Auto Rename Tag
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml",
+  ],
   // Code Spell Checker Configuration
   "cSpell.dictionaries": [
     "css",
