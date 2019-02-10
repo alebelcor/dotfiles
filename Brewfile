@@ -39,6 +39,7 @@ brew 'zsh-syntax-highlighting'
 # Apps
 
 cask 'android-file-transfer'
+cask 'appcleaner'
 cask 'bitbar'
 cask 'brave'
 cask 'caffeine'
