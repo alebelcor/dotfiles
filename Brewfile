@@ -25,7 +25,6 @@ brew 'grep', args: ['with-default-names']
 brew 'hostess'
 brew 'mas'
 brew 'nodenv'
-brew 'openssh'
 brew 'safe-rm'
 brew 'shellcheck'
 brew 'wget'
