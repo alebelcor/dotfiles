@@ -40,6 +40,9 @@ EXTENSIONS_TO_INSTALL=(
 	# Code Spell Checker
 	"streetsidesoftware.code-spell-checker"
 
+	# DotENV
+	"mikestead.dotenv"
+
 	# EditorConfig for VS Code
 	"EditorConfig.EditorConfig"
 
