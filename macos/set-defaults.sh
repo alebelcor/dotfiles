@@ -880,6 +880,49 @@ defaults write com.lightheadsw.Caffeine DefaultDuration -int 0
 defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 
 ###############################################################################
+# Firefox                                                                     #
+###############################################################################
+
+# Enable policies.
+defaults write org.mozilla.firefox EnterprisePoliciesEnabled -bool true
+
+# Disable the menus for reporting sites.
+defaults write org.mozilla.firefox DisableFeedbackCommands -bool true
+
+# Disable Sync.
+defaults write org.mozilla.firefox DisableFirefoxAccounts -bool true
+
+# Remove access to Firefox Screenshots.
+defaults write org.mozilla.firefox DisableFirefoxScreenshots -bool true
+
+# Disable Firefox studies (Shield)
+defaults write org.mozilla.firefox DisableFirefoxStudies -bool true
+
+# Turn off the browser.formfill.enable preferences.
+defaults write org.mozilla.firefox DisableFormHistory -bool true
+
+# Remove master password funcionality.
+defaults write org.mozilla.firefox DisableMasterPasswordCreation -bool true
+
+# Turn off Pocket.
+defaults write org.mozilla.firefox DisablePocket -bool true
+
+# Prevent the upload of telemetry data.
+defaults write org.mozilla.firefox DisableTelemetry -bool true
+
+# Enable tracking protection by default.
+defaults write org.mozilla.firefox EnableTrackingProtection -dict 'Value' 1
+
+# Prevent the default bookmarks or the Smart Bookmarks from being created.
+defaults write org.mozilla.firefox NoDefaultBookmarks -bool true
+
+# Disable Firefox offering to save passwords.
+defaults write org.mozilla.firefox OfferToSaveLogins -bool false
+
+# Combine search bar with URL bar.
+defaults write org.mozilla.firefox SearchBar -string 'unified'
+
+###############################################################################
 # Fitbit Connect                                                              #
 ###############################################################################
 
