@@ -315,9 +315,9 @@ sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Key
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Muted" -bool true
 
 # Add "Spanish" keyboard input source.
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
-defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
-defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add "<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>"
+defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add "<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>"
+defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add "<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>"
 
 ###############################################################################
 # Screen                                                                      #
@@ -580,14 +580,14 @@ defaults write com.apple.dock persistent-apps -array
 #  * Hyper
 #  * (small spacer tile)
 #  * Signal
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-type</key><string>small-spacer-tile</string></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Firefox.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-type</key><string>small-spacer-tile</string></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Visual Studio Code.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Hyper.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-type</key><string>small-spacer-tile</string></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Signal.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-type</key><string>small-spacer-tile</string></dict>"
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Firefox.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-type</key><string>small-spacer-tile</string></dict>"
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Visual Studio Code.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Hyper.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-type</key><string>small-spacer-tile</string></dict>"
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Signal.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -883,6 +883,9 @@ defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 # Firefox                                                                     #
 ###############################################################################
 
+# Full list of supported policies: about:policies#documentation
+# Last updated for version 65.0.1.
+
 # Enable policies.
 defaults write org.mozilla.firefox EnterprisePoliciesEnabled -bool true
 
@@ -911,7 +914,7 @@ defaults write org.mozilla.firefox DisablePocket -bool true
 defaults write org.mozilla.firefox DisableTelemetry -bool true
 
 # Enable tracking protection by default.
-defaults write org.mozilla.firefox EnableTrackingProtection -dict 'Value' 1
+defaults write org.mozilla.firefox EnableTrackingProtection -dict "Value" 1
 
 # Prevent the default bookmarks or the Smart Bookmarks from being created.
 defaults write org.mozilla.firefox NoDefaultBookmarks -bool true
@@ -920,7 +923,7 @@ defaults write org.mozilla.firefox NoDefaultBookmarks -bool true
 defaults write org.mozilla.firefox OfferToSaveLogins -bool false
 
 # Combine search bar with URL bar.
-defaults write org.mozilla.firefox SearchBar -string 'unified'
+defaults write org.mozilla.firefox SearchBar -string "unified"
 
 ###############################################################################
 # Fitbit Connect                                                              #
