@@ -889,6 +889,11 @@ defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 # Enable policies.
 defaults write org.mozilla.firefox EnterprisePoliciesEnabled -bool true
 
+# Set bookmarks.
+defaults delete org.mozilla.firefox Bookmarks &> /dev/null
+defaults write org.mozilla.firefox Bookmarks -array-add '<dict><key>Title</key><string>Guitar Tuner</string><key>URL</key><string>https://www.fender.com/online-guitar-tuner/</string><key>Placement</key><string>toolbar</string></dict>'
+defaults write org.mozilla.firefox Bookmarks -array-add '<dict><key>Title</key><string>Chord Progression Generator</string><key>URL</key><string>https://autochords.com/</string><key>Placement</key><string>toolbar</string></dict>'
+
 # Disable the menus for reporting sites.
 defaults write org.mozilla.firefox DisableFeedbackCommands -bool true
 
@@ -916,7 +921,35 @@ defaults write org.mozilla.firefox DisableTelemetry -bool true
 # Enable tracking protection by default.
 defaults write org.mozilla.firefox EnableTrackingProtection -dict "Value" 1
 
-# Prevent the default bookmarks or the Smart Bookmarks from being created.
+# Install Extensions.
+#   1Password extension (desktop app required)
+#   Decentraleyes
+#   Google Analytics Opt-out
+#   Hacker News Enhancement Suite
+#   HTTPS Everywhere
+#   IBA Opt-out (by Google)
+#   minerBlock
+#   Momentum
+#   Protect My Choices
+#   Reddit Enhancement Suite
+#   Refined GitHub
+#   uBlock Origin
+defaults write org.mozilla.firefox Extensions -dict "Install" "( \
+  'https://app-updates.agilebits.com/download/OPX4?browser=firefox', \
+  'https://addons.mozilla.org/firefox/downloads/latest/decentraleyes', \
+  'https://addons.mozilla.org/firefox/downloads/latest/google-analytics-opt-out', \
+  'https://addons.mozilla.org/firefox/downloads/latest/hnes', \
+  'https://addons.mozilla.org/firefox/downloads/latest/https-everywhere', \
+  'https://addons.mozilla.org/firefox/downloads/latest/interest-advertising-opt-out', \
+  'https://addons.mozilla.org/firefox/downloads/latest/minerblock-origin', \
+  'https://addons.mozilla.org/firefox/downloads/latest/momentumdash', \
+  'https://addons.mozilla.org/firefox/downloads/latest/protect-my-choices', \
+  'https://addons.mozilla.org/firefox/downloads/latest/reddit-enhancement-suite', \
+  'https://addons.mozilla.org/firefox/downloads/latest/refined-github-', \
+  'https://addons.mozilla.org/firefox/downloads/latest/ublock-origin' \
+)"
+
+# Prevent the default bookmarks, or the Smart Bookmarks, from being created.
 defaults write org.mozilla.firefox NoDefaultBookmarks -bool true
 
 # Disable Firefox offering to save passwords.
