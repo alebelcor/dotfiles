@@ -59,12 +59,14 @@ org.m0k.transmission      org.bittorrent.torrent      all
 # Set "VLC" as the default app for "movie" files
 org.videolan.vlc      public.movie                   viewer
 org.videolan.vlc      public.avi                     viewer
+org.videolan.vlc      public.3gpp                    viewer
 org.videolan.vlc      com.apple.quicktime-movie      viewer
 
 # Set "VLC" as the default app for "audio" files
-org.videolan.vlc      public.audio             viewer
-org.videolan.vlc      public.mp3               viewer
-org.videolan.vlc      com.apple.m4a-audio      viewer
+org.videolan.vlc      public.audio                      viewer
+org.videolan.vlc      public.mp3                        viewer
+org.videolan.vlc      com.apple.m4a-audio               viewer
+org.videolan.vlc      com.microsoft.waveform-audio      viewer
 
 # Set "ebook-viewer" as the default app for "epub" files
 com.calibre-ebook.ebook-viewer      org.idpf.epub-container      viewer
