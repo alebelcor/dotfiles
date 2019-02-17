@@ -57,6 +57,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   // File Explorer
+  "explorer.confirmDelete": false,
   "explorer.openEditors.visible": 0,
   // Search
   "search.exclude": {
