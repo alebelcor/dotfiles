@@ -61,6 +61,8 @@
   "explorer.openEditors.visible": 0,
   // Search
   "search.exclude": {
+    "**/.nyc_output": true,
+    "**/coverage": true,
     "**/package-lock.json": true,
   },
   // Update
