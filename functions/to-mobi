@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# Convert e-book files to `.mobi` using Calibre.
+#
+# Usage: to-mobi <filename>
+#
+
+function to_mobi() {
+	if test ! "$(command -v ebook-convert)"
+	then
+		echo "Error: Calibre is not installed."
+		return 1
+	fi
+
+	if ! test -f "$1"
+	then
+		echo "File not found: \"$1\""
+		return 1
+	fi
+
+	local input_filename
+	input_filename=$(basename "$1")
+	local input_extension="${input_filename##*.}"
+	local output="${1/$input_extension/mobi}"
+
+	ebook-convert "$1" "${output}"
+}
