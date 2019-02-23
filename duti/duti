@@ -61,6 +61,7 @@ org.videolan.vlc      public.movie                   viewer
 org.videolan.vlc      public.avi                     viewer
 org.videolan.vlc      public.3gpp                    viewer
 org.videolan.vlc      com.apple.quicktime-movie      viewer
+org.videolan.vlc      org.videolan.webm              viewer
 
 # Set "VLC" as the default app for "audio" files
 org.videolan.vlc      public.audio                      viewer
