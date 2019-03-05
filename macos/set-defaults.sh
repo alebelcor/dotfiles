@@ -265,6 +265,10 @@ defaults write com.apple.menuextra.clock IsAnalog -bool false
 # Disable hibernation (speeds up entering sleep mode).
 sudo pmset -a hibernatemode 0
 
+# Disable the sudden motion sensor.
+# It's not useful for SSDs/current MacBooks.
+sudo pmset -a sms 0
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
