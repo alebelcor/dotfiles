@@ -62,6 +62,7 @@
   // Search
   "search.exclude": {
     "**/.nyc_output": true,
+    "**/build": true,
     "**/coverage": true,
     "**/package-lock.json": true,
   },
