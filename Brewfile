@@ -1,10 +1,10 @@
 cask_args appdir: '/Applications'
 
 # Tap for drivers as Casks
-tap 'caskroom/drivers'
+tap 'homebrew/cask-drivers'
 
 # Tap for fonts as Casks
-tap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
 
 # Command-line
 
