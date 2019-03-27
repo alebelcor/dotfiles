@@ -1,8 +1,5 @@
 cask_args appdir: '/Applications'
 
-# Install Homebrew bundle
-tap 'homebrew/bundle'
-
 # Install Homebrew Cask
 tap 'caskroom/cask'
 
