@@ -1,8 +1,5 @@
 cask_args appdir: '/Applications'
 
-# Install Homebrew Cask
-tap 'caskroom/cask'
-
 # Tap for drivers as Casks
 tap 'caskroom/drivers'
 
