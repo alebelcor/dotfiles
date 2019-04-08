@@ -988,7 +988,11 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 ###############################################################################
 
 # Full list of supported policies: https://www.chromium.org/administrators/policy-list-3
-# Last updated for version 74.0.3690.
+# Last updated for version 75.0.3754.
+
+# -- Configure remote access options
+
+defaults write com.google.Chrome RemoteAccessHostAllowFileTransfer -bool false
 
 # -- Default search provider
 
@@ -1047,6 +1051,9 @@ defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
 
 # Disallow ads on sites with intrusive ads.
 defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -int 2
+
+# Disallow a page to show popups during its unloading
+defaults write com.google.Chrome AllowPopupsDuringPageUnload -bool false
 
 # Disable web service to help resolve navigation errors.
 defaults write com.google.Chrome AlternateErrorPagesEnabled -bool false
