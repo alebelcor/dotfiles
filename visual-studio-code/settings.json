@@ -32,6 +32,7 @@
   // Window
   "window.closeWhenEmpty": true,
   "window.restoreWindows": "all",
+  "window.zoomLevel": 0,
   // Files
   "files.associations": {
     "*.js.symlink": "javascript",
