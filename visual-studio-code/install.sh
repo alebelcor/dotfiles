@@ -64,6 +64,9 @@ EXTENSIONS_TO_INSTALL=(
 	# One Monokai Theme
 	"azemoh.one-monokai"
 
+	# Sass
+	"robinbentley.sass-indented"
+
 	# shellcheck
 	"timonwong.shellcheck"
 
