@@ -988,11 +988,7 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 ###############################################################################
 
 # Full list of supported policies: https://www.chromium.org/administrators/policy-list-3
-# Last updated for version 75.0.3754.
-
-# -- Configure remote access options
-
-defaults write com.google.Chrome RemoteAccessHostAllowFileTransfer -bool false
+# Last updated for version 76.0.3776.
 
 # -- Default search provider
 
@@ -1016,11 +1012,6 @@ defaults write com.google.Chrome EnableMediaRouter -bool true
 # Hide the Google Cast toolbar icon.
 defaults write com.google.Chrome ShowCastIconInToolbar -bool false
 
-# -- Home page
-
-# Use New Tab Page as homepage.
-defaults write com.google.Chrome HomepageIsNewTabPage -bool true
-
 # -- Password manager
 
 # Disable saving passwords to the password manager.
@@ -1031,6 +1022,10 @@ defaults write com.google.Chrome PasswordManagerEnabled -bool false
 # Use the system-native print preview dialog instead of the print preview.
 defaults write com.google.Chrome DisablePrintPreview -bool true
 
+# -- Remote access options
+
+defaults write com.google.Chrome RemoteAccessHostAllowFileTransfer -bool false
+
 # -- Safe Browsing settings
 
 # Protect you and your device from dangerous sites.
@@ -1039,7 +1034,13 @@ defaults write com.google.Chrome SafeBrowsingEnabled -bool true
 # Disable sending system information and page content to Google servers to help detect dangerous apps and sites.
 defaults write com.google.Chrome SafeBrowsingExtendedReportingEnabled -bool false
 
-# -- Startup pages
+# -- Startup, Home page and New Tab page
+
+# Hide the Home button on the toolbar.
+defaults write com.google.Chrome ShowHomeButton -bool false
+
+# Use New Tab Page as homepage.
+defaults write com.google.Chrome HomepageIsNewTabPage -bool true
 
 # Continue where you left off on startup.
 defaults write com.google.Chrome RestoreOnStartup -int 1
@@ -1052,7 +1053,7 @@ defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
 # Disallow ads on sites with intrusive ads.
 defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -int 2
 
-# Disallow a page to show popups during its unloading
+# Disallow a page to show popups during its unloading.
 defaults write com.google.Chrome AllowPopupsDuringPageUnload -bool false
 
 # Disable web service to help resolve navigation errors.
@@ -1074,7 +1075,7 @@ defaults write com.google.Chrome AutofillCreditCardEnabled -bool false
 defaults write com.google.Chrome AutoplayAllowed -bool false
 
 # Stop running background apps when browser is closed.
-defaults write com.google.Chrome BackgroundModeEnabled -bool true
+defaults write com.google.Chrome BackgroundModeEnabled -bool false
 
 # Enable bookmark bar.
 defaults write com.google.Chrome BookmarkBarEnabled -bool true
@@ -1139,6 +1140,9 @@ defaults write com.google.Chrome ImportSavedPasswords -bool false
 # Don't import search engines from default browser on first run.
 defaults write com.google.Chrome ImportSearchEngine -bool false
 
+# Enable incognito mode.
+defaults write com.google.Chrome IncognitoModeAvailability -int 0
+
 # Allow Google Cast to connect to Cast devices on private IP addresses only.
 defaults write com.google.Chrome MediaRouterCastAllowAllIPs -bool false
 
@@ -1163,11 +1167,11 @@ defaults write com.google.Chrome SafeSitesFilterBehavior -int 0
 # Disable prediction service to help complete searches and URLs typed in the address bar.
 defaults write com.google.Chrome SearchSuggestEnabled -bool false
 
+# Disallow Multiple Sign-in within the browser.
+defaults write com.google.Chrome SecondaryGoogleAccountSigninAllowed -bool false
+
 # Hide the apps shortcut in the bookmark bar.
 defaults write com.google.Chrome ShowAppsShortcutInBookmarkBar -bool false
-
-# Hide the Home button on the toolbar.
-defaults write com.google.Chrome ShowHomeButton -bool false
 
 # Enable site isolation for every site.
 defaults write com.google.Chrome SitePerProcess -bool true
