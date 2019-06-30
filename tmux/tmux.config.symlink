@@ -1,0 +1,43 @@
+# ==========================================================================
+# tmux options
+# ==========================================================================
+
+# More info: http://man7.org/linux/man-pages/man1/tmux.1.html#OPTIONS
+
+# -- Server options
+
+# Number of buffers.
+set-option -g buffer-limit 20
+
+# Enable 256 color terminal.
+set-option -g default-terminal "screen-256color"
+
+## -- Session options
+
+# Start index of window with 1.
+set-option -g base-index 1
+
+# Amount of time for which status line messages and other on-screen indicators are displayed.
+set-option -g display-time 1500
+
+# Maximum number of lines held in window history.
+set-option -g history-limit 20000
+
+# Status line message style.
+# set-option -g message-style "fg=$color_main,bg=$color_dark"
+
+# Enable mouse support.
+# http://man7.org/linux/man-pages/man1/tmux.1.html#MOUSE_SUPPORT
+set-option -g mouse on
+
+# Set title to client terminal.
+set-option -g set-titles on
+
+# Client terminal title with format: {Window index}. {Window name}
+set-option -g set-titles-string "#I. #W"
+
+# Show the status line.
+set-option -g status on
+
+# Start index of pane with 1.
+set-window-option -g pane-base-index 1
