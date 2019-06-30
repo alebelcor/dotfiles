@@ -3,5 +3,5 @@
 # Initialize `nodenv`.
 if test "$(command -v nodenv)"
 then
-	eval "$(nodenv init -)"
+	eval "$(nodenv init - --no-rehash)"
 fi
