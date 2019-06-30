@@ -31,6 +31,7 @@ brew 'zsh-syntax-highlighting'
 
 # Apps
 
+cask 'alacritty'
 cask 'android-file-transfer'
 cask 'appcleaner'
 cask 'bitbar'
