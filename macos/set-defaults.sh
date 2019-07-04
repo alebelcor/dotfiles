@@ -922,6 +922,9 @@ defaults write org.mozilla.firefox DisablePocket -bool true
 # Prevent the upload of telemetry data.
 defaults write org.mozilla.firefox DisableTelemetry -bool true
 
+# Disable check for default browser on startup.
+defaults write org.mozilla.firefox DontCheckDefaultBrowser -bool true
+
 # Enable tracking protection by default.
 defaults write org.mozilla.firefox EnableTrackingProtection -dict "Value" 1
 
