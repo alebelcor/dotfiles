@@ -990,22 +990,30 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 # Google Chrome                                                               #
 ###############################################################################
 
-# Full list of supported policies: https://www.chromium.org/administrators/policy-list-3
-# Last updated for version 77.0.3838.
+# Full list of supported policies: https://cloud.google.com/docs/chrome-enterprise/policies/
+# Last updated for (Mac) version 75.
+
+# -- Content settings
+
+# ...
 
 # -- Default search provider
 
 # Enable the use of a default search provider.
 defaults write com.google.Chrome DefaultSearchProviderEnabled -bool true
 
-# Set the name of the default search provider.
-defaults write com.google.Chrome DefaultSearchProviderName -string "Encrypted Google"
-
 # Set the keyword of the default search provider provider, as trigger, for the omnibox.
 defaults write com.google.Chrome DefaultSearchProviderKeyword -string "google.com"
 
+# Set the name of the default search provider.
+defaults write com.google.Chrome DefaultSearchProviderName -string "Encrypted Google"
+
 # Set the search URL of the default search provider.
 defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://encrypted.google.com/search?hl=en&q={searchTerms}"
+
+# -- Extensions
+
+# ...
 
 # -- Google Cast
 
@@ -1015,40 +1023,15 @@ defaults write com.google.Chrome EnableMediaRouter -bool true
 # Hide the Google Cast toolbar icon.
 defaults write com.google.Chrome ShowCastIconInToolbar -bool false
 
-# -- Password manager
+# -- HTTP authentication
 
-# Disable saving passwords to the password manager.
-defaults write com.google.Chrome PasswordManagerEnabled -bool false
+# ...
 
-# -- Printing
+# -- Legacy Browser Support
 
-# Use the system-native print preview dialog instead of the print preview.
-defaults write com.google.Chrome DisablePrintPreview -bool true
+# ...
 
-# -- Remote access options
-
-defaults write com.google.Chrome RemoteAccessHostAllowFileTransfer -bool false
-
-# -- Safe Browsing settings
-
-# Protect you and your device from dangerous sites.
-defaults write com.google.Chrome SafeBrowsingEnabled -bool true
-
-# Disable sending system information and page content to Google servers to help detect dangerous apps and sites.
-defaults write com.google.Chrome SafeBrowsingExtendedReportingEnabled -bool false
-
-# -- Startup, Home page and New Tab page
-
-# Hide the Home button on the toolbar.
-defaults write com.google.Chrome ShowHomeButton -bool false
-
-# Use New Tab Page as homepage.
-defaults write com.google.Chrome HomepageIsNewTabPage -bool true
-
-# Continue where you left off on startup.
-defaults write com.google.Chrome RestoreOnStartup -int 1
-
-# --
+# -- Miscellaneous
 
 # Prevent sites with abusive experiences from opening new windows or tabs.
 defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
@@ -1065,9 +1048,6 @@ defaults write com.google.Chrome AlternateErrorPagesEnabled -bool false
 # Always open PDF files in browser instead of downloading them.
 defaults write com.google.Chrome AlwaysOpenPdfExternally -bool false
 
-# Set the application locale.
-defaults write com.google.Chrome ApplicationLocaleValue -string "en-US"
-
 # Disable autoFill for addresses.
 defaults write com.google.Chrome AutofillAddressEnabled -bool false
 
@@ -1076,9 +1056,6 @@ defaults write com.google.Chrome AutofillCreditCardEnabled -bool false
 
 # Disable playing videos automatically (without user consent) with audio content.
 defaults write com.google.Chrome AutoplayAllowed -bool false
-
-# Stop running background apps when browser is closed.
-defaults write com.google.Chrome BackgroundModeEnabled -bool false
 
 # Enable bookmark bar.
 defaults write com.google.Chrome BookmarkBarEnabled -bool true
@@ -1101,17 +1078,11 @@ defaults write com.google.Chrome BuiltInDnsClientEnabled -bool false
 # Disable mandatory cloud management enrollment.
 defaults write com.google.Chrome CloudManagementEnrollmentMandatory -bool false
 
-# Enable security warnings for command-line flags.
-defaults write com.google.Chrome CommandLineFlagSecurityWarningsEnabled -bool true
-
 # Set as default browser.
 defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
 
 # Set default download directory.
 defaults write com.google.Chrome DefaultDownloadDirectory -string "${HOME}/Downloads"
-
-# Allow usage of the developer tools.
-defaults write com.google.Chrome DeveloperToolsAvailability -int 1
 
 # Disable taking screenshots.
 defaults write com.google.Chrome DisableScreenshots -bool true
@@ -1146,9 +1117,6 @@ defaults write com.google.Chrome ImportSavedPasswords -bool false
 # Don't import search engines from default browser on first run.
 defaults write com.google.Chrome ImportSearchEngine -bool false
 
-# Enable incognito mode.
-defaults write com.google.Chrome IncognitoModeAvailability -int 0
-
 # Allow Google Cast to connect to Cast devices on private IP addresses only.
 defaults write com.google.Chrome MediaRouterCastAllowAllIPs -bool false
 
@@ -1173,9 +1141,6 @@ defaults write com.google.Chrome SafeSitesFilterBehavior -int 0
 # Disable prediction service to help complete searches and URLs typed in the address bar.
 defaults write com.google.Chrome SearchSuggestEnabled -bool false
 
-# Disallow Multiple Sign-in within the browser.
-defaults write com.google.Chrome SecondaryGoogleAccountSigninAllowed -bool false
-
 # Hide the apps shortcut in the bookmark bar.
 defaults write com.google.Chrome ShowAppsShortcutInBookmarkBar -bool false
 
@@ -1188,23 +1153,68 @@ defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
 # Disable synchronization of data with Google.
 defaults write com.google.Chrome SyncDisabled -bool true
 
-# Disable tab lifecycles.
-defaults write com.google.Chrome TabLifecyclesEnabled -bool false
-
 # Disable the integrated Google Translate service.
 defaults write com.google.Chrome TranslateEnabled -bool false
 
 # Disable URL-keyed anonymized data collection.
 defaults write com.google.Chrome UrlKeyedAnonymizedDataCollectionEnabled -bool false
 
-# Disallow sending of user feedback.
-defaults write com.google.Chrome UserFeedbackAllowed -bool false
-
 # Disable Web Proxy Auto-Discovery optimization.
 defaults write com.google.Chrome WPADQuickCheckEnabled -bool false
 
 # Disable collection of WebRTC event logs from Google services.
 defaults write com.google.Chrome WebRtcEventLogCollectionAllowed -bool false
+
+# -- Native Messaging
+
+# ...
+
+# -- Password manager
+
+# Disable saving passwords to the password manager.
+defaults write com.google.Chrome PasswordManagerEnabled -bool false
+
+# -- Printing
+
+# Use the system-native print preview dialog instead of the print preview.
+defaults write com.google.Chrome DisablePrintPreview -bool true
+
+# -- Proxy server
+
+# ...
+
+# -- Remote access options
+
+defaults write com.google.Chrome RemoteAccessHostAllowFileTransfer -bool false
+
+# -- Safe Browsing settings
+
+# Protect you and your device from dangerous sites.
+defaults write com.google.Chrome SafeBrowsingEnabled -bool true
+
+# Disable sending system information and page content to Google servers to help detect dangerous apps and sites.
+defaults write com.google.Chrome SafeBrowsingExtendedReportingEnabled -bool false
+
+# -- Startup, Home page and New Tab page
+
+# Use New Tab Page as homepage.
+defaults write com.google.Chrome HomepageIsNewTabPage -bool true
+
+# Continue where you left off on startup.
+defaults write com.google.Chrome RestoreOnStartup -int 1
+
+# Hide the Home button on the toolbar.
+defaults write com.google.Chrome ShowHomeButton -bool false
+
+# --
+
+# https://www.chromium.org/administrators/policy-list-3
+
+# Enable security warnings for command-line flags.
+defaults write com.google.Chrome CommandLineFlagSecurityWarningsEnabled -bool true
+
+# Disallow sending of user feedback.
+defaults write com.google.Chrome UserFeedbackAllowed -bool false
 
 ###############################################################################
 # ImageOptim                                                                  #
