@@ -40,6 +40,9 @@ EXTENSIONS_TO_INSTALL=(
 	# Code Spell Checker
 	"streetsidesoftware.code-spell-checker"
 
+	# Docker
+	"ms-azuretools.vscode-docker"
+
 	# DotENV
 	"mikestead.dotenv"
 
