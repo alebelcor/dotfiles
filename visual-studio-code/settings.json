@@ -140,4 +140,7 @@
   ],
   // Npm
   "npm.enableScriptExplorer": true,
+  // YAML
+  "yaml.format.enable": true,
+  "yaml.format.printWidth": 100,
 }

@@ -73,6 +73,9 @@ EXTENSIONS_TO_INSTALL=(
 	# shellcheck
 	"timonwong.shellcheck"
 
+	# YAML
+	"redhat.vscode-yaml"
+
 )
 
 for extension_to_install in "${EXTENSIONS_TO_INSTALL[@]}"
