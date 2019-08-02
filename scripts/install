@@ -10,7 +10,7 @@ set -e
 cd "$(dirname "$0")/.."
 
 printf "\\r› Installing packages and applications.\\n\\n"
-brew bundle > /dev/null
+brew bundle
 
 # Find the installers and run them iteratively.
 find . -name install.sh | while read -r installer ; do sh -c "${installer}" ; done
