@@ -15,7 +15,7 @@ brew 'coreutils'
 brew 'dark-mode'
 brew 'diff-so-fancy'
 brew 'duti'
-brew 'findutils', args: ['with-default-names']
+brew 'findutils'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
@@ -45,8 +45,6 @@ cask 'bitbar'
 cask 'caffeine'
 cask 'calibre'
 cask 'charles'
-cask 'colorpicker'
-cask 'colorpicker-hex'
 cask 'disk-inventory-x'
 cask 'exodus'
 cask 'firefox'
