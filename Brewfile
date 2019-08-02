@@ -6,6 +6,9 @@ tap 'homebrew/cask-drivers'
 # Tap for fonts as Casks
 tap 'homebrew/cask-fonts'
 
+# Tap for nodenv plugins
+tap 'nodenv/nodenv'
+
 # Command-line
 
 brew 'coreutils'
