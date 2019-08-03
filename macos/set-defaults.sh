@@ -91,6 +91,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.safaridavclient.plist
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
 
+# INFO: Terminal app may require "Full Disk Access".
 # Disable transparency in the menu bar and elsewhere on Yosemite.
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
@@ -286,6 +287,7 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# INFO: Terminal app may require "Full Disk Access".
 # Use scroll gesture with the Ctrl (^) modifier key to zoom.
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144
