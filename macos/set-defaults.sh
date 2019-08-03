@@ -232,12 +232,12 @@ DNS_SERVERS=(
 )
 
 # Clear all DNS entries.
-sudo networksetup -setdnsservers "Wi-Fi" "Empty"
-sudo networksetup -setdnsservers "Thunderbolt Ethernet" "Empty"
+sudo networksetup -setdnsservers "Wi-Fi" "Empty" > /dev/null
+sudo networksetup -setdnsservers "Thunderbolt Ethernet" "Empty" > /dev/null
 
 # Set DNS entries.
-sudo networksetup -setdnsservers "Wi-Fi" ${DNS_SERVERS[*]}
-sudo networksetup -setdnsservers "Thunderbolt Ethernet" ${DNS_SERVERS[*]}
+sudo networksetup -setdnsservers "Wi-Fi" ${DNS_SERVERS[*]} > /dev/null
+sudo networksetup -setdnsservers "Thunderbolt Ethernet" ${DNS_SERVERS[*]} > /dev/null
 
 # Flush DNS cache.
 sudo dscacheutil -flushcache
