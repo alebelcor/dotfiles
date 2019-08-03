@@ -75,6 +75,12 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.
 # Disable service daemon related to "Siri".
 launchctl unload -w /System/Library/LaunchAgents/com.apple.assistant_service.plist 2> /dev/null
 
+# Disable Ask Siri.
+defaults write com.apple.assistant.support "Assistant Enabled" -bool false
+
+# Don't show Siri in menu bar.
+defaults write com.apple.systemuiserver "NSStatusItem Visible Siri" -bool false
+
 # Disable service daemon related to photos and iCloud.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.cloudphotosd.plist 2> /dev/null
 
