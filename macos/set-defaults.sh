@@ -258,6 +258,9 @@ defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
 # Set the clock to be digital.
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 
+# Don't play user interface sound effects
+defaults write com.apple.sound.uiaudio.enabled -bool false
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
