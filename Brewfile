@@ -17,8 +17,8 @@ brew 'diff-so-fancy'
 brew 'duti'
 brew 'findutils'
 brew 'git'
-brew 'gnu-sed', args: ['with-default-names']
-brew 'grep', args: ['with-default-names']
+brew 'gnu-sed'
+brew 'grep'
 brew 'hostess'
 brew 'mas'
 brew 'nodenv'
