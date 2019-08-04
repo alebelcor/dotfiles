@@ -3,9 +3,6 @@
 # Make vim the default editor.
 export EDITOR='vim'
 
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto'
-
 # Increase history size.
 export HISTSIZE=1500
 export SAVEHIST="${HISTSIZE}"
