@@ -944,6 +944,8 @@ defaults write org.mozilla.firefox EnableTrackingProtection -dict "Value" 1
 
 # Install Extensions.
 #   1Password extension (desktop app required)
+#   Augmented Steam
+#   Auto Tab Discard
 #   Decentraleyes
 #   Google Analytics Opt-out
 #   Hacker News Enhancement Suite
@@ -957,6 +959,8 @@ defaults write org.mozilla.firefox EnableTrackingProtection -dict "Value" 1
 #   uBlock Origin
 defaults write org.mozilla.firefox Extensions -dict "Install" "( \
   'https://app-updates.agilebits.com/download/OPX4?browser=firefox', \
+  'https://addons.mozilla.org/firefox/downloads/latest/enhanced-steam-an-itad-fork', \
+  'https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard', \
   'https://addons.mozilla.org/firefox/downloads/latest/decentraleyes', \
   'https://addons.mozilla.org/firefox/downloads/latest/google-analytics-opt-out', \
   'https://addons.mozilla.org/firefox/downloads/latest/hnes', \
