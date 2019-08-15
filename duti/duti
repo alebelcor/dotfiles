@@ -72,3 +72,9 @@ org.videolan.vlc      org.videolan.ogg-audio            viewer
 
 # Set "ebook-viewer" as the default app for "epub" files
 com.calibre-ebook.ebook-viewer      org.idpf.epub-container      viewer
+
+# Set "OpenOffice" as the default app for:
+#   * .doc
+#   * .docx
+org.openoffice.script      com.microsoft.word.doc                            all
+org.openoffice.script      org.openxmlformats.wordprocessingml.document      all
