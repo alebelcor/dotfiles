@@ -266,7 +266,11 @@ defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 
 # Don't play user interface sound effects
-defaults write com.apple.sound.uiaudio.enabled -bool false
+defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -bool false
+
+# Enable Tap to click (tap with one finger).
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
