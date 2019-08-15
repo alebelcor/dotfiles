@@ -823,6 +823,9 @@ defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
 # Turn on app auto-update.
 defaults write com.apple.commerce AutoUpdate -bool true
 
+# Disable "Video Autoplay".
+defaults write com.apple.AppStore AutoPlayVideoSetting -string "off"
+
 ###############################################################################
 # Photos                                                                      #
 ###############################################################################
