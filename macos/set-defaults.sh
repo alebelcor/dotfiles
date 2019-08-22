@@ -90,6 +90,9 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.SafariCloudHistoryPus
 # Disable service daemon related to Safari bookmark syncing.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.safaridavclient.plist 2> /dev/null
 
+# Limit ad tracking. Opt out of receiving ads targeted to your interests in Apple Apps and your macOS devices.
+defaults write com.apple.AdLib forceLimitAdTracking -bool false
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
