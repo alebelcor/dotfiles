@@ -698,6 +698,9 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Spotlight                                                                   #
 ###############################################################################
 
+# Disallow Spotlight Suggestions in Look up.
+defaults write com.apple.lookup.shared LookupSuggestionsDisabled -bool true
+
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
