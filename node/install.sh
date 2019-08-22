@@ -14,7 +14,7 @@ nodenv init > /dev/null 2>&1
 DOTFILES_NODE="${DOTFILES}/node"
 
 # Setup default packages list.
-if test "$(brew list nodenv/nodenv/nodenv-default-packages)"
+if test "$(brew list nodenv-default-packages)"
 then
 	# Set path to nodenv root.
 	NODENV_ROOT="$(nodenv root)"
@@ -30,7 +30,7 @@ else
 fi
 
 # Install the hooks for existing `nodenv` versions.
-if test "$(brew list nodenv/nodenv/nodenv-package-rehash)"
+if test "$(brew list nodenv-package-rehash)"
 then
 	nodenv package-hooks install --all > /dev/null 2>&1
 else
@@ -39,7 +39,7 @@ else
 fi
 
 # Update `nodenv` and plugins.
-if test "$(brew list nodenv/nodenv/nodenv-update)"
+if test "$(brew list nodenv-update)"
 then
 	nodenv update > /dev/null 2>&1
 else
