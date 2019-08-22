@@ -339,10 +339,15 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Manual Brightness" -int 0
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Muted" -bool true
 
-# Add "Spanish" keyboard input source.
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add "<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>"
-defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add "<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>"
-defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add "<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>"
+# Set "U.S." and "Spanish" keyboard input sources.
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
+	"<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>0</integer><key>KeyboardLayout Name</key><string>U.S.</string></dict>" \
+	"<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>" \
+	"<dict><key>InputSourceKind</key><string>Non Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.inputmethod.EmojiFunctionRowItem</string></dict>"
+
+defaults write com.apple.HIToolbox AppleSelectedInputSources -array \
+	"<dict><key>InputSourceKind</key><string>Non Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.inputmethod.EmojiFunctionRowItem</string></dict>" \
+	"<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>0</integer><key>KeyboardLayout Name</key><string>U.S.</string></dict>"
 
 ###############################################################################
 # Screen                                                                      #
