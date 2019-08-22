@@ -93,6 +93,9 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.safaridavclient.plist
 # Limit ad tracking. Opt out of receiving ads targeted to your interests in Apple Apps and your macOS devices.
 defaults write com.apple.AdLib forceLimitAdTracking -bool false
 
+# Disable Touch Bar typing suggestions.
+defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -363,6 +366,15 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 
 # Show mirroring options in the menu bar when available.
 defaults write com.apple.airplay showInMenuBarIfPresent -bool true
+
+# Touch Bar shows "Expanded Control Strip".
+defaults write com.apple.touchbar.agent PresentationModeGlobal -string "fullControlStrip"
+
+# Press Fn key to "Show f1, F2, etc. Keys".
+# Use F1, F2, etc. keys as standard function keys on external keyboards.
+defaults write com.apple.touchbar.agent PresentationModeFnModes -dict \
+	fullControlStrip -string "functionKeys" \
+	functionKeys -string "app"
 
 ###############################################################################
 # Finder                                                                      #
