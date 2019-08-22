@@ -76,5 +76,7 @@ com.calibre-ebook.ebook-viewer      org.idpf.epub-container      viewer
 # Set "OpenOffice" as the default app for:
 #   * .doc
 #   * .docx
+#   * .xslx
 org.openoffice.script      com.microsoft.word.doc                            all
 org.openoffice.script      org.openxmlformats.wordprocessingml.document      all
+org.openoffice.script      org.openxmlformats.spreadsheetml.sheet            all
