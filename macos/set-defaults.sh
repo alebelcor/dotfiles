@@ -1386,9 +1386,18 @@ defaults write org.m0k.transmission RandomPort -bool true
 defaults write org.m0k.transmission RatioCheck -bool true
 defaults write org.m0k.transmission RatioLimit -string "2.00"
 
+# Remove from the transfer list when seeding completes.
+defaults write org.m0k.transmission RemoveWhenFinishSeeding -bool true
+
 # Turn on "Download with maximum of" 1 active transfer.
 defaults write org.m0k.transmission Queue -bool true
-defaults write org.m0k.transmission QueueDownloadNumber -int 1
+defaults write org.m0k.transmission QueueDownloadNumber -bool true
+
+# Don't play sound when download completes.
+defaults write org.m0k.transmission PlayDownloadSound -bool false
+
+# Don't play sound when seeding completes.
+defaults write org.m0k.transmission PlaySeedingSound -bool false
 
 ###############################################################################
 # VLC media player                                                            #
