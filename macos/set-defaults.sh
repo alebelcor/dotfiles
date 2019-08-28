@@ -443,7 +443,7 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Disable the warning when changing a file extension.
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Remove "Tags"section from sidebar
+# Remove "Tags" section from sidebar.
 defaults write com.apple.finder ShowRecentTags -bool false
 
 # Enable spring loading for directories.
