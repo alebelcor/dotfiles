@@ -1,5 +1,12 @@
 #!/usr/bin/env zsh
 
+# Adding this variable here because it doesn't exist at this point in time.
+HOMEBREW_PREFIX="$(brew --prefix)"
+
+# Ensure Homebrew programs are used instead of the system-provided ones.
+path=("${HOMEBREW_PREFIX}/bin" $path)
+path=("${HOMEBREW_PREFIX}/sbin" $path)
+
 # Adding coreutils to $PATH.
 path=("${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin" $path)
 
@@ -11,10 +18,6 @@ path=("${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin" $path)
 
 # Adding `grep` to $PATH.
 path=("${HOMEBREW_PREFIX}/opt/grep/libexec/gnubin" $path)
-
-# Ensure Homebrew programs are used instead of the system-provided ones.
-path=("${HOMEBREW_PREFIX}/bin" $path)
-path=("${HOMEBREW_PREFIX}/sbin" $path)
 
 # Adding local `/bin` folder.
 path=("${DOTFILES}/bin" $path)
