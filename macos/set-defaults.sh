@@ -1058,7 +1058,7 @@ defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 ###############################################################################
 
 # Full list of supported policies: https://cloud.google.com/docs/chrome-enterprise/policies/
-# Last updated for (Mac) version 75.
+# Last updated for (Mac) version 76.
 
 # -- Content settings
 
@@ -1145,6 +1145,9 @@ defaults write com.google.Chrome BuiltInDnsClientEnabled -bool false
 # Disable mandatory cloud management enrollment.
 defaults write com.google.Chrome CloudManagementEnrollmentMandatory -bool false
 
+# Enable security warnings for command-line flags.
+defaults write com.google.Chrome CommandLineFlagSecurityWarningsEnabled -bool true
+
 # Set as default browser.
 defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
 
@@ -1226,6 +1229,9 @@ defaults write com.google.Chrome TranslateEnabled -bool false
 # Disable URL-keyed anonymized data collection.
 defaults write com.google.Chrome UrlKeyedAnonymizedDataCollectionEnabled -bool false
 
+# Disallow sending of user feedback.
+defaults write com.google.Chrome UserFeedbackAllowed -bool false
+
 # Disable Web Proxy Auto-Discovery optimization.
 defaults write com.google.Chrome WPADQuickCheckEnabled -bool false
 
@@ -1272,16 +1278,6 @@ defaults write com.google.Chrome RestoreOnStartup -int 1
 
 # Hide the Home button on the toolbar.
 defaults write com.google.Chrome ShowHomeButton -bool false
-
-# --
-
-# https://www.chromium.org/administrators/policy-list-3
-
-# Enable security warnings for command-line flags.
-defaults write com.google.Chrome CommandLineFlagSecurityWarningsEnabled -bool true
-
-# Disallow sending of user feedback.
-defaults write com.google.Chrome UserFeedbackAllowed -bool false
 
 ###############################################################################
 # ImageOptim                                                                  #
