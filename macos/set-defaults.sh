@@ -341,16 +341,16 @@ sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Key
 
 # Set "U.S." and "Spanish" keyboard input sources.
 defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
-	"<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>0</integer><key>KeyboardLayout Name</key><string>U.S.</string></dict>" \
-	"<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>" \
-	"<dict><key>InputSourceKind</key><string>Non Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.inputmethod.EmojiFunctionRowItem</string></dict>"
+	'{ "InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S."; }' \
+	'{ "InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = 8; "KeyboardLayout Name" = "Spanish"; }' \
+	'{ "InputSourceKind" = "Non Keyboard Input Method"; "Bundle ID" = "com.apple.inputmethod.EmojiFunctionRowItem"; }'
 
-defaults write com.apple.HIToolbox AppleSelectedInputSources -array \
-	"<dict><key>InputSourceKind</key><string>Non Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.inputmethod.EmojiFunctionRowItem</string></dict>" \
-	"<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>0</integer><key>KeyboardLayout Name</key><string>U.S.</string></dict>"
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
+	'{ "InputSourceKind" = "Non Keyboard Input Method"; "Bundle ID" = "com.apple.inputmethod.EmojiFunctionRowItem"; }' \
+	'{ "InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S."; }'
 
 # Enable "Select the previous input source" keyboard shortcut.
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{enabled = 1; value = { parameters = (32, 49, 262144); type = "standard"; }; }'
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{ "enabled" = 1; "value" = { "parameters" = (32, 49, 262144); "type" = "standard"; }; }'
 
 ###############################################################################
 # Screen                                                                      #
@@ -728,26 +728,26 @@ sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Vol
 
 # Change indexing order and disable some search results
 defaults write com.apple.spotlight orderedItems -array \
-	'{"enabled" = 1; "name" = "APPLICATIONS";}' \
-	'{"enabled" = 1; "name" = "SYSTEM_PREFS";}' \
-	'{"enabled" = 1; "name" = "DIRECTORIES";}' \
-	'{"enabled" = 1; "name" = "DOCUMENTS";}' \
-	'{"enabled" = 1; "name" = "IMAGES";}' \
-	'{"enabled" = 1; "name" = "PDF";}' \
-	'{"enabled" = 1; "name" = "FONTS";}' \
-	'{"enabled" = 0; "name" = "BOOKMARKS";}' \
-	'{"enabled" = 0; "name" = "CONTACT";}' \
-	'{"enabled" = 0; "name" = "EVENT_TODO";}' \
-	'{"enabled" = 0; "name" = "MENU_CONVERSION";}' \
-	'{"enabled" = 0; "name" = "MENU_DEFINITION";}' \
-	'{"enabled" = 0; "name" = "MENU_EXPRESSION";}' \
-	'{"enabled" = 0; "name" = "MENU_OTHER";}' \
-	'{"enabled" = 0; "name" = "MENU_SPOTLIGHT_SUGGESTIONS";}' \
-	'{"enabled" = 0; "name" = "MESSAGES";}' \
-	'{"enabled" = 0; "name" = "MOVIES";}' \
-	'{"enabled" = 0; "name" = "MUSIC";}' \
-	'{"enabled" = 0; "name" = "PRESENTATIONS";}' \
-	'{"enabled" = 0; "name" = "SPREADSHEETS";}'
+	'{ "enabled" = 1; "name" = "APPLICATIONS"; }' \
+	'{ "enabled" = 1; "name" = "SYSTEM_PREFS"; }' \
+	'{ "enabled" = 1; "name" = "DIRECTORIES"; }' \
+	'{ "enabled" = 1; "name" = "DOCUMENTS"; }' \
+	'{ "enabled" = 1; "name" = "IMAGES"; }' \
+	'{ "enabled" = 1; "name" = "PDF"; }' \
+	'{ "enabled" = 1; "name" = "FONTS"; }' \
+	'{ "enabled" = 0; "name" = "BOOKMARKS"; }' \
+	'{ "enabled" = 0; "name" = "CONTACT"; }' \
+	'{ "enabled" = 0; "name" = "EVENT_TODO"; }' \
+	'{ "enabled" = 0; "name" = "MENU_CONVERSION"; }' \
+	'{ "enabled" = 0; "name" = "MENU_DEFINITION"; }' \
+	'{ "enabled" = 0; "name" = "MENU_EXPRESSION"; }' \
+	'{ "enabled" = 0; "name" = "MENU_OTHER"; }' \
+	'{ "enabled" = 0; "name" = "MENU_SPOTLIGHT_SUGGESTIONS"; }' \
+	'{ "enabled" = 0; "name" = "MESSAGES"; }' \
+	'{ "enabled" = 0; "name" = "MOVIES"; }' \
+	'{ "enabled" = 0; "name" = "MUSIC"; }' \
+	'{ "enabled" = 0; "name" = "PRESENTATIONS"; }' \
+	'{ "enabled" = 0; "name" = "SPREADSHEETS"; }'
 
 # Load new settings before rebuilding the index.
 killall mds > /dev/null 2>&1
@@ -940,8 +940,8 @@ defaults write org.mozilla.firefox EnterprisePoliciesEnabled -bool true
 
 # Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.
 defaults write org.mozilla.firefox Bookmarks -array \
-	'{"Title" = "Guitar Tuner"; "URL" = "https://www.fender.com/online-guitar-tuner/"; "Placement" = "toolbar";}' \
-	'{"Title" = "Chord Progression Generator"; "URL" = "https://autochords.com/"; "Placement" = "toolbar";}'
+	'{ "Title" = "Guitar Tuner"; "URL" = "https://www.fender.com/online-guitar-tuner/"; "Placement" = "toolbar"; }' \
+	'{ "Title" = "Chord Progression Generator"; "URL" = "https://autochords.com/"; "Placement" = "toolbar"; }'
 
 # Set the default download directory.
 defaults write org.mozilla.firefox DefaultDownloadDirectory -string "${HOME}/Downloads"
