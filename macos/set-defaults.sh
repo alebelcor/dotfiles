@@ -349,6 +349,9 @@ defaults write com.apple.HIToolbox AppleSelectedInputSources -array \
 	"<dict><key>InputSourceKind</key><string>Non Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.inputmethod.EmojiFunctionRowItem</string></dict>" \
 	"<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>0</integer><key>KeyboardLayout Name</key><string>U.S.</string></dict>"
 
+# Enable "Select the previous input source" keyboard shortcut.
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{enabled = 1; value = { parameters = (32, 49, 262144); type = "standard"; }; }'
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
