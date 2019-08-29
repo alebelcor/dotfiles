@@ -939,9 +939,9 @@ defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 defaults write org.mozilla.firefox EnterprisePoliciesEnabled -bool true
 
 # Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.
-defaults delete org.mozilla.firefox Bookmarks &> /dev/null
-defaults write org.mozilla.firefox Bookmarks -array-add '<dict><key>Title</key><string>Guitar Tuner</string><key>URL</key><string>https://www.fender.com/online-guitar-tuner/</string><key>Placement</key><string>toolbar</string></dict>'
-defaults write org.mozilla.firefox Bookmarks -array-add '<dict><key>Title</key><string>Chord Progression Generator</string><key>URL</key><string>https://autochords.com/</string><key>Placement</key><string>toolbar</string></dict>'
+defaults write org.mozilla.firefox Bookmarks -array \
+	'{"Title" = "Guitar Tuner"; "URL" = "https://www.fender.com/online-guitar-tuner/"; "Placement" = "toolbar";}' \
+	'{"Title" = "Chord Progression Generator"; "URL" = "https://autochords.com/"; "Placement" = "toolbar";}'
 
 # Set the default download directory.
 defaults write org.mozilla.firefox DefaultDownloadDirectory -string "${HOME}/Downloads"
