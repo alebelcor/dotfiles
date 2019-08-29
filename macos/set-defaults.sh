@@ -933,45 +933,54 @@ defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 ###############################################################################
 
 # Full list of supported policies: about:policies#documentation
-# Last updated for version 65.0.1.
+# Last updated for version 68.0.2.
 
 # Enable policies.
 defaults write org.mozilla.firefox EnterprisePoliciesEnabled -bool true
 
-# Set bookmarks.
+# Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.
 defaults delete org.mozilla.firefox Bookmarks &> /dev/null
 defaults write org.mozilla.firefox Bookmarks -array-add '<dict><key>Title</key><string>Guitar Tuner</string><key>URL</key><string>https://www.fender.com/online-guitar-tuner/</string><key>Placement</key><string>toolbar</string></dict>'
 defaults write org.mozilla.firefox Bookmarks -array-add '<dict><key>Title</key><string>Chord Progression Generator</string><key>URL</key><string>https://autochords.com/</string><key>Placement</key><string>toolbar</string></dict>'
 
-# Disable the menus for reporting sites.
+# Set the default download directory.
+defaults write org.mozilla.firefox DefaultDownloadDirectory -string "${HOME}/Downloads"
+
+# Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).
 defaults write org.mozilla.firefox DisableFeedbackCommands -bool true
 
-# Disable Sync.
+# Disable Firefox Account based services, including Sync.
 defaults write org.mozilla.firefox DisableFirefoxAccounts -bool true
 
-# Remove access to Firefox Screenshots.
+# Disable the Firefox Screenshots feature.
 defaults write org.mozilla.firefox DisableFirefoxScreenshots -bool true
 
-# Disable Firefox studies (Shield)
+# Prevent Firefox from running studies.
 defaults write org.mozilla.firefox DisableFirefoxStudies -bool true
 
-# Turn off the browser.formfill.enable preferences.
+# Don’t remember form history.
 defaults write org.mozilla.firefox DisableFormHistory -bool true
 
-# Remove master password funcionality.
+# If true, a master password can’t be created.
 defaults write org.mozilla.firefox DisableMasterPasswordCreation -bool true
 
-# Turn off Pocket.
+# Disable the feature to save webpages to Pocket.
 defaults write org.mozilla.firefox DisablePocket -bool true
 
-# Prevent the upload of telemetry data.
+# Disable the menu command to Import data from another browser.
+defaults write org.mozilla.firefox DisableProfileImport -bool true
+
+# Turn off Telemetry.
 defaults write org.mozilla.firefox DisableTelemetry -bool true
+
+# Display the Bookmarks Toolbar by default.
+defaults write org.mozilla.firefox DisplayBookmarksToolbar -bool true
 
 # Disable check for default browser on startup.
 defaults write org.mozilla.firefox DontCheckDefaultBrowser -bool true
 
-# Enable tracking protection by default.
-defaults write org.mozilla.firefox EnableTrackingProtection -dict "Value" 1
+# Enable or disable Content Blocking and optionally lock it.
+defaults write org.mozilla.firefox EnableTrackingProtection -dict Value -bool true
 
 # Install Extensions.
 #   1Password extension (desktop app required)
@@ -1005,14 +1014,23 @@ defaults write org.mozilla.firefox Extensions -dict "Install" "( \
   'https://addons.mozilla.org/firefox/downloads/latest/ublock-origin' \
 )"
 
-# Prevent the default bookmarks, or the Smart Bookmarks, from being created.
+# Disable network prediction (DNS prefetching).
+defaults write org.mozilla.firefox NetworkPrediction -bool false
+
+# Disable creation of the default bookmarks bundled with Firefox, and the Smart Bookmarks (Most Visited, Recent Tags).
 defaults write org.mozilla.firefox NoDefaultBookmarks -bool true
 
-# Disable Firefox offering to save passwords.
+# Enforce the setting to allow Firefox to offer to remember saved logins and passwords.
 defaults write org.mozilla.firefox OfferToSaveLogins -bool false
 
-# Combine search bar with URL bar.
+# Ask where to save files when downloading.
+defaults write org.mozilla.firefox PromptForDownloadLocation -bool false
+
+# Set the default location of the search bar. The user is still allowed to customize it.
 defaults write org.mozilla.firefox SearchBar -string "unified"
+
+# Disable search suggestions.
+defaults write org.mozilla.firefox SearchSuggestEnabled -bool false
 
 ###############################################################################
 # Fitbit Connect                                                              #
