@@ -52,6 +52,9 @@ EXTENSIONS_TO_INSTALL=(
 	# GitLens
 	"eamodio.gitlens"
 
+	# GraphQL
+	"prisma.vscode-graphql"
+
 	# markdownlint
 	"DavidAnson.vscode-markdownlint"
 
