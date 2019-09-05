@@ -70,6 +70,9 @@ EXTENSIONS_TO_INSTALL=(
 	# One Monokai Theme
 	"azemoh.one-monokai"
 
+	# Ruby
+	"rebornix.ruby"
+
 	# Sass
 	"robinbentley.sass-indented"
 

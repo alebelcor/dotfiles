@@ -140,7 +140,9 @@
   ],
   // Npm
   "npm.enableScriptExplorer": true,
+  // Ruby
+  "ruby.format": "rubocop",
   // YAML
   "yaml.format.enable": true,
-  "yaml.format.printWidth": 100,
+  "yaml.format.printWidth": 100
 }
