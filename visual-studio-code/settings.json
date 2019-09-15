@@ -131,12 +131,16 @@
   "cSpell.userWords": [
     "autofill",
     "Brewfile",
+    "flexbox",
     "editorconfig",
     "gitignore",
     "monokai",
     "polyfill",
+    "rubocop",
     "symlink",
+    "tmux",
     "todos",
+    "youtube",
   ],
   // Npm
   "npm.enableScriptExplorer": true,
