@@ -134,11 +134,11 @@ setopt LOCAL_TRAPS
 # Set ZSH Line Editor to use emacs mode.
 bindkey -e
 
-# Move backwards (per word) using: Control + ←
-bindkey '^[[1;5D' backward-word
+# Move backwards (per word) using: ⌥ + ←
+bindkey '^[[1;3D' backward-word
 
-# Move forward (per word) using: Control + →
-bindkey '^[[1;5C' forward-word
+# Move forward (per word) using: ⌥ + →
+bindkey '^[[1;3C' forward-word
 
 # Set forward delete (i.e. erase to the right) to "delete ⌦" key on Mac
 bindkey '^[[3~' delete-char
