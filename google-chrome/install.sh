@@ -20,6 +20,9 @@ EXTENSIONS=(
 	# 1Password: Password Manager and Secure Wallet
 	"aomjjhallfgjeglblehebfpbcfeobpgk"
 
+	# Airbnb Price Per Night Correcter
+	"lijeilcglmadpkbengpkfnkpmcehecfe"
+
 	# Clear Downloads
 	"bknoejjhcfmakcibhifepfkegpjdnadk"
 
