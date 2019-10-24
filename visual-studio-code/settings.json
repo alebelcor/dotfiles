@@ -129,24 +129,32 @@
     "typescript",
   ],
   "cSpell.userWords": [
-    "autofill",
     "Brewfile",
-    "flexbox",
+    "WCAG",
+    "autofill",
+    "conformant",
     "editorconfig",
+    "flexbox",
     "gitignore",
+    "initialisms",
     "monokai",
     "polyfill",
     "rubocop",
     "symlink",
+    "tabindex",
     "tmux",
     "todos",
-    "youtube",
+    "youtube"
   ],
   // Npm
   "npm.enableScriptExplorer": true,
   // Ruby
   "ruby.format": "rubocop",
+  // TypeScript
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.semicolons": "insert",
+  "typescript.surveys.enabled": false,
   // YAML
   "yaml.format.enable": true,
-  "yaml.format.printWidth": 100
+  "yaml.format.printWidth": 100,
 }
