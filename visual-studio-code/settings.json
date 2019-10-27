@@ -7,6 +7,7 @@
   "editor.cursorBlinking": "smooth",
   "editor.dragAndDrop": false,
   "editor.emptySelectionClipboard": false,
+  "editor.find.addExtraSpaceOnTop": false,
   "editor.fontSize": 15,
   "editor.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.multiCursorModifier": "ctrlCmd",
