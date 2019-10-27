@@ -28,7 +28,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
-  "workbench.statusBar.feedback.visible": false,
   // Window
   "window.closeWhenEmpty": true,
   "window.restoreWindows": "all",
@@ -67,8 +66,6 @@
     "**/coverage": true,
     "**/package-lock.json": true,
   },
-  // Update
-  "update.enableWindowsBackgroundUpdates": false,
   // HTML
   "html.format.endWithNewline": true,
   "html.format.wrapLineLength": 0,
