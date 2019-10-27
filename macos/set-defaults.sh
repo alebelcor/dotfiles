@@ -984,6 +984,7 @@ defaults write org.mozilla.firefox EnableTrackingProtection -dict Value -bool tr
 
 # Install Extensions.
 #   1Password extension (desktop app required)
+#   Airbnb Price Per Night Correcter
 #   Augmented Steam
 #   Auto Tab Discard
 #   Decentraleyes
@@ -993,12 +994,14 @@ defaults write org.mozilla.firefox EnableTrackingProtection -dict Value -bool tr
 #   IBA Opt-out (by Google)
 #   minerBlock
 #   Momentum
+#   Privacy Badger
 #   Protect My Choices
 #   Reddit Enhancement Suite
 #   Refined GitHub
 #   uBlock Origin
 defaults write org.mozilla.firefox Extensions -dict "Install" "( \
   'https://app-updates.agilebits.com/download/OPX4?browser=firefox', \
+  'https://addons.mozilla.org/firefox/downloads/latest/airbnb-price-per-night-correct', \
   'https://addons.mozilla.org/firefox/downloads/latest/enhanced-steam-an-itad-fork', \
   'https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard', \
   'https://addons.mozilla.org/firefox/downloads/latest/decentraleyes', \
@@ -1008,6 +1011,7 @@ defaults write org.mozilla.firefox Extensions -dict "Install" "( \
   'https://addons.mozilla.org/firefox/downloads/latest/interest-advertising-opt-out', \
   'https://addons.mozilla.org/firefox/downloads/latest/minerblock-origin', \
   'https://addons.mozilla.org/firefox/downloads/latest/momentumdash', \
+  'https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17', \
   'https://addons.mozilla.org/firefox/downloads/latest/protect-my-choices', \
   'https://addons.mozilla.org/firefox/downloads/latest/reddit-enhancement-suite', \
   'https://addons.mozilla.org/firefox/downloads/latest/refined-github-', \
