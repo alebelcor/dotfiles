@@ -26,6 +26,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.tabSizing": "shrink",
+  "workbench.enableExperiments": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
