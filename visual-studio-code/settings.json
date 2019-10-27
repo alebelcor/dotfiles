@@ -38,7 +38,7 @@
     "*.js.symlink": "javascript",
     "*.plist": "xml",
   },
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "onFocusChange",
   "files.eol": "\n",
   "files.exclude": {
     "**/.git": true,
