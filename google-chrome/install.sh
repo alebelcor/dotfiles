@@ -53,6 +53,9 @@ EXTENSIONS=(
 	# NoCountryRedirect (NCR)
 	"ciboebddidackjicoeoiigdnbmchkdll"
 
+	# Privacy Badger
+	"pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
+
 	# Protect My Choices
 	"hdgloanjhdcenjgiafkpbehddcnonlic"
 
