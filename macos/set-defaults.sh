@@ -228,11 +228,15 @@ sudo "${AIRPORT}" prefs RequireAdminNetworkChange=YES
 sudo "${AIRPORT}" prefs RequireAdminPowerToggle=YES
 
 # Define list of DNS servers to set up.
-#   1. CloudFlare
-#   2. Google
-#   3. Quad9
-#   4. OpenDNS
+#   1. dnscrypt-proxy
+#   2. CloudFlare
+#   3. Google
+#   4. Quad9
+#   5. OpenDNS
 DNS_SERVERS=(
+	"127.0.0.1"
+
+	"1.0.0.1"
 	"1.1.1.1"
 
 	"8.8.8.8"
