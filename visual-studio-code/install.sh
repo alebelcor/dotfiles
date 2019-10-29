@@ -55,6 +55,9 @@ EXTENSIONS_TO_INSTALL=(
 	# GraphQL
 	"prisma.vscode-graphql"
 
+	# Import Cost
+	"wix.vscode-import-cost"
+
 	# markdownlint
 	"DavidAnson.vscode-markdownlint"
 
