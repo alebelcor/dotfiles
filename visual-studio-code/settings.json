@@ -81,6 +81,9 @@
   "css.lint.importStatement": "warning",
   "css.lint.universalSelector": "warning",
   "css.lint.zeroUnits": "warning",
+  // ESLint
+  "eslint.run": "onSave",
+  "eslint.alwaysShowStatus": true,
   // Sass
   "scss.lint.duplicateProperties": "warning",
   "scss.lint.idSelector": "warning",

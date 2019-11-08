@@ -49,6 +49,9 @@ EXTENSIONS_TO_INSTALL=(
 	# EditorConfig for VS Code
 	"EditorConfig.EditorConfig"
 
+	# ESLint
+	"dbaeumer.vscode-eslint"
+
 	# GitLens
 	"eamodio.gitlens"
 
