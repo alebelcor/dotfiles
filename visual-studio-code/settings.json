@@ -152,6 +152,8 @@
   "npm.enableScriptExplorer": true,
   // Ruby
   "ruby.format": "rubocop",
+  // Todo Tree
+  "todo-tree.filtering.ignoreGitSubmodules": true,
   // TypeScript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.format.semicolons": "insert",

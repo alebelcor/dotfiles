@@ -85,6 +85,9 @@ EXTENSIONS_TO_INSTALL=(
 	# shellcheck
 	"timonwong.shellcheck"
 
+	# Todo Tree
+	"Gruntfuggly.todo-tree"
+
 	# YAML
 	"redhat.vscode-yaml"
 
