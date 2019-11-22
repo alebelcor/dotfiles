@@ -333,7 +333,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
 # Set tracking speed.
-defaults write NSGlobalDomain com.apple.mouse.scaling -float 0.875
+defaults write NSGlobalDomain com.apple.mouse.scaling -float 2
 
 # Show language menu in the top right corner of the boot screen.
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
