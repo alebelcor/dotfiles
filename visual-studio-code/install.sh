@@ -76,6 +76,9 @@ EXTENSIONS_TO_INSTALL=(
 	# One Monokai Theme
 	"azemoh.one-monokai"
 
+	# Prettier - Code formatter
+	"prettier.prettier-vscode"
+
 	# Ruby
 	"rebornix.ruby"
 
