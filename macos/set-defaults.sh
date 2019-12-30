@@ -939,7 +939,7 @@ defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 ###############################################################################
 
 # Full list of supported policies: about:policies#documentation
-# Last updated for version 68.0.2.
+# Last updated for version 71.0.
 
 # Enable policies.
 defaults write org.mozilla.firefox EnterprisePoliciesEnabled -bool true
@@ -1032,6 +1032,9 @@ defaults write org.mozilla.firefox NoDefaultBookmarks -bool true
 
 # Enforce the setting to allow Firefox to offer to remember saved logins and passwords.
 defaults write org.mozilla.firefox OfferToSaveLogins -bool false
+
+# Disable saving passwords to the password manager.
+defaults write org.mozilla.firefox PasswordManagerEnabled -bool false
 
 # Ask where to save files when downloading.
 defaults write org.mozilla.firefox PromptForDownloadLocation -bool false
