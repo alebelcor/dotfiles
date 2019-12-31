@@ -227,25 +227,26 @@ sudo "${AIRPORT}" prefs RequireAdminNetworkChange=YES
 # Require administrator authorization to turn Wi-Fi on or off.
 sudo "${AIRPORT}" prefs RequireAdminPowerToggle=YES
 
-# Define list of DNS servers to set up.
-#   1. dnscrypt-proxy
-#   2. CloudFlare
-#   3. Google
-#   4. Quad9
-#   5. OpenDNS
+# Note: For historic/learning/future purposes:
+#
+# CloudFlare
+# "1.0.0.1"
+# "1.1.1.1"
+#
+# Google
+# "8.8.8.8"
+# "8.8.4.4"
+#
+# Quad9
+# "9.9.9.9"
+#
+# OpenDNS
+# "208.67.222.222"
+# "208.67.220.220"
+
+# Add dnscrypt-proxy as the DNS server.
 DNS_SERVERS=(
 	"127.0.0.1"
-
-	"1.0.0.1"
-	"1.1.1.1"
-
-	"8.8.8.8"
-	"8.8.4.4"
-
-	"9.9.9.9"
-
-	"208.67.222.222"
-	"208.67.220.220"
 )
 
 # Clear all DNS entries.
