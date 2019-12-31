@@ -69,6 +69,11 @@
 	changed = green
 	untracked = cyan
 
+[credential]
+
+	# Helper to be called when a username or password credential is needed.
+	helper = osxkeychain
+
 [diff]
 
 	# Detect copies as well as renames.
