@@ -1068,6 +1068,17 @@ defaults write org.herf.Flux location -string "29.0975,-111.022"
 defaults write org.herf.Flux locationTextField -string "29.0975, -111.022"
 
 ###############################################################################
+# Gas Mask                                                                    #
+###############################################################################
+
+# Set the (remote) hosts blacklist previously downloaded.
+defaults delete ee.clockwise.gmask remoteHostsFiles
+defaults write ee.clockwise.gmask remoteHostsFiles -dict-add "sbc.io" '{ "url" = "http://sbc.io/hosts/hosts"; }'
+
+# Activate the combined hosts file.
+defaults write ee.clockwise.gmask activeHostsFile -string "${HOME}/Library/Gas Mask/Combined/combined.hst"
+
+###############################################################################
 # Google Chrome                                                               #
 ###############################################################################
 
