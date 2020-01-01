@@ -286,17 +286,6 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
 ###############################################################################
-# SSD-specific tweaks                                                         #
-###############################################################################
-
-# Disable hibernation (speeds up entering sleep mode).
-sudo pmset -a hibernatemode 0
-
-# Disable the sudden motion sensor.
-# It's not useful for SSDs/current MacBooks.
-sudo pmset -a sms 0
-
-###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
@@ -358,6 +347,44 @@ defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
 
 # Enable "Select the previous input source" keyboard shortcut.
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{ "enabled" = 1; "value" = { "parameters" = (32, 49, 262144); "type" = "standard"; }; }'
+
+###############################################################################
+# Energy saving                                                               #
+###############################################################################
+
+# Restart automatically on power loss.
+sudo pmset -a autorestart 1
+
+# Sleep the display after 15 minutes.
+sudo pmset -a displaysleep 15
+
+# Hibernation mode
+# 0: Disable hibernation (speeds up entering sleep mode)
+# 3: Copy RAM to disk so the system state can still be restored in case of a
+#    power failure.
+sudo pmset -a hibernatemode 0
+
+# Enable lid wakeup.
+sudo pmset -a lidwake 1
+
+# Disable machine sleep while charging/on battery.
+sudo pmset -a sleep 0
+
+# Set standby delay to 24 hours (default is 1 hour).
+sudo pmset -a standbydelay 86400
+
+# Never go into computer sleep mode.
+sudo systemsetup -setcomputersleep Off > /dev/null
+
+# Restart automatically if the computer freezes.
+sudo systemsetup -setrestartfreeze on
+
+# Remove the sleep image file to save disk space.
+sudo rm /private/var/vm/sleepimage &> /dev/null
+# Create a zero-byte file instead.
+sudo touch /private/var/vm/sleepimage
+# And make sure it can't be rewritten.
+sudo chflags uchg /private/var/vm/sleepimage
 
 ###############################################################################
 # Screen                                                                      #
