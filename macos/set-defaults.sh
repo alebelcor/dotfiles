@@ -1119,7 +1119,7 @@ defaults write ee.clockwise.gmask activeHostsFile -string "${HOME}/Library/Gas M
 ###############################################################################
 
 # Full list of supported policies: https://cloud.google.com/docs/chrome-enterprise/policies/
-# Last updated for (Mac) version 76.
+# Last updated for (Mac) version 79.
 
 # -- Content settings
 
@@ -1176,6 +1176,9 @@ defaults write com.google.Chrome AlternateErrorPagesEnabled -bool false
 # Always open PDF files in browser instead of downloading them.
 defaults write com.google.Chrome AlwaysOpenPdfExternally -bool false
 
+# Enable the audio sandbox to run.
+defaults write com.google.Chrome AudioSandboxEnabled -bool true
+
 # Disable autoFill for addresses.
 defaults write com.google.Chrome AutofillAddressEnabled -bool false
 
@@ -1202,6 +1205,9 @@ defaults write com.google.Chrome BrowserSignin -int 0
 
 # Don't use built-in DNS client.
 defaults write com.google.Chrome BuiltInDnsClientEnabled -bool false
+
+# Disable the Click to Call feature.
+defaults write com.google.Chrome ClickToCallEnabled -bool false
 
 # Disable mandatory cloud management enrollment.
 defaults write com.google.Chrome CloudManagementEnrollmentMandatory -bool false
@@ -1272,6 +1278,9 @@ defaults write com.google.Chrome SafeSitesFilterBehavior -int 0
 # Disable prediction service to help complete searches and URLs typed in the address bar.
 defaults write com.google.Chrome SearchSuggestEnabled -bool false
 
+# Disable the Shared Clipboard Feature.
+defaults write com.google.Chrome SharedClipboardEnabled -bool false
+
 # Hide the apps shortcut in the bookmark bar.
 defaults write com.google.Chrome ShowAppsShortcutInBookmarkBar -bool false
 
@@ -1283,6 +1292,9 @@ defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
 
 # Disable synchronization of data with Google.
 defaults write com.google.Chrome SyncDisabled -bool true
+
+# Allow background tabs freeze.
+defaults write com.google.Chrome TabFreezingEnabled -bool true
 
 # Disable the integrated Google Translate service.
 defaults write com.google.Chrome TranslateEnabled -bool false
@@ -1305,10 +1317,16 @@ defaults write com.google.Chrome WebRtcEventLogCollectionAllowed -bool false
 
 # -- Password manager
 
+# Enable leak detection for entered credentials.
+defaults write com.google.Chrome PasswordLeakDetectionEnabled -bool true
+
 # Disable saving passwords to the password manager.
 defaults write com.google.Chrome PasswordManagerEnabled -bool false
 
 # -- Printing
+
+# Disable submission of documents to Google Cloud Print.
+defaults write com.google.Chrome CloudPrintSubmitEnabled -bool false
 
 # Use the system-native print preview dialog instead of the print preview.
 defaults write com.google.Chrome DisablePrintPreview -bool true
@@ -1319,6 +1337,7 @@ defaults write com.google.Chrome DisablePrintPreview -bool true
 
 # -- Remote access options
 
+# Disallow remote access users to transfer files to/from the host.
 defaults write com.google.Chrome RemoteAccessHostAllowFileTransfer -bool false
 
 # -- Safe Browsing settings
