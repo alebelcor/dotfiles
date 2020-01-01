@@ -6,9 +6,6 @@ tap 'homebrew/cask-drivers'
 # Tap for fonts as Casks
 tap 'homebrew/cask-fonts'
 
-# Tap for nodenv plugins
-tap 'nodenv/nodenv'
-
 # Command-line
 
 brew 'coreutils'
@@ -22,9 +19,6 @@ brew 'gnu-sed'
 brew 'grep'
 brew 'mas'
 brew 'nodenv'
-brew 'nodenv-default-packages'
-brew 'nodenv-package-rehash'
-brew 'nodenv-update'
 brew 'rbenv'
 brew 'safe-rm'
 brew 'shellcheck'
