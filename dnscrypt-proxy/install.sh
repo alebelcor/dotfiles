@@ -36,5 +36,5 @@ chmod +x "dnscrypt-proxy-switcher.10s.sh"
 # Start the service.
 sudo brew services start dnscrypt-proxy > /dev/null 2>&1
 
-# Reload the BitBar plugin, in case BitBar is already running.
+# Reload the plugin, in case BitBar is already running.
 open 'bitbar://refreshPlugin?name=dnscrypt-proxy-switcher.*?.sh' > /dev/null 2>&1
