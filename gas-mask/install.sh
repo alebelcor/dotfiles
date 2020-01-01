@@ -42,13 +42,4 @@ ln -sf "${DOTFILES_GAS_MASK}/combined.hst" "${HOME}/Library/Gas Mask/Combined"
 sudo dscacheutil -flushcache
 sudo killall -HUP mDNSResponder
 
-printf "› Openning \"Gas Mask\" to sync remote hosts and apply changes.\\n"
-
-# Open "Gas Mask" app.
-open -a "Gas Mask" > /dev/null 2>&1
-
-# And let some time pass for the app to sync the remote hosts file.
-sleep 8
-
-# Close "Gas Mask", hopefully after the sync completed successfully.
-osascript -e 'tell app "Gas Mask" to quit' > /dev/null 2>&1
+printf "\\r  [ \\033[00;34mINFO\\033[0m ] Remember to open \"Gas Mask\", edit the combined hosts file, and save it for changes to take effect.\\n"
