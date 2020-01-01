@@ -159,6 +159,10 @@ defaults write com.apple.helpviewer DevMode -bool true
 # Restart automatically if the computer freezes.
 sudo systemsetup -setrestartfreeze on
 
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window.
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
 # Disable "Notification Center" and remove the menu bar icon.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
@@ -633,6 +637,7 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
+# 13: Lock Screen
 
 # Top left screen corner → no-op.
 defaults write com.apple.dock wvous-tl-corner -int 0
@@ -767,12 +772,12 @@ sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Vol
 # Change indexing order and disable some search results
 defaults write com.apple.spotlight orderedItems -array \
 	'{ "enabled" = 1; "name" = "APPLICATIONS"; }' \
-	'{ "enabled" = 1; "name" = "SYSTEM_PREFS"; }' \
 	'{ "enabled" = 1; "name" = "DIRECTORIES"; }' \
 	'{ "enabled" = 1; "name" = "DOCUMENTS"; }' \
+	'{ "enabled" = 1; "name" = "FONTS"; }' \
 	'{ "enabled" = 1; "name" = "IMAGES"; }' \
 	'{ "enabled" = 1; "name" = "PDF"; }' \
-	'{ "enabled" = 1; "name" = "FONTS"; }' \
+	'{ "enabled" = 1; "name" = "SYSTEM_PREFS"; }' \
 	'{ "enabled" = 0; "name" = "BOOKMARKS"; }' \
 	'{ "enabled" = 0; "name" = "CONTACT"; }' \
 	'{ "enabled" = 0; "name" = "EVENT_TODO"; }' \
