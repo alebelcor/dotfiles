@@ -16,7 +16,7 @@ source scripts/bootstrap
 ```sh
 mkdir -p ~/projects/dotfiles
 cd ~/projects/dotfiles
-curl --location https://github.com/alebelcor/dotfiles/tarball/master | tar -xz --strip-components 1 --exclude={.editorconfig,.gitattributes,.gitignore,readme.md}
+curl --location https://github.com/alebelcor/dotfiles/tarball/master | tar -xz --strip-components 1 --exclude={.editorconfig,.gitattributes,.gitignore,license,readme.md}
 source scripts/bootstrap
 ```
 
