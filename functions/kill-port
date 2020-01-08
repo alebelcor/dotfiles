@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# Quit any running process on a certain port.
+#
+# Usage: kill-port <port>
+# Example: `kill-port 9000` will kill any running process on port 9000
+#
+
+kill_port() {
+	local processes=( "$(lsof -t -i:"$1")" )
+
+	kill "${processes[@]}"
+}
