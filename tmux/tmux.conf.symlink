@@ -41,3 +41,6 @@ set-option -g status on
 
 # Start index of pane with 1.
 set-window-option -g pane-base-index 1
+
+# Load local configuration.
+source-file -q "${HOME}"/.tmux.conf.local

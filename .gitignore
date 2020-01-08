@@ -12,4 +12,7 @@ Thumbs.db
 
 gitconfig.local.symlink
 gitignore.local.symlink
+
+tmux.conf.local.symlink
+
 .localrc
