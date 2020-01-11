@@ -69,6 +69,7 @@ cask 'whatsapp'
 
 # Drivers
 
+cask 'caldigit-thunderbolt-charging'
 cask 'fitbit-connect'
 cask 'xbox360-controller-driver-unofficial'
 
