@@ -972,6 +972,28 @@ defaults write com.lightheadsw.Caffeine DefaultDuration -int 0
 defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
 
 ###############################################################################
+# Commander One                                                               #
+###############################################################################
+
+# Show hidden files.
+defaults write com.eltima.cmd1 TCX-show-hidden-files -bool true
+
+# Do not send anonymous usage statistics.
+defaults write com.eltima.cmd1 TCX-use-appstatico -bool false
+
+# Do not save "Command line" on quit.
+defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-command-line -bool false
+
+# Do not save "Folder history" on quit.
+defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-folder-history -bool false
+
+# Do not save "Opened folders" on quit.
+defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-folders -bool false
+
+# Do not save "Panels state" on quit.
+defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-panel-state -bool false
+
+###############################################################################
 # Firefox                                                                     #
 ###############################################################################
 
