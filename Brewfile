@@ -80,6 +80,7 @@ cask 'font-fira-mono'
 # App Store
 
 mas '1Password', id: 443987910
+mas 'Dato', id: 1470584107
 mas 'Joystick Mapper', id: 528183797
 mas 'Lightshot Screenshot', id: 526298438
 mas 'LimeChat', id: 414030210

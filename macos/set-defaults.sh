@@ -994,6 +994,16 @@ defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-folders -bool fals
 defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-panel-state -bool false
 
 ###############################################################################
+# Dato                                                                     #
+###############################################################################
+
+# Show date in menu bar.
+defaults write com.sindresorhus.Dato showDateInMenuBar -bool true
+
+# Do not show icon-only in menu bar.
+defaults write com.sindresorhus.Dato showIconOnlyInMenubar -bool false
+
+###############################################################################
 # Firefox                                                                     #
 ###############################################################################
 
