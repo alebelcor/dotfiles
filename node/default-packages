@@ -1,4 +1,5 @@
 create-react-app
+depcheck
 movie-draft-cli
 nodemon
 pure-prompt
