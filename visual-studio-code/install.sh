@@ -76,6 +76,9 @@ EXTENSIONS_TO_INSTALL=(
 	# One Monokai Theme
 	"azemoh.one-monokai"
 
+	# Path Intellisens
+	"christian-kohler.path-intellisense"
+
 	# Prettier - Code formatter
 	"prettier.prettier-vscode"
 
