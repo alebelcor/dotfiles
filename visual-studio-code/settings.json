@@ -10,6 +10,7 @@
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontSize": 15,
   "editor.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderControlCharacters": true,
   "editor.renderIndentGuides": true,
@@ -63,10 +64,13 @@
   "explorer.openEditors.visible": 0,
   // Search
   "search.exclude": {
+    "**/.build": true,
     "**/.nyc_output": true,
     "**/build": true,
     "**/coverage": true,
+    "**/dist": true,
     "**/package-lock.json": true,
+    "**/yarn.lock": true,
   },
   // HTML
   "html.format.endWithNewline": true,
