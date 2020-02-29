@@ -233,6 +233,10 @@ sudo "${AIRPORT}" prefs RequireAdminPowerToggle=YES
 
 # Note: For historic/learning/future purposes:
 #
+# Quad9
+# "9.9.9.9"
+# "149.112.112.112"
+#
 # CloudFlare
 # "1.0.0.1"
 # "1.1.1.1"
@@ -240,9 +244,6 @@ sudo "${AIRPORT}" prefs RequireAdminPowerToggle=YES
 # Google
 # "8.8.8.8"
 # "8.8.4.4"
-#
-# Quad9
-# "9.9.9.9"
 #
 # OpenDNS
 # "208.67.222.222"
