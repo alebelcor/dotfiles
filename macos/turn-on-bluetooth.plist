@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<!-- Key to uniquely identify the job to `launchd` -->
+		<key>Label</key>
+		<string>turn-on-bluetooth</string>
+
+		<!-- Absolute path to the executable -->
+		<key>ProgramArguments</key>
+		<array>
+			<string>/usr/local/bin/blueutil</string>
+			<string>--power=1</string>
+		</array>
+
+		<!-- Run every Monday and Friday at 10:59am -->
+		<key>StartCalendarInterval</key>
+		<array>
+			<dict>
+				<key>Hour</key>
+				<integer>10</integer>
+				<key>Minute</key>
+				<integer>59</integer>
+				<key>Weekday</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>Hour</key>
+				<integer>10</integer>
+				<key>Minute</key>
+				<integer>59</integer>
+				<key>Weekday</key>
+				<integer>5</integer>
+			</dict>
+		</array>
+	</dict>
+</plist>

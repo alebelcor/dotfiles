@@ -8,6 +8,7 @@ tap 'homebrew/cask-fonts'
 
 # Command-line
 
+brew 'blueutil'
 brew 'coreutils'
 brew 'dark-mode'
 brew 'diff-so-fancy'
