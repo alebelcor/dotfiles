@@ -17,3 +17,6 @@ indent_size = 2
 
 [*.{js.symlink,json}]
 indent_style = space
+
+[*.xml]
+insert_final_newline = false
