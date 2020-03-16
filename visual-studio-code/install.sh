@@ -94,6 +94,9 @@ EXTENSIONS_TO_INSTALL=(
 	# Todo Tree
 	"Gruntfuggly.todo-tree"
 
+	# XML
+	"redhat.vscode-xml"
+
 	# YAML
 	"redhat.vscode-yaml"
 
