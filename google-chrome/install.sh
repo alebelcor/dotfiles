@@ -76,6 +76,12 @@ EXTENSIONS=(
 
 	# uBlock Origin
 	"cjpalhdlnbpafiamejdnhcphjbkeiagm"
+
+	# Wikipedia night mode
+	"idhghjodolinkdhibgfgfoceackpcjfl"
+
+	# Zoom Redirector
+	"fmaeeiocbalinknpdkjjfogehkdcbkcd"
 )
 
 # Define content for JSON files.
