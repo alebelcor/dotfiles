@@ -61,6 +61,9 @@ EXTENSIONS_TO_INSTALL=(
 	# Import Cost
 	"wix.vscode-import-cost"
 
+	# LaTeX Workshop
+	"james-yu.latex-workshop"
+
 	# markdownlint
 	"DavidAnson.vscode-markdownlint"
 
