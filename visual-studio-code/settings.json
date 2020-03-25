@@ -119,6 +119,8 @@
   "gitlens.views.lineHistory.avatars": false,
   "gitlens.views.repositories.avatars": false,
   "gitlens.views.search.avatars": false,
+  // LaTeX Workshop
+  "latex-workshop.view.pdf.viewer": "browser",
   // Material Icons
   "material-icon-theme.showWelcomeMessage": false,
   // Auto Rename Tag
