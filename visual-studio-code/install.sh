@@ -70,6 +70,9 @@ EXTENSIONS_TO_INSTALL=(
 	# Material Icon Theme
 	"PKief.material-icon-theme"
 
+	# MDX
+	"silvenon.mdx"
+
 	# npm
 	"eg2.vscode-npm-script"
 
