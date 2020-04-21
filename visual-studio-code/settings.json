@@ -65,10 +65,12 @@
   "search.exclude": {
     "**/.build": true,
     "**/.nyc_output": true,
+    "**/.yarn": true,
     "**/build": true,
     "**/coverage": true,
     "**/dist": true,
     "**/package-lock.json": true,
+    "**/.pnp.js": true,
     "**/yarn.lock": true,
   },
   // HTML
