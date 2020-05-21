@@ -34,6 +34,9 @@ EXTENSIONS_TO_INSTALL=(
 	# Auto Rename Tag
 	"formulahendry.auto-rename-tag"
 
+	# Babel JavaScript
+	"mgmcdermott.vscode-language-babel"
+
 	# Brewfile
 	"sharat.vscode-brewfile"
 
