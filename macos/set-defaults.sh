@@ -1543,6 +1543,37 @@ defaults write org.videolan.vlc SUSendProfileInfo -bool true
 defaults write org.videolan.vlc language -string "en"
 
 ###############################################################################
+# Zoom                                                                        #
+###############################################################################
+
+# -- General
+
+# Do not use dual monitors.
+defaults write ZoomChat ZMEnableDualMonitor -bool false
+
+# Do not enter full screen when starting or joining a meeting.
+defaults write ZoomChat ZoomEnterFullscreenWhenDualMonitorSetted -bool false
+
+# Do not add Zoom to macOS menu bar
+defaults write ZoomChat ZoomShowIconInMenuBar -bool false
+
+# -- Video
+
+# Always display participant name on their videos.
+defaults write ZoomChat ZMEnableShowUserName -bool true
+
+# -- Share Screen
+
+# Do not enter full screen when a participant shares screen.
+defaults write ZoomChat ZoomEnterFullscreenWhenViewShare -bool false
+
+# Do not maximize Zoom window when a participant shares screen
+defaults write ZoomChat ZoomEnterMaxWndWhenViewShare -bool false
+
+# Disable Side-by-side Mode.
+defaults write ZoomChat ZoomShouldShowSharingWithSplitView -bool false
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
