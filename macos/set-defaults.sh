@@ -1549,29 +1549,29 @@ defaults write org.videolan.vlc language -string "en"
 # -- General
 
 # Do not use dual monitors.
-defaults write ZoomChat ZMEnableDualMonitor -bool false
+defaults write ZoomChat ZMEnableDualMonitor -string false
 
 # Do not enter full screen when starting or joining a meeting.
-defaults write ZoomChat ZoomEnterFullscreenWhenDualMonitorSetted -bool false
+defaults write ZoomChat ZoomEnterFullscreenWhenDualMonitorSetted -string false
 
 # Do not add Zoom to macOS menu bar
-defaults write ZoomChat ZoomShowIconInMenuBar -bool false
+defaults write ZoomChat ZoomShowIconInMenuBar -string false
 
 # -- Video
 
 # Always display participant name on their videos.
-defaults write ZoomChat ZMEnableShowUserName -bool true
+defaults write ZoomChat ZMEnableShowUserName -string true
 
 # -- Share Screen
 
 # Do not enter full screen when a participant shares screen.
-defaults write ZoomChat ZoomEnterFullscreenWhenViewShare -bool false
+defaults write ZoomChat ZoomEnterFullscreenWhenViewShare -string false
 
 # Do not maximize Zoom window when a participant shares screen
-defaults write ZoomChat ZoomEnterMaxWndWhenViewShare -bool false
+defaults write ZoomChat ZoomEnterMaxWndWhenViewShare -string false
 
 # Disable Side-by-side Mode.
-defaults write ZoomChat ZoomShouldShowSharingWithSplitView -bool false
+defaults write ZoomChat ZoomShouldShowSharingWithSplitView -string false
 
 ###############################################################################
 # Kill affected applications                                                  #
