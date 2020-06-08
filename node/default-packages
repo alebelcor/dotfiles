@@ -5,6 +5,6 @@ movie-draft-cli
 nodemon
 pure-prompt
 serve
-speed-test
+speedtest-net
 trash-cli
 xo
