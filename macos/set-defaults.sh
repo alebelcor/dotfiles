@@ -922,23 +922,67 @@ defaults write com.apple.calculator PrecisionDefaultsKey_2 -int 8
 # 1Password                                                                   #
 ###############################################################################
 
-# Always keep 1Password mini running.
-defaults write com.agilebits.onepassword-osx KeepHelperRunning -bool true
+# -- General
 
-# Show mini app icon in the menu bar.
-defaults write com.agilebits.onepassword-osx ShowStatusItem -bool true
+# Show 1Password in the menu bar.
+defaults write com.agilebits.onepassword7 ShowStatusItem -bool true
 
 # Use rich icons.
-defaults write com.agilebits.onepassword-osx ShowRichIcons -bool true
+defaults write com.agilebits.onepassword7 ShowRichIcons -bool true
 
-# Don't show item count in sidebar.
-defaults write com.agilebits.onepassword-osx ShowItemCounts -bool false
+# Show item count in sidebar.
+defaults write com.agilebits.onepassword7 ShowItemCounts -bool true
+
+# Format secure notes using Markdown.
+defaults write com.agilebits.onepassword7 EnableMarkdown -bool true
+
+# -- Security
 
 # Conceal passwords.
-defaults write com.agilebits.onepassword-osx ConcealPasswords -bool true
+defaults write com.agilebits.onepassword7 ConcealPasswords -bool true
 
-# Automatically check for updates.
-defaults write com.agilebits.onepassword-osx CheckForSoftwareUpdatesEnabled -bool true
+# Lock on sleep.
+defaults write com.agilebits.onepassword7 LockOnSleep -bool true
+
+# Lock when screen saver is activated.
+defaults write com.agilebits.onepassword7 LockOnScreenSaver -bool true
+
+# Lock when fast user switching.
+defaults write com.agilebits.onepassword7 LockOnUserSwitch -bool true
+
+# Lock after computer is idle for 5 minutes.
+defaults write com.agilebits.onepassword7 LockOnIdle -bool true
+
+# Clear clipboard contents after 90 seconds.
+defaults write com.agilebits.onepassword7 ClearPasteboardAfterTimeout -bool true
+
+# -- Watchtower
+
+# Check for compromised websites.
+defaults write com.agilebits.onepassword7 watchtowerService -bool true
+
+# Check for vulnerable passwords.
+defaults write com.agilebits.onepassword7 compromisedPasswordServiceV2 -bool true
+
+# Check for two-factor authentication.
+defaults write com.agilebits.onepassword7 twoFactorService -bool true
+
+# Ask before checking for a secure connection.
+defaults write com.agilebits.onepassword7 watchtowerMakeHTTPSAlwaysAskForConsent -bool true
+
+# -- Browsers
+
+# Always keep 1Password Extension Helper running.
+defaults write com.agilebits.onepassword7 KeepHelperRunning -bool true
+
+# Detect new usernames and passwords and offer to save them.
+defaults write com.agilebits.onepassword7 autosave -bool true
+
+# Open logins in "New Tab".
+defaults write com.agilebits.onepassword7 GoAndFillOpenInTabMode -int 2
+
+# Automatically copy one-time passwords.
+defaults write com.agilebits.onepassword7 CopyTOTPToClipboard -bool true
 
 ###############################################################################
 # BitBar                                                                      #
