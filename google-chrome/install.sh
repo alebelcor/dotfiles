@@ -77,9 +77,6 @@ EXTENSIONS=(
 	# uBlock Origin
 	"cjpalhdlnbpafiamejdnhcphjbkeiagm"
 
-	# Wikipedia night mode
-	"idhghjodolinkdhibgfgfoceackpcjfl"
-
 	# Zoom Redirector
 	"fmaeeiocbalinknpdkjjfogehkdcbkcd"
 )
