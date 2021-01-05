@@ -163,7 +163,7 @@
     "youtube"
   ],
   // Npm
-  "npm.enableScriptExplorer": true,
+  "npm.enableRunFromFolder": true,
   // Ruby
   "ruby.format": "rubocop",
   // Todo Tree
