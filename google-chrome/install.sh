@@ -23,6 +23,9 @@ EXTENSIONS=(
 	# Airbnb Price Per Night Correcter
 	"lijeilcglmadpkbengpkfnkpmcehecfe"
 
+	# Auto Tab Discard
+	"jhnleheckmknfcgijgkadoemagpecfol"
+
 	# Clear Downloads
 	"bknoejjhcfmakcibhifepfkegpjdnadk"
 
@@ -70,9 +73,6 @@ EXTENSIONS=(
 
 	# Tab Size on GitHub
 	"ofjbgncegkdemndciafljngjbdpfmbkn"
-
-	# The Great Suspender
-	"klbibkeccnjlkjkiokjodocebajanakg"
 
 	# uBlock Origin
 	"cjpalhdlnbpafiamejdnhcphjbkeiagm"
