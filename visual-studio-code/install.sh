@@ -59,7 +59,7 @@ EXTENSIONS_TO_INSTALL=(
 	"eamodio.gitlens"
 
 	# GraphQL
-	"prisma.vscode-graphql"
+	"graphql.vscode-graphql"
 
 	# Import Cost
 	"wix.vscode-import-cost"
