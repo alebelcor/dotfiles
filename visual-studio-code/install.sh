@@ -68,7 +68,7 @@ EXTENSIONS_TO_INSTALL=(
 	"james-yu.latex-workshop"
 
 	# markdownlint
-	"DavidAnson.vscode-markdownlint"
+	"davidanson.vscode-markdownlint"
 
 	# Material Icon Theme
 	"PKief.material-icon-theme"
