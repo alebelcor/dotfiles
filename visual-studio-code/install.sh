@@ -71,7 +71,7 @@ EXTENSIONS_TO_INSTALL=(
 	"davidanson.vscode-markdownlint"
 
 	# Material Icon Theme
-	"PKief.material-icon-theme"
+	"pkief.material-icon-theme"
 
 	# MDX
 	"silvenon.mdx"
@@ -88,17 +88,23 @@ EXTENSIONS_TO_INSTALL=(
 	# Path Intellisens
 	"christian-kohler.path-intellisense"
 
+	# PostCSS Language Support
+	"csstools.postcss"
+
 	# Prettier - Code formatter
-	"prettier.prettier-vscode"
+	"esbenp.prettier-vscode"
 
 	# Ruby
 	"rebornix.ruby"
 
-	# Sass
-	"robinbentley.sass-indented"
-
 	# shellcheck
 	"timonwong.shellcheck"
+
+	# stylelint
+	"stylelint.vscode-stylelint"
+
+	# Tailwind CSS IntelliSense
+	"bradlc.vscode-tailwindcss"
 
 	# Todo Tree
 	"Gruntfuggly.todo-tree"
