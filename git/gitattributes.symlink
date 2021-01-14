@@ -2,15 +2,20 @@
 
 # Fonts
 *.eot binary
+*.otf binary
 *.ttf binary
 *.woff binary
-*.otf binary
+*.woff2 binary
 
 # Images
-*.png binary
-*.jpg binary
+*.avif binary
 *.gif binary
 *.ico binary
+*.jp2 binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
 
 # Others
 *.jar binary
