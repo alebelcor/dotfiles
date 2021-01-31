@@ -6,8 +6,13 @@
 # Run it periodically to make sure you're on the latest and greatest.
 #
 
+# Shortcut to dotfiles directory.
 DOTFILES="${HOME}/projects/dotfiles"
 export DOTFILES
+
+# Shortcut to Homebrew's root directory.
+HOMEBREW_PREFIX="$(brew --prefix)"
+export HOMEBREW_PREFIX
 
 # Install Homebrew.
 "${DOTFILES}"/homebrew/install.sh

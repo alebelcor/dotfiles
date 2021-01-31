@@ -16,3 +16,6 @@ gitignore.local.symlink
 tmux.conf.local.symlink
 
 .localrc
+
+gas-mask/work.hst
+nextdns/dnscrypt-proxy.toml

@@ -85,4 +85,5 @@ mas 'Dato', id: 1470584107
 mas 'Joystick Mapper', id: 528183797
 mas 'Lightshot Screenshot', id: 526298438
 mas 'LimeChat', id: 414030210
+mas 'NextDNS', id: 1464122853
 mas 'TweetDeck', id: 485812721

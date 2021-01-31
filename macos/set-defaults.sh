@@ -1498,6 +1498,25 @@ defaults write net.limechat.LimeChat-AppStore Preferences.Theme.input_font_size 
 defaults write net.limechat.LimeChat-AppStore Preferences.Dcc.action -int 1
 
 ###############################################################################
+# NextDNS                                                                     #
+###############################################################################
+
+# Start at login.
+defaults write io.nextdns.NextDNSMac startAtLogin -bool true
+
+# Send device name.
+defaults write io.nextdns.NextDNSMac reportDeviceName -bool true
+
+# Accept terms of usage.
+defaults write io.nextdns.NextDNSMac tou_accepted -bool true
+
+# Disable hardened privacy (for decreased latency).
+defaults write io.nextdns.NextDNSMac hardenedPrivacyMode -bool false
+
+# Enable NextDNS.
+defaults write io.nextdns.NextDNSMac connected -bool true
+
+###############################################################################
 # Noisy                                                                       #
 ###############################################################################
 

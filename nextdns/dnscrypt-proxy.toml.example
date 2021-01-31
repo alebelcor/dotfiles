@@ -1,0 +1,9 @@
+########################################
+#     Custom NextDNS configuration     #
+########################################
+
+server_names = ['NEXTDNS_CONFIG_ID']
+
+[static]
+  [static.'NEXTDNS_CONFIG_ID']
+  stamp = 'NEXTDNS_DNS_STAMP'

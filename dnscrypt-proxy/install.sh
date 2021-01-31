@@ -13,13 +13,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# List of DNS servers. The fastest is automatically picked.
-# INFO: https://dnscrypt.info/public-servers
-DNS_SERVERS="'quad9-dnscrypt-ip4-filter-pri', 'quad9-dnscrypt-ip4-filter-alt', 'cloudflare'"
-
-# Add the servers to the configuration file.
-sed -i -re "s/^\#\s+server_names\s+=\s+.*/server_names = [${DNS_SERVERS}]/gi" "${HOMEBREW_PREFIX}/etc/dnscrypt-proxy.toml"
-
 # Create Bitbar plugins folder if it doesn't exist.
 mkdir -p "${HOME}/.config/bitbar"
 
