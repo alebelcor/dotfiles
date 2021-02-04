@@ -115,6 +115,8 @@ EXTENSIONS_TO_INSTALL=(
 	# YAML
 	"redhat.vscode-yaml"
 
+	# vscode-styled-components
+	"jpoissonnier.vscode-styled-components"
 )
 
 for extension_to_install in "${EXTENSIONS_TO_INSTALL[@]}"
