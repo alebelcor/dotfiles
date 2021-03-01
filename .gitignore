@@ -13,10 +13,10 @@ Thumbs.db
 gitconfig.local.symlink
 gitignore.local.symlink
 
+localrc*.symlink
+
 tmux.conf.local.symlink
 tmux.conf.work.symlink
-
-.localrc
 
 gas-mask/work.hst
 nextdns/dnscrypt-proxy.toml
