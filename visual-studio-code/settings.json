@@ -18,7 +18,7 @@
   "editor.rulers": [
     80,
     100,
-    120,
+    120
   ],
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
@@ -71,7 +71,7 @@
     "**/dist": true,
     "**/package-lock.json": true,
     "**/.pnp.js": true,
-    "**/yarn.lock": true,
+    "**/yarn.lock": true
   },
   // HTML
   "html.format.endWithNewline": true,
@@ -127,7 +127,7 @@
   // Auto Rename Tag
   "auto-rename-tag.activationOnLanguage": [
     "html",
-    "xml",
+    "xml"
   ],
   // Code Spell Checker Configuration
   "cSpell.dictionaries": [
@@ -135,7 +135,7 @@
     "html",
     "node",
     "npm",
-    "typescript",
+    "typescript"
   ],
   "cSpell.userWords": [
     "Brewfile",
@@ -177,5 +177,5 @@
   "yaml.format.printWidth": 100,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
+  }
 }
