@@ -1,10 +1,7 @@
 create-next-app
 create-react-app
 depcheck
-movie-draft-cli
-nodemon
 pure-prompt
 serve
 speedtest-net
 trash-cli
-xo
