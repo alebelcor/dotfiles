@@ -14,6 +14,7 @@ gitconfig.local.symlink
 gitignore.local.symlink
 
 tmux.conf.local.symlink
+tmux.conf.work.symlink
 
 .localrc
 
