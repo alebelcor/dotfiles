@@ -44,7 +44,7 @@
 	precomposeunicode = false
 
 	# Speed up commands involving untracked files such as `git status`.
-	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	# https://git-scm.com/docs/git-config/#Documentation/git-config.txt-coreuntrackedCache
 	untrackedCache = true
 
 	# Set `diff-so-fancy` as the preferred pager when outputting logs and diffs.
@@ -108,8 +108,10 @@
 	path = ~/.gitconfig.local
 
 [push]
+	# https://git-scm.com/docs/git-config/#Documentation/git-config.txt-pushautoSetupRemote
+	autoSetupRemote = true
 
-	# https://git-scm.com/docs/git-config#git-config-pushdefault
+	# https://git-scm.com/docs/git-config/#Documentation/git-config.txt-remotepushDefault
 	default = simple
 
 	# Make `git push` push relevant annotated tags when pushing branches out.
