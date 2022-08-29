@@ -11,9 +11,9 @@
   "editor.fontSize": 15,
   "editor.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": false,
+  "editor.guides.indentation": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderControlCharacters": true,
-  "editor.renderIndentGuides": true,
   "editor.renderWhitespace": "boundary",
   "editor.rulers": [
     80,
@@ -34,11 +34,11 @@
   // Window
   "window.closeWhenEmpty": true,
   "window.restoreWindows": "all",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   // Files
   "files.associations": {
     "*.js.symlink": "javascript",
-    "*.plist": "xml",
+    "*.plist": "xml"
   },
   "files.autoSave": "onFocusChange",
   "files.eol": "\n",
@@ -52,7 +52,7 @@
     "**/.Spotlight-V100": true,
     "**/.Trashes": true,
     "**/Desktop.ini": true,
-    "**/Thumbs.db": true,
+    "**/Thumbs.db": true
   },
   "files.hotExit": "onExitAndWindowClose",
   "files.insertFinalNewline": true,
@@ -153,7 +153,6 @@
     "monokai",
     "polyfill",
     "refetch",
-    "rubocop",
     "stringifier",
     "symlink",
     "tabindex",
@@ -164,10 +163,8 @@
   ],
   // Npm
   "npm.enableRunFromFolder": true,
-  // Ruby
-  "ruby.format": "rubocop",
-  // Todo Tree
-  "todo-tree.filtering.ignoreGitSubmodules": true,
+  // Red Hat
+  "redhat.telemetry.enabled": false,
   // TypeScript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.format.semicolons": "insert",
