@@ -99,6 +99,9 @@ then
 
 	printf "› Setting global version of Node for all shells to v%s.\\n" "${LATEST_LTS_VERSION}"
 	nodenv global "${LATEST_LTS_VERSION}" 1> /dev/null
+
+	printf "› Enabling corepack.\\n"
+	corepack enable --install-directory="${HOME}/.nodenv/shims"
 else
 	printf "\\r  [ \\033[00;34mINFO\\033[0m ] Node.js v%s is already installed.\\n" "${LATEST_LTS_VERSION}"
 fi
