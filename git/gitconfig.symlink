@@ -8,7 +8,7 @@
 	st = status
 
 	# Verify objects in database and optimize.
-	cleanup = !git fsck && git gc --aggressive --prune=now
+	cleanup = !git fsck && git gc --aggressive --prune=now && git remote prune origin
 
 	# Stash current changes, pull and re-apply stashed changes.
 	sth = !git stash && git pull && git stash pop
