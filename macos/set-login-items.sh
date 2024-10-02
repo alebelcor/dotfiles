@@ -2,11 +2,11 @@
 
 printf "› Adding login items.\\n"
 
-for app in "BitBar" \
-	"Caffeine" \
+for app in "Caffeine" \
 	"Flux" \
 	"Google Chrome" \
 	"Lightshot Screenshot" \
+	"NextDNS" \
 	"Pure Paste" \
 	"Raycast" \
 	"Spectacle";

@@ -249,10 +249,9 @@ sudo "${AIRPORT}" prefs RequireAdminPowerToggle=YES
 # "208.67.222.222"
 # "208.67.220.220"
 
-# Add dnscrypt-proxy as the DNS server.
-DNS_SERVERS=(
-	"127.0.0.1"
-)
+# DNS_SERVERS=(
+# 	# Add DNS servers here
+# )
 
 # Clear all DNS entries.
 sudo networksetup -setdnsservers "Wi-Fi" "Empty" > /dev/null
@@ -260,9 +259,9 @@ sudo networksetup -setdnsservers "Thunderbolt Ethernet" "Empty" > /dev/null
 sudo networksetup -setdnsservers "Thunderbolt Ethernet Slot 1" "Empty" > /dev/null
 
 # Set DNS entries.
-sudo networksetup -setdnsservers "Wi-Fi" ${DNS_SERVERS[*]} > /dev/null
-sudo networksetup -setdnsservers "Thunderbolt Ethernet" ${DNS_SERVERS[*]} > /dev/null
-sudo networksetup -setdnsservers "Thunderbolt Ethernet Slot 1" ${DNS_SERVERS[*]} > /dev/null
+# sudo networksetup -setdnsservers "Wi-Fi" ${DNS_SERVERS[*]} > /dev/null
+# sudo networksetup -setdnsservers "Thunderbolt Ethernet" ${DNS_SERVERS[*]} > /dev/null
+# sudo networksetup -setdnsservers "Thunderbolt Ethernet Slot 1" ${DNS_SERVERS[*]} > /dev/null
 
 # Flush DNS cache.
 sudo dscacheutil -flushcache
@@ -762,45 +761,15 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Spotlight                                                                   #
 ###############################################################################
 
-# Disallow Spotlight Suggestions in Look up.
-defaults write com.apple.lookup.shared LookupSuggestionsDisabled -bool true
+#
+# Disable Spotlight (use Raycast instead)
+#
 
-# Disable Spotlight indexing for any volume that gets mounted and has not yet
-# been indexed before.
-# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# Sets the indexing status for all volumes to off.
+sudo mdutil -a -i off
 
-# Change indexing order and disable some search results
-defaults write com.apple.spotlight orderedItems -array \
-	'{ "enabled" = 1; "name" = "APPLICATIONS"; }' \
-	'{ "enabled" = 1; "name" = "DIRECTORIES"; }' \
-	'{ "enabled" = 1; "name" = "DOCUMENTS"; }' \
-	'{ "enabled" = 1; "name" = "FONTS"; }' \
-	'{ "enabled" = 1; "name" = "IMAGES"; }' \
-	'{ "enabled" = 1; "name" = "PDF"; }' \
-	'{ "enabled" = 1; "name" = "SYSTEM_PREFS"; }' \
-	'{ "enabled" = 0; "name" = "BOOKMARKS"; }' \
-	'{ "enabled" = 0; "name" = "CONTACT"; }' \
-	'{ "enabled" = 0; "name" = "EVENT_TODO"; }' \
-	'{ "enabled" = 0; "name" = "MENU_CONVERSION"; }' \
-	'{ "enabled" = 0; "name" = "MENU_DEFINITION"; }' \
-	'{ "enabled" = 0; "name" = "MENU_EXPRESSION"; }' \
-	'{ "enabled" = 0; "name" = "MENU_OTHER"; }' \
-	'{ "enabled" = 0; "name" = "MENU_SPOTLIGHT_SUGGESTIONS"; }' \
-	'{ "enabled" = 0; "name" = "MESSAGES"; }' \
-	'{ "enabled" = 0; "name" = "MOVIES"; }' \
-	'{ "enabled" = 0; "name" = "MUSIC"; }' \
-	'{ "enabled" = 0; "name" = "PRESENTATIONS"; }' \
-	'{ "enabled" = 0; "name" = "SPREADSHEETS"; }'
-
-# Load new settings before rebuilding the index.
-killall mds > /dev/null 2>&1
-
-# Make sure indexing is enabled for the main volume.
-sudo mdutil -i on / > /dev/null
-
-# Rebuild the index from scratch.
-sudo mdutil -E / > /dev/null
+# Mark local store for all volumes as to be erased.
+sudo mdutil -a -E
 
 ###############################################################################
 # Terminal                                                                    #
@@ -919,16 +888,6 @@ defaults write com.apple.calculator SeparatorsDefaultsKey -int 1
 defaults write com.apple.calculator PrecisionDefaultsKey_2 -int 8
 
 ###############################################################################
-# BitBar                                                                      #
-###############################################################################
-
-# Create plugin folder if it doesn't exist.
-mkdir -p "${HOME}/.config/bitbar"
-
-# Set plugin folder.
-defaults write com.matryer.BitBar pluginsDirectory -string "${HOME}/.config/bitbar"
-
-###############################################################################
 # Caffeine                                                                    #
 ###############################################################################
 
@@ -949,28 +908,6 @@ defaults write com.lightheadsw.Caffeine DefaultDuration -int 0
 
 # Suppress welcome message when starting.
 defaults write com.lightheadsw.Caffeine SuppressLaunchMessage -bool true
-
-###############################################################################
-# Commander One                                                               #
-###############################################################################
-
-# Show hidden files.
-defaults write com.eltima.cmd1 TCX-show-hidden-files -bool true
-
-# Do not send anonymous usage statistics.
-defaults write com.eltima.cmd1 TCX-use-appstatico -bool false
-
-# Do not save "Command line" on quit.
-defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-command-line -bool false
-
-# Do not save "Folder history" on quit.
-defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-folder-history -bool false
-
-# Do not save "Opened folders" on quit.
-defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-folders -bool false
-
-# Do not save "Panels state" on quit.
-defaults write com.eltima.cmd1 TCXPreferencesWindow-misc-save-panel-state -bool false
 
 ###############################################################################
 # Firefox                                                                     #
@@ -1603,28 +1540,35 @@ defaults write ZoomChat ZoomShouldShowSharingWithSplitView -string false
 ###############################################################################
 
 AFFECTED_APPS=(
+	# macOS
 	"Activity Monitor"
 	"App Store"
-	"BitBar"
-	"Caffeine"
 	"Calculator"
 	"cfprefsd"
 	"Dock"
 	"Finder"
+	"Photos"
+	"QuickTime Player"
+	"Safari"
+	"SystemUIServer"
+	"Terminal"
+	# Others
+	"Caffeine"
 	"Flux"
+	"Gas Mask"
 	"Google Chrome"
 	"ImageOptim"
 	"Lightshot Screenshot"
 	"LimeChat"
+	"NextDNS"
 	"Noisy"
-	"Photos"
-	"QuickTime Player"
-	"Safari"
+	"Pure Paste"
+	"Raycast"
 	"Spectacle"
-	"SystemUIServer"
-	"Terminal"
+	"System Color Picker"
 	"Transmission"
 	"VLC"
+	"Zoom"
 )
 
 for app in "${AFFECTED_APPS[@]}"
