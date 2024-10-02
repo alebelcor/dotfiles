@@ -85,3 +85,4 @@ mas 'Joystick Mapper', id: 528183797
 mas 'Lightshot Screenshot', id: 526298438
 mas 'LimeChat', id: 414030210
 mas 'NextDNS', id: 1464122853
+mas 'Pure Paste', id: 1611378436
