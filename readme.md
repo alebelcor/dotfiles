@@ -9,8 +9,6 @@
 * `git/gitignore.local.symlink`: Extended ignore list for Git, referenced in `gitconfig.local.symlink`
 * `tmux/tmux.conf.local.symlink`: Extended Tmux configuration for private, or work-related stuff
 
-<sup>*</sup> – Found on the ["Setup" page](https://my.nextdns.io/) > Setup Guide > Routers > DNSCrypt
-
 ## Installation
 
 ```sh
