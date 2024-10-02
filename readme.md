@@ -7,7 +7,6 @@
 * `gas-mask/work.hst`: Extended hosts file for work-related hostname mappings. If file does not exist, an empty file will be created
 * `git/gitconfig.local.symlink`: Extended Git configuration for private, or work-related stuff
 * `git/gitignore.local.symlink`: Extended ignore list for Git, referenced in `gitconfig.local.symlink`
-* `nextdns/dnscrypt-proxy.toml`: Extended DNSCrypt configuration for NextDNS<sup>*</sup>. If file does not exist, one will be created based on your input
 * `tmux/tmux.conf.local.symlink`: Extended Tmux configuration for private, or work-related stuff
 
 <sup>*</sup> – Found on the ["Setup" page](https://my.nextdns.io/) > Setup Guide > Routers > DNSCrypt
