@@ -1160,13 +1160,6 @@ defaults write org.mozilla.firefox SearchBar -string "unified"
 defaults write org.mozilla.firefox SearchSuggestEnabled -bool false
 
 ###############################################################################
-# Fitbit Connect                                                              #
-###############################################################################
-
-# Don't show menu bar icon.
-defaults write com.fitbit.GalileoClient menubarHelperNotKeepRunning -int 0
-
-###############################################################################
 # Flux                                                                        #
 ###############################################################################
 
@@ -1649,7 +1642,6 @@ AFFECTED_APPS=(
 	"cfprefsd"
 	"Dock"
 	"Finder"
-	"Fitbit Connect"
 	"Flux"
 	"Google Chrome"
 	"ImageOptim"
