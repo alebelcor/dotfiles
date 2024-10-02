@@ -1530,7 +1530,7 @@ defaults write com.sindresorhus.Pure-Paste automaticallyClearFormatting -bool tr
 
 defaults write com.sindresorhus.Pure-Paste dimMenuBarIconWhenDisabled -bool true
 
-defaults write com.sindresorhus.Pure-Paste hideMenuBarIcon -bool false
+defaults write com.sindresorhus.Pure-Paste hideMenuBarIcon -bool true
 
 defaults write com.sindresorhus.Pure-Paste removeTrackingParametersFromURLs -bool true
 
