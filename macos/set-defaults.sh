@@ -1516,14 +1516,19 @@ defaults write com.rathertremendous.noisy NoiseVolume -int 1
 # Pure Paste                                                                  #
 ###############################################################################
 
+# Automatically clear formatting
 defaults write com.sindresorhus.Pure-Paste automaticallyClearFormatting -bool true
 
+# Dim menu bar icon when disabled
 defaults write com.sindresorhus.Pure-Paste dimMenuBarIconWhenDisabled -bool true
 
+# Hide menu bar icon
 defaults write com.sindresorhus.Pure-Paste hideMenuBarIcon -bool true
 
+# Remove tracking parameters from URLs
 defaults write com.sindresorhus.Pure-Paste removeTrackingParametersFromURLs -bool true
 
+# Trim leading and trailing whitespace
 defaults write com.sindresorhus.Pure-Paste trimLeadingAndTrailingWhitespace -bool true
 
 ###############################################################################
@@ -1535,6 +1540,16 @@ defaults write com.divisiblebyzero.Spectacle SUEnableAutomaticChecks -bool true
 
 # Run as a background application (false). Run in the status menu (true).
 defaults write com.divisiblebyzero.Spectacle StatusItemEnabled -bool false
+
+###############################################################################
+# System Color Picker                                                         #
+###############################################################################
+
+# Prefix Hex color with #
+defaults write com.sindresorhus.Color-Picker hashPrefixInHexColor -bool true
+
+# Use larger text in text fields
+defaults write com.sindresorhus.Color-Picker largerText -bool true
 
 ###############################################################################
 # Transmission                                                                #
