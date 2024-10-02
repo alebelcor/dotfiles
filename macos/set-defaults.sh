@@ -1532,6 +1532,22 @@ defaults write com.sindresorhus.Pure-Paste removeTrackingParametersFromURLs -boo
 defaults write com.sindresorhus.Pure-Paste trimLeadingAndTrailingWhitespace -bool true
 
 ###############################################################################
+# Raycast                                                                     #
+###############################################################################
+
+# Do not show Raycast in menu bar
+defaults write com.raycast.macos "NSStatusItem Visible raycastIcon" -bool false
+
+# Set `⌘ + Space` as global hotkey
+defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+
+# Set "Window Mode" to "Compact"
+defaults write com.raycast.macos raycastPreferredWindowMode -string "compact"
+
+# Set "Text Size" as "Large"
+defaults write com.raycast.macos raycastUI_preferredTextSize -string "large"
+
+###############################################################################
 # Spectacle                                                                   #
 ###############################################################################
 

@@ -8,6 +8,7 @@ for app in "BitBar" \
 	"Google Chrome" \
 	"Lightshot Screenshot" \
 	"Pure Paste" \
+	"Raycast" \
 	"Spectacle";
 do
 	# Check if app is installed.
