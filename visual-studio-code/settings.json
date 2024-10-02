@@ -1,10 +1,13 @@
 {
-  // Editor
-  "diffEditor.ignoreTrimWhitespace": false,
+  //
+  // VS Code
+  //
+  "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "always",
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "smooth",
+  "editor.detectIndentation": true,
   "editor.dragAndDrop": false,
   "editor.emptySelectionClipboard": false,
   "editor.find.addExtraSpaceOnTop": false,
@@ -15,15 +18,12 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [
-    80,
-    100,
-    120
-  ],
+  "editor.rulers": [80, 100, 120],
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   // Workbench
   "workbench.colorTheme": "One Monokai",
+  "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.tabSizing": "shrink",
@@ -60,7 +60,6 @@
   "files.trimTrailingWhitespace": true,
   // File Explorer
   "explorer.confirmDelete": false,
-  "explorer.openEditors.visible": 0,
   // Search
   "search.exclude": {
     "**/.build": true,
@@ -73,8 +72,8 @@
     "**/.pnp.js": true,
     "**/yarn.lock": true
   },
+  "search.followSymlinks": false,
   // HTML
-  "html.format.endWithNewline": true,
   "html.format.wrapLineLength": 0,
   // Markdown
   "markdown.preview.fontSize": 16,
@@ -88,7 +87,6 @@
   "css.lint.zeroUnits": "warning",
   // ESLint
   "eslint.run": "onSave",
-  "eslint.alwaysShowStatus": true,
   // Sass
   "scss.lint.duplicateProperties": "warning",
   "scss.lint.idSelector": "warning",
@@ -98,50 +96,25 @@
   "scss.lint.universalSelector": "warning",
   "scss.lint.zeroUnits": "warning",
   // Telemetry
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
   // Git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.path": "/usr/local/bin/git",
-  // GitLens
-  "gitlens.advanced.telemetry.enabled": false,
-  "gitlens.blame.avatars": false,
-  "gitlens.blame.heatmap.enabled": false,
-  "gitlens.codeLens.authors.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.liveshare.allowGuestAccess": false,
-  "gitlens.mode.statusBar.enabled": false,
-  "gitlens.hovers.avatars": false,
-  "gitlens.statusBar.enabled": false,
-  "gitlens.views.compare.avatars": false,
-  "gitlens.views.fileHistory.avatars": false,
-  "gitlens.views.lineHistory.avatars": false,
-  "gitlens.views.repositories.avatars": false,
-  "gitlens.views.search.avatars": false,
-  // LaTeX Workshop
-  "latex-workshop.view.pdf.viewer": "browser",
-  // Material Icons
-  "material-icon-theme.showWelcomeMessage": false,
+  // TypeScript
+  "typescript.surveys.enabled": false,
+  //
+  // Extensions (below)
+  //
+
   // Auto Rename Tag
-  "auto-rename-tag.activationOnLanguage": [
-    "html",
-    "xml"
-  ],
+  "auto-rename-tag.activationOnLanguage": ["html", "xml"],
   // Code Spell Checker Configuration
-  "cSpell.dictionaries": [
-    "css",
-    "html",
-    "node",
-    "npm",
-    "typescript"
-  ],
+  "cSpell.dictionaries": ["css", "html", "node", "npm", "typescript"],
   "cSpell.userWords": [
-    "Brewfile",
-    "WCAG",
     "autofill",
+    "Brewfile",
     "camelcase",
+    "clsx",
     "conformant",
     "datepicker",
     "decamelize",
@@ -159,16 +132,26 @@
     "tmux",
     "todos",
     "unmount",
+    "WCAG",
     "youtube"
   ],
-  // Npm
-  "npm.enableRunFromFolder": true,
-  // Red Hat
-  "redhat.telemetry.enabled": false,
-  // TypeScript
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.format.semicolons": "insert",
-  "typescript.surveys.enabled": false,
+  // GitLens
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.liveshare.allowGuestAccess": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.views.fileHistory.avatars": false,
+  "gitlens.views.lineHistory.avatars": false,
+  "gitlens.views.repositories.avatars": false,
+  "gitlens.telemetry.enabled": false,
+  // LaTeX Workshop
+  "latex-workshop.view.pdf.viewer": "browser",
   // YAML
   "yaml.format.enable": true,
   "yaml.format.printWidth": 100,
