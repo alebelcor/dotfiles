@@ -7,6 +7,7 @@ for app in "BitBar" \
 	"Flux" \
 	"Google Chrome" \
 	"Lightshot Screenshot" \
+	"Pure Paste" \
 	"Spectacle";
 do
 	# Check if app is installed.

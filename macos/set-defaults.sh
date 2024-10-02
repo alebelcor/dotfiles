@@ -1523,6 +1523,20 @@ defaults write com.rathertremendous.noisy PreviousNoiseType -int 3
 defaults write com.rathertremendous.noisy NoiseVolume -int 1
 
 ###############################################################################
+# Pure Paste                                                                  #
+###############################################################################
+
+defaults write com.sindresorhus.Pure-Paste automaticallyClearFormatting -bool true
+
+defaults write com.sindresorhus.Pure-Paste dimMenuBarIconWhenDisabled -bool true
+
+defaults write com.sindresorhus.Pure-Paste hideMenuBarIcon -bool false
+
+defaults write com.sindresorhus.Pure-Paste removeTrackingParametersFromURLs -bool true
+
+defaults write com.sindresorhus.Pure-Paste trimLeadingAndTrailingWhitespace -bool true
+
+###############################################################################
 # Spectacle                                                                   #
 ###############################################################################
 
