@@ -17,14 +17,8 @@ mkdir -p "${DESTINATION}"
 # List of Google Chrome extensions to install.
 EXTENSIONS=(
 
-	# 1Password: Password Manager and Secure Wallet
-	"aomjjhallfgjeglblehebfpbcfeobpgk"
-
-	# Airbnb Price Per Night Correcter
-	"lijeilcglmadpkbengpkfnkpmcehecfe"
-
-	# Auto Tab Discard
-	"jhnleheckmknfcgijgkadoemagpecfol"
+	# 1Password – Password Manager
+	"aeblfdkhhhdcdjpifhhbdiojplfjncoa"
 
 	# Clear Downloads
 	"bknoejjhcfmakcibhifepfkegpjdnadk"
@@ -32,29 +26,20 @@ EXTENSIONS=(
 	# Decentraleyes
 	"ldpochfccmkkmhdbclfhpagapcfdljkj"
 
+	# DuckDuckGo Privacy Essentials
+	"bkdgflcldnnnapblkhphbgpggdiikppg"
+
 	# Google Analytics Opt-out Add-on (by Google)
 	"fllaojicojecljbmefodhfapmkghcbnh"
-
-	# Hacker News Enhancement Suite
-	"bappiabcodbpphnojdiaddhnilfnjmpm"
-
-	# HTTPS Everywhere
-	"gcbommkclmclpchllfjekcdonpmejbdp"
 
 	# IBA Opt-out (by Google)
 	"gbiekjoijknlhijdjbaadobpkdhmoebb"
 
-	# JSON Formatter
-	"bcjindcccaagfpapjjmafapmmgkkhgoa"
-
-	# minerBlock
-	"emikbbbebcdfohonlaifafnoanocnebl"
+	# Keepa - Amazon Price Tracker
+	"neebplgakaahbhdphmkckjjcegoiijjo"
 
 	# Momentum
 	"laookkfknpbbblfpciffpaejjkokdgca"
-
-	# NoCountryRedirect (NCR)
-	"ciboebddidackjicoeoiigdnbmchkdll"
 
 	# Privacy Badger
 	"pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
@@ -62,23 +47,23 @@ EXTENSIONS=(
 	# Protect My Choices
 	"hdgloanjhdcenjgiafkpbehddcnonlic"
 
+	# React Developer Tools
+	"fmkadmapgofadopljbjfkapdkoienihi"
+
 	# Reddit Enhancement Suite
 	"kbmfpngjjgdllneeigpgjifpgocmfgmb"
 
 	# Refined GitHub
 	"hlepfoohegkhhmjieoechaddaejaokhf"
 
-	# Refined Twitter
-	"nlfgmdembofgodcemomfeimamihoknip"
+	# Return YouTube Dislike
+	"gebbhagfogifgggkldgodflihgfeippi"
 
-	# Tab Size on GitHub
-	"ofjbgncegkdemndciafljngjbdpfmbkn"
+	# SponsorBlock for YouTube - Skip Sponsorships
+	"mnjggcdmjocbbbhaepdhchncahnbgone"
 
-	# uBlock Origin
-	"cjpalhdlnbpafiamejdnhcphjbkeiagm"
-
-	# Zoom Redirector
-	"fmaeeiocbalinknpdkjjfogehkdcbkcd"
+	# uBlock Origin Lite
+	"ddkjiahejlhfcafbddmgiahcphecmpfh"
 )
 
 # Define content for JSON files.
