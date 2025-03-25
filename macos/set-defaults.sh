@@ -1049,54 +1049,167 @@ defaults write ee.clockwise.gmask activeHostsFile -string "${HOME}/Library/Gas M
 # Google Chrome                                                               #
 ###############################################################################
 
-# Full list of supported policies: https://cloud.google.com/docs/chrome-enterprise/policies/
-# Last updated for (Mac) version 79.
+# Full list of supported policies: https://chromeenterprise.google/intl/en_us/policies/
+# Last updated for (Mac) version 134.
 
-# -- Content settings
+#
+# Accessibility settings
+# https://chromeenterprise.google/intl/en_us/policies/#Accessibility
+#
+
+# Disable Live Translate.
+defaults write com.google.Chrome LiveTranslateEnabled -bool false
+
+#
+# Allow or deny screen capture
+# https://chromeenterprise.google/intl/en_us/policies/#ScreenCapture
+#
 
 # ...
 
-# -- Default search provider
+#
+# Certificate management settings
+# https://chromeenterprise.google/intl/en_us/policies/#CertificateManagement
+#
 
-# Enable the use of a default search provider.
+# ...
+
+#
+# Cloud Reporting
+# https://chromeenterprise.google/intl/en_us/policies/#CloudReporting
+#
+
+# Disable Google Chrome cloud reporting for managed profile.
+defaults write com.google.Chrome CloudProfileReportingEnabled -bool false
+
+# Disable Google Chrome cloud reporting.
+defaults write com.google.Chrome CloudReportingEnabled -bool false
+
+#
+# Content settings
+# https://chromeenterprise.google/intl/en_us/policies/#ContentSettings
+#
+
+# Do not allow any site to access sensors.
+defaults write com.google.Chrome DefaultSensorsSetting -integer 2
+
+# Do not allow any site to request access to serial ports via the Serial API.
+defaults write com.google.Chrome DefaultSerialGuardSetting -integer 2
+
+# Do not allow any site to request access to Bluetooth devices via the Web Bluetooth API.
+defaults write com.google.Chrome DefaultWebBluetoothGuardSetting -integer 2
+
+# Do not allow any site to request access to HID devices via the WebHID API.
+defaults write com.google.Chrome DefaultWebHidGuardSetting -integer 2
+
+# Do not allow any site to request access to USB devices via the WebUSB API.
+defaults write com.google.Chrome DefaultWebUsbGuardSetting -integer 2
+
+#
+# Default search provider
+# https://chromeenterprise.google/intl/en_us/policies/#DefaultSearchProvider
+#
+
+# Enable the default search provider.
 defaults write com.google.Chrome DefaultSearchProviderEnabled -bool true
 
-# Set the keyword of the default search provider provider, as trigger, for the omnibox.
-defaults write com.google.Chrome DefaultSearchProviderKeyword -string "google.com"
+# Specifies the keyword or shortcut used in the address bar to trigger the search for this provider.
+defaults write com.google.Chrome DefaultSearchProviderKeyword -string "ddg"
 
-# Set the name of the default search provider.
-defaults write com.google.Chrome DefaultSearchProviderName -string "Encrypted Google"
+# Specifies the default search provider's name.
+defaults write com.google.Chrome DefaultSearchProviderName -string "DuckDuckGo"
 
-# Set the search URL of the default search provider.
-defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://encrypted.google.com/search?hl=en&q={searchTerms}"
+# Specifies the URL of the search engine used during a default search.
+defaults write com.google.Chrome DefaultSearchProviderSearchURL -string "https://duckduckgo.com/?q={searchTerms}"
 
-# -- Extensions
+#
+# Extensions
+# https://chromeenterprise.google/intl/en_us/policies/#Extensions
+#
 
 # ...
 
-# -- Google Cast
+#
+# First-Party Sets
+# https://chromeenterprise.google/intl/en_us/policies/#FirstPartySets
+#
 
-# Enable Google Cast.
+# ...
+
+#
+# Generative AI
+# https://chromeenterprise.google/intl/en_us/policies/#GenerativeAI
+#
+
+# Allow "Create Themes with AI" to be used, but does not allow Google to improve models using users' content.
+defaults write com.google.Chrome CreateThemesSettings -integer 1
+
+# Allow "DevTools Generative AI Features" to be used, but does not allow Google to improve models using users' content.
+defaults write com.google.Chrome DevToolsGenAiSettings -integer 1
+
+# Allow generative AI features to be used, but does not allow Google to improve models using users' content.
+defaults write com.google.Chrome GenAiDefaultSettings -integer 1
+
+# Allow "Help Me Write" to be used, but does not allow Google to improve models using users' content.
+defaults write com.google.Chrome HelpMeWriteSettings -integer 1
+
+# Allow "AI History Searc" to be used, but does not allow Google to improve models using users' content.
+defaults write com.google.Chrome HistorySearchSettings -integer 1
+
+# Allow "Tab Compare" to be used, but does not allow Google to improve models using users' content.
+defaults write com.google.Chrome TabCompareSettings -integer 1
+
+# Allow "Tab Organizer" to be used, but does not allow Google to improve models using users' content.
+defaults write com.google.Chrome TabOrganizerSettings -integer 1
+
+#
+# Google Cast
+# https://chromeenterprise.google/intl/en_us/policies/#GoogleCast
+#
+
+# Allow users to use Google Cast.
 defaults write com.google.Chrome EnableMediaRouter -bool true
 
-# Hide the Google Cast toolbar icon.
+# Allow Google Cast to connect to Cast devices on private IP addresses only.
+defaults write com.google.Chrome MediaRouterCastAllowAllIPs -bool false
+
+# Do not show the Google Cast icon in the toolbar by default, but let users choose.
 defaults write com.google.Chrome ShowCastIconInToolbar -bool false
 
-# -- HTTP authentication
+#
+# HTTP authentication
+# https://chromeenterprise.google/intl/en_us/policies/#HTTPAuthentication
+#
 
 # ...
 
-# -- Legacy Browser Support
+#
+# Idle Browser Actions
+# https://chromeenterprise.google/intl/en_us/policies/#BrowserIdle
+#
 
 # ...
 
-# -- Miscellaneous
+#
+# Legacy Browser Support
+# https://chromeenterprise.google/intl/en_us/policies/#BrowserSwitcher
+#
+
+# ...
+
+#
+# Miscellaneous
+# https://chromeenterprise.google/intl/en_us/policies/#Miscellaneous
+#
 
 # Prevent sites with abusive experiences from opening new windows or tabs.
 defaults write com.google.Chrome AbusiveExperienceInterventionEnforce -bool true
 
 # Disallow ads on sites with intrusive ads.
 defaults write com.google.Chrome AdsSettingForIntrusiveAdsSites -int 2
+
+# Users enrolled in the Advanced Protection program will only receive standard consumer protections.
+defaults write com.google.Chrome AdvancedProtectionAllowed -bool false
 
 # Disallow a page to show popups during its unloading.
 defaults write com.google.Chrome AllowPopupsDuringPageUnload -bool false
@@ -1146,6 +1259,9 @@ defaults write com.google.Chrome CloudManagementEnrollmentMandatory -bool false
 # Enable security warnings for command-line flags.
 defaults write com.google.Chrome CommandLineFlagSecurityWarningsEnabled -bool true
 
+# Do not perform DNS interception checks.
+defaults write com.google.Chrome DNSInterceptionChecksEnabled -bool false
+
 # Set as default browser.
 defaults write com.google.Chrome DefaultBrowserSettingEnabled -bool true
 
@@ -1158,14 +1274,29 @@ defaults write com.google.Chrome DisableScreenshots -bool true
 # Set download directory.
 defaults write com.google.Chrome DownloadDirectory -string "${HOME}/Downloads"
 
+# Disable in-product surveys.
+defaults write com.google.Chrome FeedbackSurveysEnabled -bool false
+
 # Don't enforce Google SafeSearch.
 defaults write com.google.Chrome ForceGoogleSafeSearch -bool false
 
 # Don't enforce restricted mode on YouTube.
 defaults write com.google.Chrome ForceYouTubeRestrict -int 0
 
+# Disable Google Search Side Panel on all web pages.
+defaults write com.google.Chrome GoogleSearchSidePanelEnabled -bool false
+
 # Use hardware acceleration when available.
 defaults write com.google.Chrome HardwareAccelerationModeEnabled -bool true
+
+# High Efficiency Mode will be enabled.
+defaults write com.google.Chrome HighEfficiencyModeEnabled -bool true
+
+# Force enable HTTPS-Only Mode in Balanced Mode.
+defaults write com.google.Chrome HttpsOnlyMode -string "force_balanced_enabled"
+
+# HTTPS Upgrades may be applied depending on feature launch status.
+defaults write com.google.Chrome HttpsUpgradesEnabled -bool true
 
 # Don't import autofill form data from default browser on first run.
 defaults write com.google.Chrome ImportAutofillFormData -bool false
@@ -1185,8 +1316,14 @@ defaults write com.google.Chrome ImportSavedPasswords -bool false
 # Don't import search engines from default browser on first run.
 defaults write com.google.Chrome ImportSearchEngine -bool false
 
-# Allow Google Cast to connect to Cast devices on private IP addresses only.
-defaults write com.google.Chrome MediaRouterCastAllowAllIPs -bool false
+# Force throttling of background JavaScript timers.
+defaults write com.google.Chrome IntensiveWakeUpThrottlingEnabled -bool true
+
+# Hide media recommendations from the user.
+defaults write com.google.Chrome MediaRecommendationsEnabled -bool false
+
+# Memory Saver will get balanced memory savings. Tabs become inactive after an optimal period of time.
+defaults write com.google.Chrome MemorySaverModeSavings -int 1
 
 # Disable reporting of usage and crash-related data.
 defaults write com.google.Chrome MetricsReportingEnabled -bool false
@@ -1194,8 +1331,11 @@ defaults write com.google.Chrome MetricsReportingEnabled -bool false
 # Disable prediction service to load pages more quickly (on any network connection).
 defaults write com.google.Chrome NetworkPredictionOptions -int 2
 
-# Disable showing full-tab promotional content.
-defaults write com.google.Chrome PromotionalTabsEnabled -bool false
+# Always tell websites that no payment methods are saved.
+defaults write com.google.Chrome PaymentMethodQueryEnabled -bool false
+
+# Disable showing promotional content
+defaults write com.google.Chrome PromotionsEnabled -bool false
 
 # Don't ask where to save each file before downloading.
 defaults write com.google.Chrome PromptForDownloadLocation -bool false
@@ -1215,6 +1355,9 @@ defaults write com.google.Chrome SharedClipboardEnabled -bool false
 # Hide the apps shortcut in the bookmark bar.
 defaults write com.google.Chrome ShowAppsShortcutInBookmarkBar -bool false
 
+# Disable showing default search engine results pages in a Browser side panel.
+defaults write com.google.Chrome SideSearchEnabled -bool false
+
 # Enable site isolation for every site.
 defaults write com.google.Chrome SitePerProcess -bool true
 
@@ -1223,9 +1366,6 @@ defaults write com.google.Chrome SpellCheckServiceEnabled -bool false
 
 # Disable synchronization of data with Google.
 defaults write com.google.Chrome SyncDisabled -bool true
-
-# Allow background tabs freeze.
-defaults write com.google.Chrome TabFreezingEnabled -bool true
 
 # Disable the integrated Google Translate service.
 defaults write com.google.Chrome TranslateEnabled -bool false
@@ -1242,11 +1382,24 @@ defaults write com.google.Chrome WPADQuickCheckEnabled -bool false
 # Disable collection of WebRTC event logs from Google services.
 defaults write com.google.Chrome WebRtcEventLogCollectionAllowed -bool false
 
-# -- Native Messaging
+#
+# Native Messaging
+# https://chromeenterprise.google/intl/en_us/policies/#NativeMessaging
+#
 
 # ...
 
-# -- Password manager
+#
+# Network Settings
+# https://chromeenterprise.google/intl/en_us/policies/#Network
+#
+
+# ...
+
+#
+# Password manager
+# https://chromeenterprise.google/intl/en_us/policies/#PasswordManager
+#
 
 # Enable leak detection for entered credentials.
 defaults write com.google.Chrome PasswordLeakDetectionEnabled -bool true
@@ -1254,7 +1407,16 @@ defaults write com.google.Chrome PasswordLeakDetectionEnabled -bool true
 # Disable saving passwords to the password manager.
 defaults write com.google.Chrome PasswordManagerEnabled -bool false
 
-# -- Printing
+# Disable saving passkeys using the password manager.
+defaults write com.google.Chrome PasswordManagerPasskeysEnabled -bool false
+
+# Disable sharing user credentials.
+defaults write com.google.Chrome PasswordSharingEnabled -bool false
+
+#
+# Printing
+# https://chromeenterprise.google/intl/en_us/policies/#Printing
+#
 
 # Disable submission of documents to Google Cloud Print.
 defaults write com.google.Chrome CloudPrintSubmitEnabled -bool false
@@ -1262,16 +1424,50 @@ defaults write com.google.Chrome CloudPrintSubmitEnabled -bool false
 # Use the system-native print preview dialog instead of the print preview.
 defaults write com.google.Chrome DisablePrintPreview -bool true
 
-# -- Proxy server
+#
+# Privacy Sandbox
+# https://chromeenterprise.google/intl/en_us/policies/#PrivacySandbox
+#
+
+# Disable Privacy Sandbox Ad measurement setting for your users.
+defaults write com.google.Chrome PrivacySandboxAdMeasurementEnabled -bool false
+
+# Disable Privacy Sandbox Ad topics setting for your users.
+defaults write com.google.Chrome PrivacySandboxAdTopicsEnabled -bool false
+
+# Do not show the Privacy Sandbox prompt to users..
+defaults write com.google.Chrome PrivacySandboxPromptEnabled -bool false
+
+# Disable Privacy Sandbox Site-suggested ads setting for your users.
+defaults write com.google.Chrome PrivacySandboxSiteEnabledAdsEnabled -bool false
+
+#
+# Private network request settings
+# https://chromeenterprise.google/intl/en_us/policies/#PrivateNetworkRequestSettings
+#
 
 # ...
 
-# -- Remote access options
+#
+# Related Website Sets Settings
+# https://chromeenterprise.google/intl/en_us/policies/#RelatedWebsiteSets
+#
+
+# Disable Related Website Sets.
+defaults write com.google.Chrome RelatedWebsiteSetsEnabled -bool false
+
+#
+# Remote access
+# https://chromeenterprise.google/intl/en_us/policies/#RemoteAccess
+#
 
 # Disallow remote access users to transfer files to/from the host.
 defaults write com.google.Chrome RemoteAccessHostAllowFileTransfer -bool false
 
-# -- Safe Browsing settings
+#
+# Safe Browsing settings
+# https://chromeenterprise.google/intl/en_us/policies/#SafeBrowsing
+#
 
 # Protect you and your device from dangerous sites.
 defaults write com.google.Chrome SafeBrowsingEnabled -bool true
@@ -1279,7 +1475,20 @@ defaults write com.google.Chrome SafeBrowsingEnabled -bool true
 # Disable sending system information and page content to Google servers to help detect dangerous apps and sites.
 defaults write com.google.Chrome SafeBrowsingExtendedReportingEnabled -bool false
 
-# -- Startup, Home page and New Tab page
+# Disable receiving Safe Browsing surveys
+defaults write com.google.Chrome SafeBrowsingSurveysEnabled -bool false
+
+#
+# Sign-in settings
+# https://chromeenterprise.google/intl/en_us/policies/#Signin
+#
+
+# ...
+
+#
+# Startup, Home page and New Tab page
+# https://chromeenterprise.google/intl/en_us/policies/#Startup
+#
 
 # Use New Tab Page as homepage.
 defaults write com.google.Chrome HomepageIsNewTabPage -bool true
@@ -1289,6 +1498,13 @@ defaults write com.google.Chrome RestoreOnStartup -int 1
 
 # Hide the Home button on the toolbar.
 defaults write com.google.Chrome ShowHomeButton -bool false
+
+#
+# WebRTC settings
+# https://chromeenterprise.google/intl/en_us/policies/#WebRtc
+#
+
+# ...
 
 ###############################################################################
 # ImageOptim                                                                  #
