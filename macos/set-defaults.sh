@@ -1587,19 +1587,6 @@ defaults write io.nextdns.NextDNSMac hardenedPrivacyMode -bool false
 defaults write io.nextdns.NextDNSMac connected -bool true
 
 ###############################################################################
-# Noisy                                                                       #
-###############################################################################
-
-# Set initial noise type to "Off".
-defaults write com.rathertremendous.noisy NoiseType -int 0
-
-# Set previous noisy type to "Brown".
-defaults write com.rathertremendous.noisy PreviousNoiseType -int 3
-
-# Set volume to 100%.
-defaults write com.rathertremendous.noisy NoiseVolume -int 1
-
-###############################################################################
 # Pure Paste                                                                  #
 ###############################################################################
 
@@ -1777,7 +1764,6 @@ AFFECTED_APPS=(
 	"Lightshot Screenshot"
 	"LimeChat"
 	"NextDNS"
-	"Noisy"
 	"Pure Paste"
 	"Raycast"
 	"Spectacle"
