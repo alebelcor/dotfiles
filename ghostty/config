@@ -1,0 +1,90 @@
+# Ghostty configuration options
+# https://ghostty.org/docs/config/reference
+
+# https://ghostty.org/docs/config/reference#font-family
+font-family = Fira Mono
+
+# https://ghostty.org/docs/config/reference#font-feature
+font-feature = -calt,-liga,-dlig
+
+# https://ghostty.org/docs/config/reference#font-size
+font-size = 16
+
+# https://ghostty.org/docs/config/reference#background
+background = #282a36
+
+# https://ghostty.org/docs/config/reference#foreground
+foreground = #eff0eb
+
+# https://ghostty.org/docs/config/reference#selection-foreground
+selection-foreground = #282a36
+
+# https://ghostty.org/docs/config/reference#selection-background
+selection-background = #feffff
+
+# https://ghostty.org/docs/config/reference#palette
+# black
+palette = 0=#282a36
+# maroon
+palette = 1=#ff5c57
+# green
+palette = 2=#5af78e
+# olive
+palette = 3=#f3f99d
+# navy
+palette = 4=#57c7ff
+# purple
+palette = 5=#ff6ac1
+# teal
+palette = 6=#9aedfe
+# silver
+palette = 7=#f1f1f0
+# grey
+palette = 8=#686868
+# red
+palette = 9=#ff5c57
+# lime
+palette = 10=#5af78e
+# yellow
+palette = 11=#f3f99d
+# blue
+palette = 12=#57c7ff
+# fuchsia
+palette = 13=#ff6ac1
+# aqua
+palette = 14=#9aedfe
+# white
+palette = 15=#eff0eb
+
+# https://ghostty.org/docs/config/reference#cursor-color
+cursor-color = #97979b
+
+# https://ghostty.org/docs/config/reference#cursor-style-blink
+cursor-style-blink = false
+
+# https://ghostty.org/docs/config/reference#cursor-text
+cursor-text = #eff0eb
+
+# https://ghostty.org/docs/config/reference#maximize
+maximize = true
+
+# https://ghostty.org/docs/config/reference#window-padding-x
+window-padding-x = 16
+
+# https://ghostty.org/docs/config/reference#window-padding-y
+window-padding-y = 16
+
+# https://ghostty.org/docs/config/reference#copy-on-select
+copy-on-select = clipboard
+
+# https://ghostty.org/docs/config/reference#shell-integration-features
+shell-integration-features = no-cursor,no-sudo,title
+
+# https://ghostty.org/docs/config/reference#macos-icon
+macos-icon = retro
+
+# https://ghostty.org/docs/config/reference#auto-update
+auto-update = check
+
+# https://ghostty.org/docs/config/reference#auto-update-channel
+auto-update-channel = stable
