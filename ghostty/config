@@ -2,7 +2,7 @@
 # https://ghostty.org/docs/config/reference
 
 # https://ghostty.org/docs/config/reference#font-family
-font-family = Fira Mono
+font-family = Menlo
 
 # https://ghostty.org/docs/config/reference#font-feature
 font-feature = -calt,-liga,-dlig
